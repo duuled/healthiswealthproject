@@ -35,7 +35,7 @@ import glycoOptimizerImage from '@/assets/glyco-optimizer.jpg';
 const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
 
-  // Power of 5 - Elite Amazon Products
+  // Power of 5 - Elite Wellness Products
   const powerOf5Products = [
     {
       id: 'p1',
@@ -60,7 +60,7 @@ const Supplements = () => {
         'USDA organic certified'
       ],
       scientificBacking: 'Amla has been scientifically proven to be one of the richest natural sources of Vitamin C and contains powerful antioxidants that support immune system function.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -86,7 +86,7 @@ const Supplements = () => {
         'Sustainability certified'
       ],
       scientificBacking: 'Moringa has been extensively studied for its nutritional density and anti-inflammatory compounds, making it one of the most nutrient-dense plants on Earth.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -112,7 +112,7 @@ const Supplements = () => {
         'Women-owned business'
       ],
       scientificBacking: 'Clinical studies show moringa contains more anti-inflammatory power, antioxidants, protein, calcium, iron, and fiber compared to kale, turmeric, and matcha.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -135,10 +135,10 @@ const Supplements = () => {
         '1 LB (16oz) size',
         'Raw from India',
         'Resealable bag',
-        'Amazon\'s Choice'
+        'Premium quality choice'
       ],
       scientificBacking: 'Moringa leaves contain the highest concentration of nutrients, and this stem-free powder ensures maximum bioavailability of vitamins, minerals, and antioxidants.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -164,7 +164,7 @@ const Supplements = () => {
         '12oz premium size'
       ],
       scientificBacking: 'Manuka honey has been studied for its unique antibacterial properties and potential immune system benefits.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     }
   ];
@@ -561,7 +561,7 @@ const Supplements = () => {
               </Badge>
               <Badge variant="secondary" className="px-4 py-2">
                 <Truck className="w-4 h-4 mr-2" />
-                Amazon Prime Shipping
+                Fast Shipping
               </Badge>
               <Badge variant="secondary" className="px-4 py-2">
                 <Award className="w-4 h-4 mr-2" />
@@ -598,19 +598,19 @@ const Supplements = () => {
                 <div className="relative">
                   <img 
                     src={product.image} 
-                    alt={`${product.name} premium supplement from Amazon`}
+                    alt={`${product.name} premium supplement`}
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute top-4 right-4 flex flex-col gap-2">
-                    {product.amazonVerified && (
-                      <Badge variant="secondary" className="bg-orange-500 text-white">
-                        Amazon Verified
-                      </Badge>
-                    )}
+                     {product.verifiedQuality && (
+                       <Badge variant="secondary" className="bg-emerald-500 text-white">
+                         Quality Verified
+                       </Badge>
+                     )}
                     {product.fastShipping && (
                       <Badge variant="secondary">
                         <Truck className="w-3 h-3 mr-1" />
-                        Prime
+                         Fast Shipping
                       </Badge>
                     )}
                   </div>
@@ -660,13 +660,13 @@ const Supplements = () => {
 
                   <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
                     <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
-                      Shop on Amazon - {product.price}
+                      Shop Now - {product.price}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </a>
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center mt-2">
-                    ✓ Amazon Prime shipping • ✓ 30-day returns
+                    ✓ Fast shipping • ✓ 30-day returns
                   </p>
                 </CardContent>
               </Card>
@@ -719,7 +719,7 @@ const Supplements = () => {
                     {supplement.fastShipping && (
                       <Badge variant="secondary">
                         <Truck className="w-3 h-3 mr-1" />
-                        Amazon Prime
+                         Fast Shipping
                       </Badge>
                     )}
                   </div>
@@ -805,13 +805,13 @@ const Supplements = () => {
 
                   <Button asChild className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90">
                     <a href={supplement.shopLink} target="_blank" rel="noopener noreferrer">
-                      Shop on Amazon - {supplement.price}
+                      Shop Now - {supplement.price}
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </a>
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center mt-3">
-                    ✓ Amazon Prime shipping • ✓ 30-day money-back guarantee
+                    ✓ Fast shipping • ✓ 30-day money-back guarantee
                   </p>
                 </CardContent>
               </Card>

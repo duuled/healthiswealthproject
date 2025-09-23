@@ -94,7 +94,7 @@ export const Home = () => {
         'USDA organic certified'
       ],
       scientificBacking: 'Amla has been scientifically proven to be one of the richest natural sources of Vitamin C and contains powerful antioxidants that support immune system function.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -120,7 +120,7 @@ export const Home = () => {
         'Sustainability certified'
       ],
       scientificBacking: 'Moringa has been extensively studied for its nutritional density and anti-inflammatory compounds, making it one of the most nutrient-dense plants on Earth.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -146,7 +146,7 @@ export const Home = () => {
         'Women-owned business'
       ],
       scientificBacking: 'Clinical studies show moringa contains more anti-inflammatory power, antioxidants, protein, calcium, iron, and fiber compared to kale, turmeric, and matcha.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -169,10 +169,10 @@ export const Home = () => {
         '1 LB (16oz) size',
         'Raw from India',
         'Resealable bag',
-        'Amazon\'s Choice'
+        'Premium quality choice'
       ],
       scientificBacking: 'Moringa leaves contain the highest concentration of nutrients, and this stem-free powder ensures maximum bioavailability of vitamins, minerals, and antioxidants.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     },
     {
@@ -198,7 +198,7 @@ export const Home = () => {
         '12oz premium size'
       ],
       scientificBacking: 'Manuka honey has been studied for its unique antibacterial properties and potential immune system benefits.',
-      amazonVerified: true,
+      verifiedQuality: true,
       fastShipping: true
     }
   ];
@@ -448,19 +448,19 @@ export const Home = () => {
                 <div className="relative">
                   <img 
                     src={product.image} 
-                    alt={`${product.name} premium supplement from Amazon`}
+                    alt={`${product.name} premium supplement`}
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute top-4 right-4 flex flex-col gap-2">
-                    {product.amazonVerified && (
-                      <Badge variant="secondary" className="bg-orange-500 text-white">
-                        Amazon Verified
-                      </Badge>
-                    )}
+                     {product.verifiedQuality && (
+                       <Badge variant="secondary" className="bg-emerald-500 text-white">
+                         Quality Verified
+                       </Badge>
+                     )}
                     {product.fastShipping && (
                       <Badge variant="secondary">
                         <Truck className="w-3 h-3 mr-1" />
-                        Prime
+                         Fast Shipping
                       </Badge>
                     )}
                   </div>
@@ -510,13 +510,13 @@ export const Home = () => {
 
                   <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
                     <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
-                      Shop on Amazon - {product.price}
+                      Shop Now - {product.price}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </a>
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center mt-2">
-                    ✓ Amazon Prime shipping • ✓ 30-day returns
+                    ✓ Fast shipping • ✓ 30-day returns
                   </p>
                 </CardContent>
               </Card>
