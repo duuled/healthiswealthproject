@@ -14,6 +14,7 @@ import {
   Truck
 } from 'lucide-react';
 import chagaccinoImage from '@/assets/chagaccino-product.jpg';
+import mariosMushroomImage from '@/assets/marios-mushroom-power.jpg';
 
 export const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -121,6 +122,32 @@ export const Supplements = () => {
       ],
       scientificBacking: 'Sea moss is naturally rich in iodine, potassium, and other minerals essential for thyroid function and overall health.',
       bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 5,
+      name: "Mario's Mushroom Power",
+      price: '$28.00',
+      originalPrice: '$32.99',
+      benefits: ['Ultimate immune support', 'Natural wellness boost', 'Cellular health enhancement', 'Vital energy restoration'],
+      usage: 'Mix 1 scoop daily with water, smoothie, or your favorite beverage',
+      category: 'IMMUNITY',
+      description: 'Premium mushroom powder blend featuring powerful immune-supporting fungi for comprehensive wellness and vitality enhancement.',
+      detailedDescription: "Mario's Mushroom Power combines the most potent medicinal mushrooms in one revolutionary formula. This expertly crafted blend features reishi, cordyceps, lion's mane, and shiitake mushrooms to create a powerful immune defense system. Each serving delivers concentrated nutrients that support your body's natural healing processes, enhance cellular regeneration, and provide comprehensive wellness support for optimal health and vitality.",
+      shopLink: 'https://amzn.to/47YErK2',
+      image: mariosMushroomImage,
+      rating: 5.0,
+      reviews: 2156,
+      features: [
+        'Multi-mushroom complex',
+        'Immune system optimization',
+        'Organic & pure extraction',
+        '30 day supply',
+        'Third-party tested',
+        'Premium quality guarantee'
+      ],
+      scientificBacking: 'Medicinal mushrooms have been extensively studied for their immune-modulating compounds including beta-glucans and polysaccharides that support natural defense mechanisms and overall wellness.',
+      bestseller: true,
       fastShipping: true
     }
   ];
