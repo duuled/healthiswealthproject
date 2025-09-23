@@ -548,6 +548,9 @@ export const Supplements = () => {
       <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Health is Wealth Mission
+            </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Discover our carefully curated collection of premium natural supplements, scientifically backed and quality tested for optimal wellness results from Amazon.
             </p>
@@ -564,6 +567,80 @@ export const Supplements = () => {
                 <Award className="w-4 h-4 mr-2" />
                 Third-Party Tested
               </Badge>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              <span className="glow-text">Our Mission: Health is Wealth</span>
+            </h2>
+            <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl font-semibold text-foreground">
+                Born in Los Angeles, Health is Wealth is more than just a supplement brand – we&apos;re a movement toward sustainable wellness and environmental responsibility.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8 mt-12">
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5">
+                  <div className="flex items-center mb-4">
+                    <Leaf className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-2xl font-bold text-foreground">Environmental Commitment</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    We believe that true health extends beyond our bodies to our planet. Every product we recommend supports sustainable farming practices, eco-friendly packaging, and companies that share our vision of a healthier Earth. When you choose Health is Wealth, you&apos;re not just investing in your wellness – you&apos;re contributing to environmental preservation.
+                  </p>
+                </Card>
+
+                <Card className="p-8 bg-gradient-to-br from-secondary/5 to-primary/5">
+                  <div className="flex items-center mb-4">
+                    <Heart className="w-8 h-8 text-secondary mr-3" />
+                    <h3 className="text-2xl font-bold text-foreground">Longevity Through Nature</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    We guide you toward healthy alternatives that promote longevity and vitality. Our carefully curated supplements are selected not just for their immediate benefits, but for their ability to support long-term wellness. We help you make informed decisions that lead to a longer, healthier, more vibrant life.
+                  </p>
+                </Card>
+              </div>
+
+              <div className="mt-12 p-8 bg-muted/30 rounded-xl">
+                <h3 className="text-2xl font-bold text-center mb-6 text-foreground">Why We Started Health is Wealth</h3>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">In Los Angeles,</strong> we witnessed too many people struggling with expensive healthcare costs while neglecting preventive wellness. We realized that investing in your health today truly is the greatest wealth you can build for tomorrow.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Our founders believed</strong> that everyone deserves access to high-quality, affordable supplements that not only improve personal health but also support our planet&apos;s wellbeing. We&apos;re not just selling products – we&apos;re building a community of conscious consumers who understand that health and environmental stewardship go hand in hand.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Every recommendation we make</strong> is thoroughly researched, environmentally conscious, and designed to help you live not just longer, but better. We believe that when you feel good, you do good – for yourself, your community, and the environment.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <h3 className="text-2xl font-bold mb-4 text-foreground">Join the Health is Wealth Movement</h3>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Together, we&apos;re proving that the best investment you can make is in your health – and our planet&apos;s future.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 mb-8">
+                  <Badge variant="secondary" className="px-6 py-3 text-lg">
+                    <Leaf className="w-4 h-4 mr-2" />
+                    Sustainable Choices
+                  </Badge>
+                  <Badge variant="secondary" className="px-6 py-3 text-lg">
+                    <Heart className="w-4 h-4 mr-2" />
+                    Longevity Focused
+                  </Badge>
+                  <Badge variant="secondary" className="px-6 py-3 text-lg">
+                    <Shield className="w-4 h-4 mr-2" />
+                    Quality Guaranteed
+                  </Badge>
+                </div>
+              </div>
             </div>
           </div>
         </div>
