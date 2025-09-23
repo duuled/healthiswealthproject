@@ -20,6 +20,11 @@ import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
 import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
 import berberineComplexImage from '@/assets/berberine-phytosome-complex.jpg';
 import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
+import zazzeeAstragalusImage from '@/assets/zazzee-astragalus-extract.jpg';
+import nutricostAstragalusImage from '@/assets/nutricost-astragalus-powder.jpg';
+import elanenAstragalusImage from '@/assets/elanen-astragalus-tea.jpg';
+import amazingIndiaNeemImage from '@/assets/amazing-india-neem-powder.jpg';
+import vitamaticNeemImage from '@/assets/vitamatic-neem-powder.jpg';
 
 export const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -100,6 +105,136 @@ export const Supplements = () => {
         'No artificial additives'
       ],
       scientificBacking: 'Berberine has been extensively studied for its metabolic benefits, with clinical research showing support for healthy blood sugar levels and cardiovascular function.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 7,
+      name: 'Zazzee Extra Strength Astragalus Root Extract',
+      price: '$21.97',
+      originalPrice: '$25.99',
+      benefits: ['Immune system support', 'Energy boost', 'Cellular protection', 'Stress adaptation'],
+      usage: 'Take 1 capsule daily with water or as directed by healthcare professional',
+      category: 'IMMUNITY',
+      description: 'Premium 20:1 astragalus extract with 5000mg strength and 70% polysaccharides for maximum immune support and vitality.',
+      detailedDescription: 'Zazzee\'s Extra Strength Astragalus Root Extract delivers concentrated immune support with standardized 20:1 extract containing 70% polysaccharides. This traditional Chinese herb has been used for centuries to support immune function, energy levels, and overall vitality. Each vegan capsule provides 5000mg equivalent strength for maximum therapeutic benefits.',
+      shopLink: 'https://amzn.to/4msoS0J',
+      image: zazzeeAstragalusImage,
+      rating: 4.6,
+      reviews: 964,
+      features: [
+        '20:1 concentrated extract',
+        '5000mg equivalent strength',
+        '70% polysaccharides',
+        '180 vegan capsules',
+        '6 month supply',
+        'Standardized extract'
+      ],
+      scientificBacking: 'Astragalus has been extensively studied for its immune-modulating properties and adaptogenic benefits, supporting the body\'s natural defense mechanisms.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 8,
+      name: 'Nutricost Organic Astragalus Root Powder',
+      price: '$19.95',
+      originalPrice: '$24.95',
+      benefits: ['Natural immune support', 'Traditional wellness', 'Antioxidant properties', 'Adaptogenic effects'],
+      usage: 'Mix 1/2 teaspoon in smoothies, tea, or water daily',
+      category: 'IMMUNITY',
+      description: 'Pure organic astragalus root powder - 1 pound of traditional Chinese herb for immune support and overall wellness.',
+      detailedDescription: 'Nutricost\'s Organic Astragalus Root Powder provides pure, high-quality astragalus membranaceus in its natural form. This USDA organic powder retains all the beneficial compounds found in the whole root, offering traditional immune support and adaptogenic benefits. Perfect for those who prefer natural powder supplements over capsules.',
+      shopLink: 'https://amzn.to/4gDNty1',
+      image: nutricostAstragalusImage,
+      rating: 4.6,
+      reviews: 445,
+      features: [
+        'USDA organic certified',
+        '1 pound bulk powder',
+        'Gluten-free & Non-GMO',
+        'Vegetarian friendly',
+        'No artificial additives',
+        'Third-party tested'
+      ],
+      scientificBacking: 'Astragalus root has been used in traditional Chinese medicine for over 2000 years and modern research supports its immune-supporting and adaptogenic properties.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 9,
+      name: 'Organic Astragalus Root Tea - Huang Qi',
+      price: '$17.97',
+      originalPrice: '$21.99',
+      benefits: ['Traditional herbal tea', 'Immune wellness', 'Natural energy', 'Stress support'],
+      usage: 'Steep 1 teaspoon in hot water for 5-10 minutes, enjoy 1-2 cups daily',
+      category: 'IMMUNITY',
+      description: 'USDA certified organic astragalus root tea - traditional Huang Qi dried root, cut & sifted for optimal brewing.',
+      detailedDescription: 'Elanen Naturals brings you authentic organic astragalus root (Huang Qi) in traditional cut & sifted form, perfect for brewing therapeutic teas. This premium quality astragalus membranaceus is USDA certified organic and carefully sourced from its native mountainous regions. Known as the "yellow leader" in Chinese herbalism, this ancient herb supports immune function and overall vitality.',
+      shopLink: 'https://amzn.to/46mnTdK',
+      image: elanenAstragalusImage,
+      rating: 4.6,
+      reviews: 69,
+      features: [
+        'USDA certified organic',
+        '4 oz (113g) bulk tea',
+        'Cut & sifted preparation',
+        'Traditional Huang Qi',
+        'Resealable packaging',
+        'Family-owned company'
+      ],
+      scientificBacking: 'Astragalus has been documented in Chinese medical texts for over 2000 years and is recognized for its immune-supporting and adaptogenic properties.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 10,
+      name: 'Amazing India Organic Neem Powder',
+      price: '$14.99',
+      originalPrice: '$18.99',
+      benefits: ['Blood purification', 'Healthy immunity', 'Skin wellness', 'Natural detox support'],
+      usage: 'Mix 1/2 teaspoon in water, juice, or smoothies daily on empty stomach',
+      category: 'DIGESTIVE',
+      description: 'USDA certified organic neem powder - traditional Ayurvedic herb for blood purification, immunity, and skin health.',
+      detailedDescription: 'Amazing India\'s Organic Neem Powder is sourced from the highest quality neem leaves (Azadirachta indica) and processed to retain maximum potency. This traditional Ayurvedic herb has been used for centuries for its purifying properties, supporting healthy immunity, clear skin, and natural detoxification processes.',
+      shopLink: 'https://amzn.to/483dlkZ',
+      image: amazingIndiaNeemImage,
+      rating: 4.2,
+      reviews: 237,
+      features: [
+        'USDA certified organic',
+        '16oz bulk powder',
+        'Non-GMO verified',
+        'Pure neem leaves',
+        'Traditional Ayurvedic herb',
+        'Quality tested'
+      ],
+      scientificBacking: 'Neem has been extensively studied for its antimicrobial, anti-inflammatory, and immune-supporting properties, making it a valuable addition to wellness routines.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 11,
+      name: 'Vitamatic Organic Neem Leaf Powder',
+      price: '$9.99',
+      originalPrice: '$12.99',
+      benefits: ['Skin support', 'Immune wellness', 'Detox support', 'Traditional Ayurvedic benefits'],
+      usage: 'Mix 1/4 to 1/2 teaspoon in water or juice daily, preferably on empty stomach',
+      category: 'DIGESTIVE',
+      description: 'Amazon\'s Choice certified USDA organic neem leaf powder - 1 pound of pure Azadirachta indica for traditional wellness support.',
+      detailedDescription: 'Vitamatic\'s Certified Organic Neem Leaf Powder delivers the traditional benefits of this revered Ayurvedic herb in convenient powder form. Made from 100% pure Azadirachta indica leaves, this Amazon\'s Choice product supports skin health, immune function, and natural detoxification processes. An excellent value for those seeking traditional herbal wellness support.',
+      shopLink: 'https://amzn.to/4gHvbMy',
+      image: vitamaticNeemImage,
+      rating: 4.5,
+      reviews: 868,
+      features: [
+        'Amazon\'s Choice product',
+        'USDA certified organic',
+        '1 lb (16oz) bulk size',
+        '100% pure neem leaves',
+        'Traditional Ayurvedic herb',
+        'Premium quality'
+      ],
+      scientificBacking: 'Neem has been used in Ayurvedic medicine for over 4000 years and modern research confirms its antimicrobial, anti-inflammatory, and skin-supporting properties.',
       bestseller: false,
       fastShipping: true
     }
