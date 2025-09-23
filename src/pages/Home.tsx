@@ -9,7 +9,6 @@ import {
   Shield, 
   Zap, 
   Brain,
-  Dumbbell,
   Mail,
   Phone,
   Instagram,
@@ -17,11 +16,17 @@ import {
   Linkedin,
   ArrowRight,
   CheckCircle,
-  X
+  X,
+  Truck
 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import heroImage from '@/assets/wellness-hero-image.jpg';
 import mentalWellnessImage from '@/assets/mental-wellness-image.jpg';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
+import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
+import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
+import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
+import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 
 export const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -138,27 +143,137 @@ export const Home = () => {
     "I deserve joy and balance, right here in West LA's vibrant energy."
   ];
 
-  const fitnessPlans = [
+  // Power of 5 - Elite Amazon Products
+  const powerOf5Products = [
     {
-      title: '15-Minute HIIT for Students',
-      description: 'Perfect for busy college schedules in Westchester',
-      duration: '15 min',
-      level: 'Beginner',
-      exercises: ['Jumping jacks', 'Push-ups', 'Squats', 'Burpees']
+      id: 'p1',
+      name: 'Organic Amla Powder - Vitamin C Powerhouse',
+      price: '$13.99',
+      originalPrice: '$15.99',
+      benefits: ['4x more Vitamin C than oranges', 'Natural antioxidant boost', 'Hair & skin health', 'Iron absorption support'],
+      usage: 'Add 1 teaspoon to smoothies, juices, or water daily',
+      category: 'IMMUNITY',
+      description: 'Pure, lab-tested organic Amla powder from India - the ultimate natural source of Vitamin C and antioxidants.',
+      detailedDescription: 'This premium organic Amla powder contains 4 times more Vitamin C than oranges and has been used for centuries in Ayurvedic medicine. Rich in iron, calcium, and phosphorus, this superfood supports immune function, enhances iron absorption, and promotes healthy hair and skin. Perfect for those seeking a natural, potent source of Vitamin C.',
+      shopLink: 'https://amzn.to/42atVvr',
+      image: amlaPowderImage,
+      rating: 4.5,
+      reviews: 349,
+      features: [
+        'Lab tested for purity',
+        'Gluten-free & Non-GMO',
+        '1.25 LB bulk bag',
+        '100% raw & natural',
+        'From sustainable farms',
+        'USDA organic certified'
+      ],
+      scientificBacking: 'Amla has been scientifically proven to be one of the richest natural sources of Vitamin C and contains powerful antioxidants that support immune system function.',
+      amazonVerified: true,
+      fastShipping: true
     },
     {
-      title: 'Professional\'s Yoga Flow',
-      description: 'Stress relief for Marina del Rey workers',
-      duration: '20 min',
-      level: 'All levels',
-      exercises: ['Sun salutations', 'Warrior poses', 'Downward dog', 'Meditation']
+      id: 'p2',
+      name: 'Micro Ingredients Organic Moringa Powder',
+      price: '$29.99',
+      originalPrice: '$34.99',
+      benefits: ['92 essential nutrients', 'Natural energy boost', 'Immune system support', 'Anti-inflammatory properties'],
+      usage: 'Mix 1 tablespoon in smoothies, tea, or water daily',
+      category: 'ENERGY',
+      description: '2-pound organic moringa leaf powder packed with vitamins, minerals, and antioxidants for comprehensive wellness support.',
+      detailedDescription: 'This premium organic moringa powder from Micro Ingredients contains 92 essential nutrients including protein, calcium, iron, and fiber. Known as the "miracle tree," moringa provides natural energy, supports immune function, and offers powerful anti-inflammatory benefits. Perfect for adding nutritional density to your daily routine.',
+      shopLink: 'https://amzn.to/4nPp5w4',
+      image: moringaLeafImage,
+      rating: 4.4,
+      reviews: 4086,
+      features: [
+        'USDA organic certified',
+        '2 pounds bulk size',
+        'Rich in antioxidants',
+        'Vegan & gluten-free',
+        'Third-party tested',
+        'Sustainability certified'
+      ],
+      scientificBacking: 'Moringa has been extensively studied for its nutritional density and anti-inflammatory compounds, making it one of the most nutrient-dense plants on Earth.',
+      amazonVerified: true,
+      fastShipping: true
     },
     {
-      title: 'Beach Workout Malibu Style',
-      description: 'Take advantage of our beautiful coastline',
-      duration: '30 min',
-      level: 'Intermediate',
-      exercises: ['Sand sprints', 'Beach volleyball', 'Ocean swimming', 'Yoga on sand']
+      id: 'p3',
+      name: 'Kuli Kuli Moringa Superfood Powder',
+      price: '$18.61',
+      originalPrice: '$22.99',
+      benefits: ['More antioxidants than kale', 'Complete protein source', 'Natural detox support', 'Sustained energy'],
+      usage: 'Add to smoothies, yogurt, or mix with water daily',
+      category: 'ENERGY',
+      description: 'Premium moringa leaf powder that packs more nutrition than kale, turmeric, and matcha combined.',
+      detailedDescription: 'Kuli Kuli sources the highest quality moringa leaves to create this nutrient-dense superfood powder. With more antioxidants than kale and more protein than most plants, this moringa powder provides sustained energy and comprehensive nutritional support. Each serving delivers essential amino acids, vitamins, and minerals.',
+      shopLink: 'https://www.amazon.com/dp/B07FYP5NXK/ref=cm_sw_r_as_gl_api_gl_i_BMBCMYMXFJ3PHK2YFJBD?linkCode=ml1&tag=keatontyler-20&linkId=80ebe2a13df56716bf749ab07b79e230',
+      image: kuliKuliMoringaImage,
+      rating: 4.3,
+      reviews: 1420,
+      features: [
+        '100% pure USDA certified',
+        'Non-GMO moringa powder',
+        '10.6 oz single pack',
+        'Complete amino acid profile',
+        'Sustainably sourced',
+        'Women-owned business'
+      ],
+      scientificBacking: 'Clinical studies show moringa contains more anti-inflammatory power, antioxidants, protein, calcium, iron, and fiber compared to kale, turmeric, and matcha.',
+      amazonVerified: true,
+      fastShipping: true
+    },
+    {
+      id: 'p4',
+      name: 'U.S. Wellness Naturals Moringa Powder',
+      price: '$21.99',
+      originalPrice: '$26.99',
+      benefits: ['100% pure leaf powder', 'Raw from India', 'Resealable packaging', 'Versatile superfood'],
+      usage: 'Perfect for smoothies, drinks, tea, and recipes',
+      category: 'ENERGY',
+      description: '1 LB certified organic moringa powder with no stems - just pure, potent leaf nutrition in a convenient resealable bag.',
+      detailedDescription: 'U.S. Wellness Naturals delivers premium moringa powder made exclusively from leaves (no stems) for maximum potency. This 100% certified organic powder is raw-processed in India to preserve all nutrients. The convenient 1-pound resealable bag makes it perfect for daily use in smoothies, beverages, and recipes.',
+      shopLink: 'https://amzn.to/47XJA4Y',
+      image: usWellnessMoringaImage,
+      rating: 4.4,
+      reviews: 4092,
+      features: [
+        '100% certified organic',
+        'Pure leaf NO stems',
+        '1 LB (16oz) size',
+        'Raw from India',
+        'Resealable bag',
+        'Amazon\'s Choice'
+      ],
+      scientificBacking: 'Moringa leaves contain the highest concentration of nutrients, and this stem-free powder ensures maximum bioavailability of vitamins, minerals, and antioxidants.',
+      amazonVerified: true,
+      fastShipping: true
+    },
+    {
+      id: 'p5',
+      name: 'Premium Manuka Honey',
+      price: '$24.99',
+      originalPrice: '$29.99',
+      benefits: ['Immunity boost', 'Natural energy', 'Antibacterial properties', 'Digestive support'],
+      usage: 'Add 1-2 teaspoons to morning tea, smoothies, or take directly',
+      category: 'IMMUNITY',
+      description: 'Raw, unprocessed Manuka honey with high MGO content for maximum therapeutic benefits and immune system support.',
+      detailedDescription: 'Sourced from pristine New Zealand landscapes, this premium Manuka honey contains active compounds that provide natural antibacterial properties and immune system support. Perfect for busy West LA professionals seeking natural wellness solutions.',
+      shopLink: 'https://amazon.com/dp/B01K0PKS5M',
+      image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=600',
+      rating: 4.6,
+      reviews: 892,
+      features: [
+        'MGO 550+ certified',
+        'Raw & unprocessed',
+        'Single-origin New Zealand',
+        'Glass jar packaging',
+        'Traceable source',
+        '12oz premium size'
+      ],
+      scientificBacking: 'Manuka honey has been studied for its unique antibacterial properties and potential immune system benefits.',
+      amazonVerified: true,
+      fastShipping: true
     }
   ];
 
@@ -354,56 +469,106 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Fitness Plans Section */}
-      <section id="fitness" className="section-padding bg-card/30">
-        <div className="max-w-6xl mx-auto container-padding">
+      {/* The Power of 5 Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="heading-secondary mb-6">Fitness Plans for Your Busy West LA Schedule</h2>
-            <p className="text-wellness max-w-3xl mx-auto">
-              Quick, effective workouts designed for West LA lifestyles. Boost with our supplements for maximum results!
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <span className="glow-text">THE POWER OF 5</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+              The 5 most powerful health supplements that will transform your wellness journey. 
+              Carefully selected from Amazon's top-rated products for maximum potency and results.
             </p>
+            <div className="flex justify-center">
+              <Badge className="px-6 py-3 text-lg bg-primary/20 text-primary border-primary">
+                ⭐ Amazon's Most Trusted Wellness Products ⭐
+              </Badge>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {fitnessPlans.map((plan, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center mb-4">
-                  <Dumbbell className="w-8 h-8 text-primary mr-3" />
-                  <div>
-                    <h3 className="text-xl font-semibold">{plan.title}</h3>
-                    <div className="flex gap-2 mt-1">
-                      <span className="text-xs bg-primary text-primary-foreground px-2 py-1 rounded">
-                        {plan.duration}
-                      </span>
-                      <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
-                        {plan.level}
-                      </span>
-                    </div>
+            {powerOf5Products.map((product, index) => (
+              <Card key={product.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary relative">
+                <div className="absolute top-4 left-4 z-10">
+                  <Badge className="bg-primary text-primary-foreground font-bold">
+                    #{index + 1} POWER PICK
+                  </Badge>
+                </div>
+                <div className="relative">
+                  <img 
+                    src={product.image} 
+                    alt={`${product.name} premium supplement from Amazon`}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute top-4 right-4 flex flex-col gap-2">
+                    {product.amazonVerified && (
+                      <Badge variant="secondary" className="bg-orange-500 text-white">
+                        Amazon Verified
+                      </Badge>
+                    )}
+                    {product.fastShipping && (
+                      <Badge variant="secondary">
+                        <Truck className="w-3 h-3 mr-1" />
+                        Prime
+                      </Badge>
+                    )}
                   </div>
                 </div>
                 
-                <p className="text-wellness mb-4">{plan.description}</p>
-                
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Exercises:</h4>
-                  <ul className="space-y-1">
-                    {plan.exercises.map((exercise, i) => (
-                      <li key={i} className="text-sm text-muted-foreground flex items-center">
-                        <CheckCircle className="w-3 h-3 text-secondary mr-2" />
-                        {exercise}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <CardContent className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground mb-2">{product.name}</h3>
+                      <div className="flex items-center mb-2">
+                        <div className="flex items-center">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-muted-foreground'}`} />
+                          ))}
+                          <span className="ml-2 text-sm text-muted-foreground">
+                            {product.rating} ({product.reviews} reviews)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-primary">{product.price}</div>
+                      {product.originalPrice && (
+                        <div className="text-sm text-muted-foreground line-through">{product.originalPrice}</div>
+                      )}
+                    </div>
+                  </div>
 
-                <div className="bg-muted/50 p-3 rounded-lg text-sm">
-                  <p><strong>Pro Tip:</strong> Take black seed oil 30 minutes before your workout for enhanced energy and endurance!</p>
-                </div>
-                
-                <Button className="btn-secondary w-full mt-4">
-                  Download Plan
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    {product.detailedDescription}
+                  </p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-foreground mb-2 flex items-center text-sm">
+                      <Zap className="w-4 h-4 mr-2 text-primary" />
+                      Key Benefits
+                    </h4>
+                    <div className="grid grid-cols-1 gap-1">
+                      {product.benefits.slice(0, 3).map((benefit, i) => (
+                        <div key={i} className="flex items-center text-xs">
+                          <CheckCircle className="w-3 h-3 text-secondary mr-2 flex-shrink-0" />
+                          {benefit}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
+                    <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
+                      Shop on Amazon - {product.price}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </a>
+                  </Button>
+
+                  <p className="text-xs text-muted-foreground text-center mt-2">
+                    ✓ Amazon Prime shipping • ✓ 30-day returns
+                  </p>
+                </CardContent>
               </Card>
             ))}
           </div>
