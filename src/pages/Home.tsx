@@ -313,7 +313,7 @@ export const Home = () => {
           </div>
           
           <p className="text-wellness max-w-4xl mx-auto mb-8">
-            Affordable honey, black seed oil, and seamoss, plus expert advice for busy professionals 
+            Discover our <span className="glow-text">Power of 5</span> elite supplements plus affordable wellness essentials for busy professionals 
             and students in Venice, Santa Monica, Malibu, and more!
           </p>
 

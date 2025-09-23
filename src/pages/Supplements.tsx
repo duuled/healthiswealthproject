@@ -25,6 +25,12 @@ import nutricostAstragalusImage from '@/assets/nutricost-astragalus-powder.jpg';
 import elanenAstragalusImage from '@/assets/elanen-astragalus-tea.jpg';
 import amazingIndiaNeemImage from '@/assets/amazing-india-neem-powder.jpg';
 import vitamaticNeemImage from '@/assets/vitamatic-neem-powder.jpg';
+import pureShilajitImage from '@/assets/pure-shilajit-supplement.jpg';
+import seaMossGummiesImage from '@/assets/sea-moss-gummies.jpg';
+import magnesiumSupplementImage from '@/assets/magnesium-supplement.jpg';
+import berberineSupplementImage from '@/assets/berberine-supplement.jpg';
+import jointSupportImage from '@/assets/joint-support-supplement.jpg';
+import glycoOptimizerImage from '@/assets/glyco-optimizer.jpg';
 
 export const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -66,7 +72,7 @@ export const Supplements = () => {
       category: 'IMMUNITY',
       description: 'Premium mushroom powder blend featuring powerful immune-supporting fungi for comprehensive wellness and vitality enhancement.',
       detailedDescription: "Mario's Mushroom Power combines the most potent medicinal mushrooms in one revolutionary formula. This expertly crafted blend features reishi, cordyceps, lion's mane, and shiitake mushrooms to create a powerful immune defense system. Each serving delivers concentrated nutrients that support your body's natural healing processes, enhance cellular regeneration, and provide comprehensive wellness support for optimal health and vitality.",
-      shopLink: 'https://amzn.to/47YErK2',
+      shopLink: 'https://amzn.to/3W2VwLk',
       image: mariosMushroomImage,
       rating: 5.0,
       reviews: 2156,
@@ -92,7 +98,7 @@ export const Supplements = () => {
       category: 'METABOLIC',
       description: 'Advanced berberine supplement with phytosome technology for superior absorption and maximum metabolic benefits.',
       detailedDescription: 'Our Berberine Phytosome Complex utilizes cutting-edge phytosome technology to enhance absorption by up to 10 times compared to regular berberine. This powerful compound supports healthy blood sugar levels, cardiovascular function, and metabolic wellness. Perfect for individuals seeking natural support for their metabolic health journey.',
-      shopLink: 'https://amazon.com/dp/berberine-complex',
+      shopLink: 'https://amzn.to/4gDJKk1',
       image: berberineComplexImage,
       rating: 4.8,
       reviews: 1247,
@@ -235,6 +241,162 @@ export const Supplements = () => {
         'Premium quality'
       ],
       scientificBacking: 'Neem has been used in Ayurvedic medicine for over 4000 years and modern research confirms its antimicrobial, anti-inflammatory, and skin-supporting properties.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 12,
+      name: 'Pure Shilajit Complex - Premium Grade',
+      price: '$32.99',
+      originalPrice: '$39.99',
+      benefits: ['Natural energy boost', 'Cognitive support', 'Mineral-rich formula', 'Adaptogenic properties'],
+      usage: 'Take 1-2 capsules daily with water, preferably with meals',
+      category: 'ENERGY',
+      description: 'Authentic Himalayan shilajit extract with over 85 trace minerals and fulvic acid for natural energy and vitality.',
+      detailedDescription: 'Sourced from the pristine Himalayan mountains, this premium shilajit complex contains naturally occurring fulvic acid and over 85 essential trace minerals. This ancient substance has been revered in Ayurvedic medicine for centuries for its ability to enhance energy, support cognitive function, and promote overall vitality.',
+      shopLink: 'https://amzn.to/4msyIzp',
+      image: pureShilajitImage,
+      rating: 4.4,
+      reviews: 892,
+      features: [
+        'Authentic Himalayan source',
+        '85+ trace minerals',
+        'High fulvic acid content',
+        '60 vegetarian capsules',
+        'Third-party tested',
+        'Traditional Ayurvedic formula'
+      ],
+      scientificBacking: 'Shilajit has been studied for its potential cognitive and energy-supporting benefits, with research showing its rich mineral content and bioactive compounds.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 13,
+      name: 'Black Girl Vitamins Sea Moss Gummies',
+      price: '$26.99',
+      originalPrice: '$31.99',
+      benefits: ['92 essential minerals', 'Thyroid support', 'Digestive wellness', 'Natural energy boost'],
+      usage: 'Take 2 gummies daily, preferably with meals',
+      category: 'IMMUNITY',
+      description: 'Delicious sea moss gummies packed with 92 essential minerals for comprehensive wellness support and natural vitality.',
+      detailedDescription: 'These premium sea moss gummies from Black Girl Vitamins deliver the power of wildcrafted Irish sea moss in a convenient, tasty format. Rich in iodine, potassium, and calcium, these gummies support thyroid function, digestive health, and provide natural energy throughout the day.',
+      shopLink: 'https://amzn.to/4njtDuM',
+      image: seaMossGummiesImage,
+      rating: 4.3,
+      reviews: 1567,
+      features: [
+        'Wildcrafted Irish sea moss',
+        '92 essential minerals',
+        'Delicious berry flavor',
+        '60 gummies per bottle',
+        'Vegan & gluten-free',
+        'Women-owned business'
+      ],
+      scientificBacking: 'Sea moss is naturally rich in iodine and essential minerals that support thyroid function and overall metabolic health.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 14,
+      name: 'BiOptimizers Magnesium Breakthrough',
+      price: '$49.95',
+      originalPrice: '$59.99',
+      benefits: ['7 forms of magnesium', 'Better sleep quality', 'Muscle recovery', 'Stress reduction'],
+      usage: 'Take 2-4 capsules before bed or as directed by healthcare professional',
+      category: 'IMMUNITY',
+      description: 'Complete magnesium complex featuring 7 different forms of magnesium for optimal absorption and comprehensive wellness support.',
+      detailedDescription: 'BiOptimizers Magnesium Breakthrough is the only supplement that contains all 7 essential forms of magnesium in one formula. This comprehensive blend supports better sleep, muscle recovery, stress reduction, and overall cellular function. Each form of magnesium targets different body systems for maximum effectiveness.',
+      shopLink: 'https://amzn.to/46wlaNp',
+      image: magnesiumSupplementImage,
+      rating: 4.6,
+      reviews: 2134,
+      features: [
+        '7 forms of magnesium',
+        'Maximum bioavailability',
+        '120 vegetarian capsules',
+        'No synthetic additives',
+        'Third-party tested',
+        'Science-backed formula'
+      ],
+      scientificBacking: 'Magnesium is essential for over 300 enzymatic reactions in the body and supports cardiovascular health, muscle function, and sleep quality.',
+      bestseller: true,
+      fastShipping: true
+    },
+    {
+      id: 15,
+      name: 'Berberine Phytosome with Berbevis',
+      price: '$44.99',
+      originalPrice: '$52.99',
+      benefits: ['Enhanced absorption', 'Metabolic support', 'Blood sugar balance', 'Cardiovascular health'],
+      usage: 'Take 1 capsule twice daily with meals',
+      category: 'METABOLIC',
+      description: 'Advanced berberine formula with Berbevis phytosome technology for 10x better absorption than standard berberine.',
+      detailedDescription: 'This premium berberine supplement features Berbevis, a patented phytosome complex that enhances absorption by up to 10 times compared to regular berberine. This advanced formula supports healthy metabolism, blood sugar balance, and cardiovascular wellness with superior bioavailability.',
+      shopLink: 'https://amzn.to/3Vx6wAw',
+      image: berberineSupplementImage,
+      rating: 4.7,
+      reviews: 845,
+      features: [
+        'Berbevis phytosome technology',
+        '10x enhanced absorption',
+        '60 vegetarian capsules',
+        'Clinically studied',
+        'GMP certified',
+        'No artificial fillers'
+      ],
+      scientificBacking: 'Berberine with phytosome technology has been clinically shown to have significantly better bioavailability and effectiveness for metabolic support.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 16,
+      name: 'OptiWize Joint Support Complex',
+      price: '$38.95',
+      originalPrice: '$45.99',
+      benefits: ['Joint mobility', 'Cartilage support', 'Anti-inflammatory', 'Pain relief'],
+      usage: 'Take 2 capsules daily with food',
+      category: 'IMMUNITY',
+      description: 'Comprehensive joint support formula with glucosamine, chondroitin, and MSM for optimal joint health and mobility.',
+      detailedDescription: 'OptiWize Joint Support Complex combines the most effective joint-supporting ingredients including glucosamine sulfate, chondroitin sulfate, MSM, and turmeric extract. This powerful formula supports cartilage health, reduces inflammation, and promotes optimal joint mobility and comfort.',
+      shopLink: 'https://amzn.to/3W2TLxJ',
+      image: jointSupportImage,
+      rating: 4.4,
+      reviews: 1223,
+      features: [
+        'Glucosamine & chondroitin',
+        'MSM for inflammation',
+        'Turmeric extract added',
+        '90 capsules per bottle',
+        'Easy to swallow',
+        'Third-party tested'
+      ],
+      scientificBacking: 'Glucosamine and chondroitin have been extensively studied for their ability to support joint health and cartilage maintenance.',
+      bestseller: false,
+      fastShipping: true
+    },
+    {
+      id: 17,
+      name: 'Glyco Optimizer Blood Sugar Support',
+      price: '$35.99',
+      originalPrice: '$42.99',
+      benefits: ['Blood sugar balance', 'Insulin sensitivity', 'Glucose metabolism', 'Energy stability'],
+      usage: 'Take 1-2 capsules with meals, up to 3 times daily',
+      category: 'METABOLIC',
+      description: 'Advanced glucose support formula with chromium, alpha lipoic acid, and cinnamon extract for healthy blood sugar management.',
+      detailedDescription: 'Glyco Optimizer combines scientifically-backed ingredients including chromium picolinate, alpha lipoic acid, bitter melon extract, and Ceylon cinnamon to support healthy glucose metabolism and insulin sensitivity. This comprehensive formula helps maintain stable energy levels throughout the day.',
+      shopLink: 'https://amzn.to/426YUbG',
+      image: glycoOptimizerImage,
+      rating: 4.5,
+      reviews: 678,
+      features: [
+        'Chromium picolinate',
+        'Alpha lipoic acid',
+        'Ceylon cinnamon extract',
+        '120 vegetarian capsules',
+        'No artificial additives',
+        'Clinically studied ingredients'
+      ],
+      scientificBacking: 'The ingredients in this formula have been clinically studied for their ability to support healthy glucose metabolism and insulin function.',
       bestseller: false,
       fastShipping: true
     }
