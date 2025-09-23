@@ -35,8 +35,7 @@ export const Home = () => {
       usage: 'Add to morning tea or smoothies',
       category: 'IMMUNITY',
       description: 'Raw, unprocessed Manuka honey perfect for busy West LA professionals',
-      amazonLink: 'https://amazon.com/dp/B01K0PKS5M',
-      isTikTok: false,
+      shopLink: 'https://amazon.com/dp/B01K0PKS5M',
       image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=400'
     },
     {
@@ -46,8 +45,7 @@ export const Home = () => {
       usage: 'Take 2 capsules daily before breakfast',
       category: 'ENERGY',
       description: 'Cold-pressed black seed oil capsules for sustained energy throughout your day',
-      amazonLink: 'https://amazon.com/dp/B075QBQZPX',
-      isTikTok: false,
+      shopLink: 'https://amazon.com/dp/B075QBQZPX',
       image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400'
     },
     {
@@ -56,42 +54,38 @@ export const Home = () => {
       benefits: 'Gut health, 92 minerals, digestive support',
       usage: 'Add to smoothies or take 2 tbsp daily',
       category: 'DIGESTIVE',
-      description: 'Wildcrafted sea moss gel packed with essential minerals',
-      amazonLink: 'https://amazon.com/dp/B08T1WZXZD',
-      isTikTok: false,
+      description: 'Wildcrafted sea moss gel packed with essential minerals and nutrients',
+      shopLink: 'https://amazon.com/dp/B08T1WZXZD',
       image: 'https://images.unsplash.com/photo-1609501676725-7186f674e2c2?w=400'
     },
     {
-      name: 'TikTok Viral Chlorophyll Drops',
+      name: 'Premium Chlorophyll Drops',
       price: '$16.99',
       benefits: 'Detoxification, energy boost, clear skin',
       usage: 'Add 15 drops to water daily',
       category: 'DETOX',
-      description: '🎵 TikTok Favorite! Liquid chlorophyll drops for that viral "green water" trend',
-      amazonLink: 'https://amazon.com/dp/B08XXZKJYG',
-      isTikTok: true,
+      description: 'Liquid chlorophyll drops for natural detoxification and energy enhancement',
+      shopLink: 'https://amazon.com/dp/B08XXZKJYG',
       image: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=400'
     },
     {
-      name: 'TikTok Famous Ashwagandha Gummies',
+      name: 'Elite Ashwagandha Gummies',
       price: '$22.95',
       benefits: 'Stress relief, better sleep, mood support',
       usage: 'Take 2 gummies daily',
       category: 'STRESS',
-      description: '🎵 TikTok Viral! Stress-busting gummies loved by influencers and health enthusiasts',
-      amazonLink: 'https://amazon.com/dp/B089QQ7YPH',
-      isTikTok: true,
+      description: 'Premium stress-relief gummies designed for busy professionals and students',
+      shopLink: 'https://amazon.com/dp/B089QQ7YPH',
       image: 'https://images.unsplash.com/photo-1607635662717-f50b1077cdf6?w=400'
     },
     {
-      name: 'TikTok Trending Collagen Powder',
+      name: 'Professional Collagen Powder',
       price: '$29.99',
       benefits: 'Skin health, joint support, hair growth',
       usage: 'Mix 1 scoop in coffee or smoothie',
       category: 'BEAUTY',
-      description: '🎵 TikTok Must-Have! Marine collagen powder for that glow-up everyone\'s talking about',
-      amazonLink: 'https://amazon.com/dp/B07QGXKQZZ',
-      isTikTok: true,
+      description: 'Marine collagen powder for enhanced skin elasticity and overall wellness',
+      shopLink: 'https://amazon.com/dp/B07QGXKQZZ',
       image: 'https://images.unsplash.com/photo-1609107200150-9cc025d56d52?w=400'
     }
   ];
@@ -221,17 +215,15 @@ export const Home = () => {
       <section id="supplements" className="section-padding bg-card/30">
         <div className="max-w-6xl mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="heading-secondary mb-6">Your Affordable Natural Supplements</h2>
+            <h2 className="heading-secondary mb-6">Elite Wellness Essentials</h2>
             <p className="text-wellness max-w-3xl mx-auto">
-              Skip the overpriced trends and invest in proven wellness solutions that fit your budget
+              Discover our handpicked collection of premium natural supplements, carefully selected for their exceptional quality and proven wellness benefits.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {supplements.map((supplement, index) => (
-              <Card key={index} className={`hover:shadow-lg transition-shadow duration-300 border-2 hover:border-primary ${
-                supplement.isTikTok ? 'bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-950/20 dark:to-purple-950/20' : ''
-              }`}>
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2 hover:border-primary">
                 <CardContent className="p-6">
                   <div className="relative mb-4">
                     <img 
@@ -239,11 +231,6 @@ export const Home = () => {
                       alt={`${supplement.name} product preview`}
                       className="w-full h-48 object-cover rounded-lg"
                     />
-                    {supplement.isTikTok && (
-                      <div className="absolute top-2 right-2 bg-black text-white px-2 py-1 rounded-full text-xs font-bold">
-                        TikTok Viral
-                      </div>
-                    )}
                   </div>
                   
                   <div className="flex items-center mb-4">
@@ -262,8 +249,8 @@ export const Home = () => {
                   </div>
 
                   <Button asChild className="btn-primary w-full">
-                    <a href={supplement.amazonLink} target="_blank" rel="noopener noreferrer">
-                      Shop on Amazon
+                    <a href={supplement.shopLink} target="_blank" rel="noopener noreferrer">
+                      Shop Now
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </a>
                   </Button>
