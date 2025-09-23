@@ -211,13 +211,22 @@ export const Home = () => {
             </span>
           </div>
 
-          <Button 
-            onClick={() => scrollToSection('supplements')}
-            className="btn-secondary text-lg px-8 py-4"
-          >
-            Explore Wellness Now
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button 
+              onClick={() => scrollToSection('supplements')}
+              variant="outline"
+              className="text-lg px-8 py-4"
+            >
+              View Preview
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button asChild className="btn-secondary text-lg px-8 py-4">
+              <a href="/supplements">
+                Shop All Supplements
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
