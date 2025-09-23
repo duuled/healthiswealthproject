@@ -164,4 +164,18 @@ body {
   .affirmation-card {
     @apply p-6 rounded-lg border-2 border-primary bg-card text-center shadow-lg halo-glow;
   }
+
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3), 0 0 30px hsl(var(--primary) / 0.1);
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from {
+      text-shadow: 0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3), 0 0 30px hsl(var(--primary) / 0.1);
+    }
+    to {
+      text-shadow: 0 0 15px hsl(var(--primary) / 0.8), 0 0 25px hsl(var(--primary) / 0.5), 0 0 35px hsl(var(--primary) / 0.3);
+    }
+  }
 }
