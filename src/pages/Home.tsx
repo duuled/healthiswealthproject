@@ -29,6 +29,16 @@ export const Home = () => {
 
   const supplements = [
     {
+      name: 'Berberine Phytosome Complex',
+      price: '$59.95',
+      benefits: 'Metabolic support, heart health, blood sugar management',
+      usage: 'Take 1-2 capsules daily with meals',
+      category: 'METABOLIC',
+      description: 'Enhanced absorption berberine formula for metabolic wellness and cardiovascular support',
+      shopLink: 'https://amzn.to/4gDJKk1',
+      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400'
+    },
+    {
       name: 'Premium Manuka Honey',
       price: '$24.99',
       benefits: 'Immunity boost, natural energy, antibacterial properties',
