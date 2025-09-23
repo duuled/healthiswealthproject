@@ -44,8 +44,6 @@ export const Header = () => {
     { label: 'Home', id: 'home' },
     { label: 'Supplements', id: 'supplements' },
     { label: 'Directory', id: 'directory' },
-    { label: 'Health Advice', id: 'health-advice' },
-    { label: 'Mental Health', id: 'mental-health' },
     { label: 'Fitness Plans', id: 'fitness' },
     { label: 'Contact', id: 'contact' }
   ];
@@ -55,17 +53,17 @@ export const Header = () => {
       isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-lg' : 'bg-background/80'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo and Brand */}
-          <div className="flex items-center space-x-4">
+        <div className="flex justify-between items-center py-2">
+          {/* Logo and Brand - Minimized */}
+          <div className="flex items-center space-x-2">
             <img 
               src={logoImage} 
               alt="Bitten leaf logo with money sign for Health Is Wealth in Santa Monica" 
-              className="w-12 h-12 leaf-animation" 
+              className="w-8 h-8 leaf-animation" 
             />
             <div>
-              <h1 className="text-xl font-bold text-foreground">Health Is Wealth</h1>
-              <p className="text-sm text-primary font-medium">
+              <h1 className="text-lg font-bold text-foreground">Health Is Wealth</h1>
+              <p className="text-xs text-primary font-medium hidden sm:block">
                 {motivationalQuotes[currentQuoteIndex]}
               </p>
             </div>
@@ -84,21 +82,14 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* CTA and Search */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-              <input
-                type="text"
-                placeholder="Search supplements..."
-                className="pl-10 pr-4 py-2 bg-input border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
+          {/* CTA - Minimized */}
+          <div className="hidden md:flex items-center">
             <Button 
               onClick={() => scrollToSection('supplements')}
+              size="sm"
               className="btn-primary"
             >
-              Get Free Health Tips
+              Shop Now
             </Button>
           </div>
 

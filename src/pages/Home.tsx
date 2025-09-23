@@ -29,28 +29,70 @@ export const Home = () => {
 
   const supplements = [
     {
-      name: 'Premium Honey',
-      price: 'From $12',
-      benefits: 'Immunity boost, natural energy, antioxidants',
+      name: 'Premium Manuka Honey',
+      price: '$24.99',
+      benefits: 'Immunity boost, natural energy, antibacterial properties',
       usage: 'Add to morning tea or smoothies',
       category: 'IMMUNITY',
-      description: 'Raw, unprocessed honey perfect for busy West LA professionals'
+      description: 'Raw, unprocessed Manuka honey perfect for busy West LA professionals',
+      amazonLink: 'https://amazon.com/dp/B01K0PKS5M',
+      isTikTok: false,
+      image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=400'
     },
     {
-      name: 'Black Seed Oil',
-      price: 'From $18',
+      name: 'Black Seed Oil Capsules',
+      price: '$19.95',
       benefits: 'Energy, inflammation support, heart health',
-      usage: 'Take 1 tsp daily before breakfast',
+      usage: 'Take 2 capsules daily before breakfast',
       category: 'ENERGY',
-      description: 'Cold-pressed black seed oil for sustained energy throughout your day'
+      description: 'Cold-pressed black seed oil capsules for sustained energy throughout your day',
+      amazonLink: 'https://amazon.com/dp/B075QBQZPX',
+      isTikTok: false,
+      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400'
     },
     {
-      name: 'Sea Moss Gel',
-      price: 'From $25',
+      name: 'Organic Sea Moss Gel',
+      price: '$32.99',
       benefits: 'Gut health, 92 minerals, digestive support',
       usage: 'Add to smoothies or take 2 tbsp daily',
       category: 'DIGESTIVE',
-      description: 'Wildcrafted sea moss gel packed with essential minerals'
+      description: 'Wildcrafted sea moss gel packed with essential minerals',
+      amazonLink: 'https://amazon.com/dp/B08T1WZXZD',
+      isTikTok: false,
+      image: 'https://images.unsplash.com/photo-1609501676725-7186f674e2c2?w=400'
+    },
+    {
+      name: 'TikTok Viral Chlorophyll Drops',
+      price: '$16.99',
+      benefits: 'Detoxification, energy boost, clear skin',
+      usage: 'Add 15 drops to water daily',
+      category: 'DETOX',
+      description: '🎵 TikTok Favorite! Liquid chlorophyll drops for that viral "green water" trend',
+      amazonLink: 'https://amazon.com/dp/B08XXZKJYG',
+      isTikTok: true,
+      image: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=400'
+    },
+    {
+      name: 'TikTok Famous Ashwagandha Gummies',
+      price: '$22.95',
+      benefits: 'Stress relief, better sleep, mood support',
+      usage: 'Take 2 gummies daily',
+      category: 'STRESS',
+      description: '🎵 TikTok Viral! Stress-busting gummies loved by influencers and health enthusiasts',
+      amazonLink: 'https://amazon.com/dp/B089QQ7YPH',
+      isTikTok: true,
+      image: 'https://images.unsplash.com/photo-1607635662717-f50b1077cdf6?w=400'
+    },
+    {
+      name: 'TikTok Trending Collagen Powder',
+      price: '$29.99',
+      benefits: 'Skin health, joint support, hair growth',
+      usage: 'Mix 1 scoop in coffee or smoothie',
+      category: 'BEAUTY',
+      description: '🎵 TikTok Must-Have! Marine collagen powder for that glow-up everyone\'s talking about',
+      amazonLink: 'https://amazon.com/dp/B07QGXKQZZ',
+      isTikTok: true,
+      image: 'https://images.unsplash.com/photo-1609107200150-9cc025d56d52?w=400'
     }
   ];
 
@@ -187,8 +229,23 @@ export const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {supplements.map((supplement, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2 hover:border-primary">
+              <Card key={index} className={`hover:shadow-lg transition-shadow duration-300 border-2 hover:border-primary ${
+                supplement.isTikTok ? 'bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-950/20 dark:to-purple-950/20' : ''
+              }`}>
                 <CardContent className="p-6">
+                  <div className="relative mb-4">
+                    <img 
+                      src={supplement.image} 
+                      alt={`${supplement.name} product preview`}
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                    {supplement.isTikTok && (
+                      <div className="absolute top-2 right-2 bg-black text-white px-2 py-1 rounded-full text-xs font-bold">
+                        TikTok Viral
+                      </div>
+                    )}
+                  </div>
+                  
                   <div className="flex items-center mb-4">
                     <Leaf className="w-8 h-8 text-secondary mr-3" />
                     <div>
@@ -204,9 +261,11 @@ export const Home = () => {
                     <p className="text-sm"><strong>Usage:</strong> {supplement.usage}</p>
                   </div>
 
-                  <Button className="btn-primary w-full">
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                  <Button asChild className="btn-primary w-full">
+                    <a href={supplement.amazonLink} target="_blank" rel="noopener noreferrer">
+                      Shop on Amazon
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -285,167 +344,6 @@ export const Home = () => {
               <strong>Disclaimer:</strong> Recommendations based on affordability and quality for busy West LA residents. 
               Visit stores and compare for yourself!
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Health Advice Section */}
-      <section id="health-advice" className="section-padding bg-card/30">
-        <div className="max-w-6xl mx-auto container-padding">
-          <div className="text-center mb-16">
-            <h2 className="heading-secondary mb-6">Free Health Tips for West LA Lifestyles</h2>
-            <p className="text-wellness max-w-3xl mx-auto">
-              Practical wellness advice tailored to your busy West LA life
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-primary mr-3" />
-                <h3 className="text-xl font-semibold">Morning Energy Boost</h3>
-              </div>
-              <p className="text-wellness mb-4">
-                Start your Santa Monica commute right: Add 1 tsp of black seed oil to your morning routine 
-                for sustained energy without the coffee crash.
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Take on empty stomach</li>
-                <li>• Wait 30 minutes before eating</li>
-                <li>• Perfect before Venice Beach workouts</li>
-              </ul>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center mb-4">
-                <Heart className="w-8 h-8 text-secondary mr-3" />
-                <h3 className="text-xl font-semibold">Gut Health for Stress</h3>
-              </div>
-              <p className="text-wellness mb-4">
-                Marina del Rey professionals: Combat work stress by adding seamoss to your daily smoothie. 
-                Your gut health affects your mood!
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• 2 tbsp daily in smoothies</li>
-                <li>• Rich in 92 essential minerals</li>
-                <li>• Supports digestive health</li>
-              </ul>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center mb-4">
-                <Shield className="w-8 h-8 text-success mr-3" />
-                <h3 className="text-xl font-semibold">Immunity for Students</h3>
-              </div>
-              <p className="text-wellness mb-4">
-                Westchester students: Keep your immune system strong during finals with raw honey. 
-                Natural antibacterial properties keep you healthy.
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• 1 tbsp in warm water daily</li>
-                <li>• Local honey helps with allergies</li>
-                <li>• Great in tea or smoothies</li>
-              </ul>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center mb-4">
-                <Brain className="w-8 h-8 text-accent mr-3" />
-                <h3 className="text-xl font-semibold">Focus & Clarity</h3>
-              </div>
-              <p className="text-wellness mb-4">
-                Malibu remote workers: Combine all three supplements for optimal brain function. 
-                Natural nootropics without the side effects.
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Morning: Black seed oil</li>
-                <li>• Midday: Seamoss smoothie</li>
-                <li>• Evening: Honey tea</li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Mental Health Section */}
-      <section id="mental-health" className="section-padding">
-        <div className="max-w-6xl mx-auto container-padding">
-          <div className="text-center mb-16">
-            <h2 className="heading-secondary mb-4">Nourish Your Mind with Health Is Wealth in West LA!</h2>
-            <p className="text-xl text-primary font-semibold mb-8">
-              Free Mental Wellness Tips and Affirmations for Busy Lives in Santa Monica, Venice, and Beyond!
-            </p>
-            <img 
-              src={mentalWellnessImage} 
-              alt="Peaceful meditation scene with calming wellness auras" 
-              className="mx-auto rounded-lg shadow-lg mb-8 wave-effect"
-            />
-          </div>
-
-          {/* Mental Health Advice */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-semibold text-center mb-8">Mental Health Advice</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="p-6">
-                <h4 className="font-semibold mb-3 text-primary">Take Short Breaks</h4>
-                <p className="text-sm text-wellness">
-                  Step away for 5 minutes every hour. Walk along Venice Beach or sip tea in Malibu—small pauses recharge your mind!
-                </p>
-              </Card>
-              
-              <Card className="p-6">
-                <h4 className="font-semibold mb-3 text-primary">Practice Gratitude</h4>
-                <p className="text-sm text-wellness">
-                  Jot down 3 things you're thankful for daily (e.g., a sunny Santa Monica morning or a supportive friend). It shifts your focus to positivity.
-                </p>
-              </Card>
-              
-              <Card className="p-6">
-                <h4 className="font-semibold mb-3 text-primary">Breathe Deeply</h4>
-                <p className="text-sm text-wellness">
-                  Try a 1-minute breathing exercise—inhale for 4 seconds, hold for 4, exhale for 4. Perfect for a quick reset during a hectic day in Marina del Rey.
-                </p>
-              </Card>
-              
-              <Card className="p-6">
-                <h4 className="font-semibold mb-3 text-primary">Connect Locally</h4>
-                <p className="text-sm text-wellness">
-                  Reach out to a friend in Westchester or join a West LA community group. Human connection boosts mental resilience.
-                </p>
-              </Card>
-              
-              <Card className="p-6">
-                <h4 className="font-semibold mb-3 text-primary">Limit Screen Time</h4>
-                <p className="text-sm text-wellness">
-                  Set boundaries on devices—replace scrolling with a nature walk or meditation to ease stress.
-                </p>
-              </Card>
-              
-              <Card className="p-6">
-                <h4 className="font-semibold mb-3 text-primary">Additional Resources</h4>
-                <p className="text-sm text-wellness">
-                  Explore free apps like Headspace or contact the West LA Mental Health Hotline at <strong>1-800-854-7771</strong>. Check for mindfulness workshops in Santa Monica!
-                </p>
-              </Card>
-            </div>
-          </div>
-
-          {/* Mental Health Affirmations */}
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-8">Daily Affirmations for West LA Warriors</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {affirmations.map((affirmation, index) => (
-                <div key={index} className="affirmation-card">
-                  <p className="text-lg font-medium text-foreground">"{affirmation}"</p>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-12">
-              <Button className="btn-primary text-lg px-8 py-4">
-                Start Your Mental Wellness Journey – Sign Up for Weekly Tips!
-              </Button>
-            </div>
           </div>
         </div>
       </section>
