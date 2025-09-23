@@ -42,6 +42,21 @@ export const Header = () => {
     }
   };
 
+  const handleNavigation = (item) => {
+    if (item.isLink) {
+      // For external links, let Link component handle it
+      setIsMenuOpen(false);
+    } else {
+      // For scroll-to-section on current page
+      if (location.pathname === '/') {
+        scrollToSection(item.id);
+      } else {
+        // If on different page, navigate to home first then scroll
+        window.location.href = `/#${item.id}`;
+      }
+    }
+  };
+
   const navItems = [
     { label: 'Home', id: 'home', isLink: false },
     { label: 'Supplements', id: 'supplements', isLink: true, path: '/supplements' },
@@ -57,17 +72,19 @@ export const Header = () => {
         <div className="flex justify-between items-center py-2">
           {/* Logo and Brand - Minimized */}
           <div className="flex items-center space-x-2">
-            <img 
-              src={logoImage} 
-              alt="Bitten leaf logo with money sign for Health Is Wealth in Santa Monica" 
-              className="w-8 h-8 leaf-animation" 
-            />
-            <div>
-              <h1 className="text-lg font-bold text-foreground">Health Is Wealth</h1>
-              <p className="text-xs text-primary font-medium hidden sm:block">
-                {motivationalQuotes[currentQuoteIndex]}
-              </p>
-            </div>
+            <Link to="/" className="flex items-center space-x-2">
+              <img 
+                src={logoImage} 
+                alt="Bitten leaf logo with money sign for Health Is Wealth in Santa Monica" 
+                className="w-8 h-8 leaf-animation" 
+              />
+              <div>
+                <h1 className="text-lg font-bold text-foreground">Health Is Wealth</h1>
+                <p className="text-xs text-primary font-medium hidden sm:block">
+                  {motivationalQuotes[currentQuoteIndex]}
+                </p>
+              </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -77,15 +94,19 @@ export const Header = () => {
                 <Link
                   key={item.id}
                   to={item.path}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  className={`text-foreground hover:text-primary transition-colors duration-200 font-medium ${
+                    location.pathname === item.path ? 'text-primary' : ''
+                  }`}
                 >
                   {item.label}
                 </Link>
               ) : (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  onClick={() => handleNavigation(item)}
+                  className={`text-foreground hover:text-primary transition-colors duration-200 font-medium ${
+                    location.pathname === '/' && item.id ? 'hover:text-primary' : ''
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -120,7 +141,9 @@ export const Header = () => {
                   <Link
                     key={item.id}
                     to={item.path}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                    className={`block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2 ${
+                      location.pathname === item.path ? 'text-primary' : ''
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
@@ -128,7 +151,7 @@ export const Header = () => {
                 ) : (
                   <button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
+                    onClick={() => handleNavigation(item)}
                     className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
                   >
                     {item.label}
