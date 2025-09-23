@@ -22,7 +22,7 @@ export const Supplements = () => {
   const supplements = [
     {
       id: 1,
-      name: 'Renude Chagaccino - Chaga Mushroom Powder',
+      name: 'Morning Coffee Mushroom Powder',
       price: '$34.99',
       originalPrice: '$39.99',
       benefits: ['Natural energy boost', 'Immune system support', 'Adaptogenic properties', 'Zero calorie formula'],
