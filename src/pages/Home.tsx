@@ -29,81 +29,7 @@ import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
 import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 
 export const Home = () => {
-  const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [email, setEmail] = useState('');
-
-  const supplements = [
-    {
-      name: 'Berberine Phytosome Complex',
-      price: '$59.95',
-      benefits: 'Metabolic support, heart health, blood sugar management',
-      usage: 'Take 1-2 capsules daily with meals',
-      category: 'METABOLIC',
-      description: 'Enhanced absorption berberine formula for metabolic wellness and cardiovascular support',
-      shopLink: 'https://amzn.to/4gDJKk1',
-      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400'
-    },
-    {
-      name: 'Premium Manuka Honey',
-      price: '$24.99',
-      benefits: 'Immunity boost, natural energy, antibacterial properties',
-      usage: 'Add to morning tea or smoothies',
-      category: 'IMMUNITY',
-      description: 'Raw, unprocessed Manuka honey perfect for busy West LA professionals',
-      shopLink: 'https://amazon.com/dp/B01K0PKS5M',
-      image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=400'
-    },
-    {
-      name: 'Black Seed Oil Capsules',
-      price: '$19.95',
-      benefits: 'Energy, inflammation support, heart health',
-      usage: 'Take 2 capsules daily before breakfast',
-      category: 'ENERGY',
-      description: 'Cold-pressed black seed oil capsules for sustained energy throughout your day',
-      shopLink: 'https://amazon.com/dp/B075QBQZPX',
-      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400'
-    },
-    {
-      name: 'Organic Sea Moss Gel',
-      price: '$32.99',
-      benefits: 'Gut health, 92 minerals, digestive support',
-      usage: 'Add to smoothies or take 2 tbsp daily',
-      category: 'DIGESTIVE',
-      description: 'Wildcrafted sea moss gel packed with essential minerals and nutrients',
-      shopLink: 'https://amazon.com/dp/B08T1WZXZD',
-      image: 'https://images.unsplash.com/photo-1609501676725-7186f674e2c2?w=400'
-    },
-    {
-      name: 'Premium Chlorophyll Drops',
-      price: '$16.99',
-      benefits: 'Detoxification, energy boost, clear skin',
-      usage: 'Add 15 drops to water daily',
-      category: 'DETOX',
-      description: 'Liquid chlorophyll drops for natural detoxification and energy enhancement',
-      shopLink: 'https://amazon.com/dp/B08XXZKJYG',
-      image: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=400'
-    },
-    {
-      name: 'Elite Ashwagandha Gummies',
-      price: '$22.95',
-      benefits: 'Stress relief, better sleep, mood support',
-      usage: 'Take 2 gummies daily',
-      category: 'STRESS',
-      description: 'Premium stress-relief gummies designed for busy professionals and students',
-      shopLink: 'https://amazon.com/dp/B089QQ7YPH',
-      image: 'https://images.unsplash.com/photo-1607635662717-f50b1077cdf6?w=400'
-    },
-    {
-      name: 'Professional Collagen Powder',
-      price: '$29.99',
-      benefits: 'Skin health, joint support, hair growth',
-      usage: 'Mix 1 scoop in coffee or smoothie',
-      category: 'BEAUTY',
-      description: 'Marine collagen powder for enhanced skin elasticity and overall wellness',
-      shopLink: 'https://amazon.com/dp/B07QGXKQZZ',
-      image: 'https://images.unsplash.com/photo-1609107200150-9cc025d56d52?w=400'
-    }
-  ];
 
   const localStores = [
     {
@@ -345,52 +271,76 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Supplements Section */}
-      <section id="supplements" className="section-padding bg-card/30">
+      {/* Our Mission Section */}
+      <section id="supplements" className="py-20 bg-background">
         <div className="max-w-6xl mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="heading-secondary mb-6">Elite Wellness Essentials</h2>
-            <p className="text-wellness max-w-3xl mx-auto">
-              Discover our handpicked collection of premium natural supplements, carefully selected for their exceptional quality and proven wellness benefits.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {supplements.map((supplement, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2 hover:border-primary">
-                <CardContent className="p-6">
-                  <div className="relative mb-4">
-                    <img 
-                      src={supplement.image} 
-                      alt={`${supplement.name} product preview`}
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
-                  </div>
-                  
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              <span className="glow-text">Our Mission: Health is Wealth</span>
+            </h2>
+            <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl font-semibold text-foreground">
+                Born in Los Angeles, Health is Wealth is more than just a supplement brand – we're a movement toward sustainable wellness and environmental responsibility.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8 mt-12">
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5">
                   <div className="flex items-center mb-4">
-                    <Leaf className="w-8 h-8 text-secondary mr-3" />
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground">{supplement.name}</h3>
-                      <p className="text-primary font-bold">{supplement.price}</p>
-                    </div>
+                    <Leaf className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-2xl font-bold text-foreground">Environmental Commitment</h3>
                   </div>
-                  
-                  <p className="text-muted-foreground mb-4">{supplement.description}</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    <p className="text-sm"><strong>Benefits:</strong> {supplement.benefits}</p>
-                    <p className="text-sm"><strong>Usage:</strong> {supplement.usage}</p>
-                  </div>
+                  <p className="text-muted-foreground">
+                    We believe that true health extends beyond our bodies to our planet. Every product we recommend supports sustainable farming practices, eco-friendly packaging, and companies that share our vision of a healthier Earth. When you choose Health is Wealth, you're not just investing in your wellness – you're contributing to environmental preservation.
+                  </p>
+                </Card>
 
-                  <Button asChild className="btn-primary w-full">
-                    <a href={supplement.shopLink} target="_blank" rel="noopener noreferrer">
-                      Shop Now
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                <Card className="p-8 bg-gradient-to-br from-secondary/5 to-primary/5">
+                  <div className="flex items-center mb-4">
+                    <Heart className="w-8 h-8 text-secondary mr-3" />
+                    <h3 className="text-2xl font-bold text-foreground">Longevity Through Nature</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    We guide you toward healthy alternatives that promote longevity and vitality. Our carefully curated supplements are selected not just for their immediate benefits, but for their ability to support long-term wellness. We help you make informed decisions that lead to a longer, healthier, more vibrant life.
+                  </p>
+                </Card>
+              </div>
+
+              <div className="mt-12 p-8 bg-muted/30 rounded-xl">
+                <h3 className="text-2xl font-bold text-center mb-6 text-foreground">Why We Started Health is Wealth</h3>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">In Los Angeles,</strong> we witnessed too many people struggling with expensive healthcare costs while neglecting preventive wellness. We realized that investing in your health today truly is the greatest wealth you can build for tomorrow.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Our founders believed</strong> that everyone deserves access to high-quality, affordable supplements that not only improve personal health but also support our planet's wellbeing. We're not just selling products – we're building a community of conscious consumers who understand that health and environmental stewardship go hand in hand.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Every recommendation we make</strong> is thoroughly researched, environmentally conscious, and designed to help you live not just longer, but better. We believe that when you feel good, you do good – for yourself, your community, and the environment.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <h3 className="text-2xl font-bold mb-4 text-foreground">Join the Health is Wealth Movement</h3>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Together, we're proving that the best investment you can make is in your health – and our planet's future.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 mb-8">
+                  <Badge className="px-6 py-3 text-lg bg-primary/20 text-primary border-primary">
+                    <Leaf className="w-4 h-4 mr-2" />
+                    Sustainable Choices
+                  </Badge>
+                  <Badge className="px-6 py-3 text-lg bg-secondary/20 text-secondary border-secondary">
+                    <Heart className="w-4 h-4 mr-2" />
+                    Longevity Focused
+                  </Badge>
+                  <Badge className="px-6 py-3 text-lg bg-primary/20 text-primary border-primary">
+                    <Shield className="w-4 h-4 mr-2" />
+                    Quality Guaranteed
+                  </Badge>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
