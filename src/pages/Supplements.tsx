@@ -13,6 +13,7 @@ import {
   Award,
   Truck
 } from 'lucide-react';
+import chagaccinoImage from '@/assets/chagaccino-product.jpg';
 
 export const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -20,27 +21,27 @@ export const Supplements = () => {
   const supplements = [
     {
       id: 1,
-      name: 'Berberine Phytosome Complex',
-      price: '$59.95',
-      originalPrice: '$69.95',
-      benefits: ['Metabolic support', 'Heart health', 'Blood sugar management', 'Enhanced absorption'],
-      usage: 'Take 1-2 capsules daily with meals for optimal results',
-      category: 'METABOLIC',
-      description: 'Advanced berberine formula with phytosome technology for superior bioavailability and enhanced absorption. Supports healthy metabolism and cardiovascular function.',
-      detailedDescription: 'This premium berberine supplement utilizes cutting-edge phytosome technology to deliver enhanced bioavailability compared to standard berberine. Each serving provides 550mg of highly absorbable berberine complex that supports healthy glucose metabolism, cardiovascular function, and overall metabolic wellness.',
-      shopLink: 'https://amzn.to/4gDJKk1',
-      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600',
-      rating: 4.8,
-      reviews: 1247,
+      name: 'Renude Chagaccino - Chaga Mushroom Powder',
+      price: '$34.99',
+      originalPrice: '$39.99',
+      benefits: ['Natural energy boost', 'Immune system support', 'Adaptogenic properties', 'Zero calorie formula'],
+      usage: 'Mix 1 scoop with hot water or your favorite beverage daily',
+      category: 'ENERGY',
+      description: 'Premium mushroom coffee blend with chaga and adaptogens for natural energy and immune support. Vegan, keto-friendly, zero calorie formula.',
+      detailedDescription: 'Experience the perfect fusion of premium coffee and powerful chaga mushrooms in this innovative adaptogenic blend. Each serving delivers sustained natural energy without the jitters, while supporting your immune system with wild-foraged chaga mushrooms and carefully selected adaptogens. Perfect for busy professionals seeking clean energy and wellness benefits.',
+      shopLink: 'https://www.amazon.com/dp/B0B75XX6L9/ref=cm_sw_r_as_gl_api_gl_i_DZZBSP0NRP9D05DCW1FH?linkCode=ml1&tag=keatontyler-20&linkId=8a29ed8dbb90fa16f9aaae155fb8ec70&th=1',
+      image: chagaccinoImage,
+      rating: 4.7,
+      reviews: 1589,
       features: [
-        'Enhanced Phytosome Technology',
-        '550mg per serving',
-        '120 vegetarian capsules',
-        'Gluten-free & Non-GMO',
-        'Third-party tested',
-        'Made in USA'
+        '30 servings per container',
+        'Wild-foraged chaga mushrooms',
+        'Adaptogenic herb blend',
+        'Zero calorie formula',
+        'Vegan & keto-friendly',
+        'No artificial additives'
       ],
-      scientificBacking: 'Clinical studies show berberine can help maintain healthy blood sugar levels already within normal range and support cardiovascular health.',
+      scientificBacking: 'Chaga mushrooms have been studied for their immune-supporting properties and antioxidant content. Adaptogens help the body manage stress and maintain energy balance.',
       bestseller: true,
       fastShipping: true
     },
