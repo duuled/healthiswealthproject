@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Search } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const motivationalQuotes = [
     "Invest in Your Health – Wealth Follows!",
@@ -41,11 +43,10 @@ export const Header = () => {
   };
 
   const navItems = [
-    { label: 'Home', id: 'home' },
-    { label: 'Supplements', id: 'supplements' },
-    { label: 'Directory', id: 'directory' },
-    { label: 'Fitness Plans', id: 'fitness' },
-    { label: 'Contact', id: 'contact' }
+    { label: 'Home', id: 'home', isLink: false },
+    { label: 'Supplements', id: 'supplements', isLink: true, path: '/supplements' },
+    { label: 'Directory', id: 'directory', isLink: false },
+    { label: 'Contact', id: 'contact', isLink: false }
   ];
 
   return (
@@ -71,25 +72,33 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => 
+              item.isLink ? (
+                <Link
+                  key={item.id}
+                  to={item.path}
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.label}
+                </button>
+              )
+            )}
           </nav>
 
           {/* CTA - Minimized */}
           <div className="hidden md:flex items-center">
-            <Button 
-              onClick={() => scrollToSection('supplements')}
-              size="sm"
-              className="btn-primary"
-            >
-              Shop Now
+            <Button asChild size="sm" className="btn-primary">
+              <Link to="/supplements">
+                Shop Now
+              </Link>
             </Button>
           </div>
 
@@ -106,21 +115,31 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-border">
             <div className="py-4 space-y-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => 
+                item.isLink ? (
+                  <Link
+                    key={item.id}
+                    to={item.path}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                  >
+                    {item.label}
+                  </button>
+                )
+              )}
               <div className="pt-4 border-t border-border">
-                <Button 
-                  onClick={() => scrollToSection('supplements')}
-                  className="btn-primary w-full"
-                >
-                  Get Free Health Tips
+                <Button asChild className="btn-primary w-full">
+                  <Link to="/supplements" onClick={() => setIsMenuOpen(false)}>
+                    Shop All Products
+                  </Link>
                 </Button>
               </div>
             </div>
