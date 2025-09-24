@@ -62,11 +62,11 @@ export const Home = () => {
   ];
 
   const affirmations = [
-    "I am enough, and my West LA journey is unfolding beautifully.",
-    "Every breath I take fills me with peace and strength in Santa Monica.",
-    "I release stress and embrace calm, thriving in Venice and beyond.",
-    "My mind is a sanctuary of positivity, growing stronger each day in Malibu.",
-    "I deserve joy and balance, right here in West LA's vibrant energy."
+    "I am enough, and my wellness journey is unfolding beautifully.",
+    "Every breath I take fills me with peace and strength.",
+    "I release stress and embrace calm, thriving wherever I am.",
+    "My mind is a sanctuary of positivity, growing stronger each day.",
+    "I deserve joy and balance, right here in this moment."
   ];
 
   // Power of 5 - Elite Amazon Products
@@ -184,7 +184,7 @@ export const Home = () => {
       usage: 'Add 1-2 teaspoons to morning tea, smoothies, or take directly',
       category: 'IMMUNITY',
       description: 'Raw, unprocessed Manuka honey with high MGO content for maximum therapeutic benefits and immune system support.',
-      detailedDescription: 'Sourced from pristine New Zealand landscapes, this premium Manuka honey contains active compounds that provide natural antibacterial properties and immune system support. Perfect for busy West LA professionals seeking natural wellness solutions.',
+      detailedDescription: 'Sourced from pristine New Zealand landscapes, this premium Manuka honey contains active compounds that provide natural antibacterial properties and immune system support. Perfect for health-conscious individuals seeking natural wellness solutions worldwide.',
       shopLink: 'https://amazon.com/dp/B01K0PKS5M',
       image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=600',
       rating: 4.6,
@@ -230,25 +230,24 @@ export const Home = () => {
             />
             <div>
               <h1 className="heading-primary">
-                Invest in Your Health with Health Is Wealth in West LA!
+                Invest in Your Health with Health Is Wealth!
               </h1>
               <p className="text-xl text-primary font-semibold mt-2">
-                Affordable wellness for busy professionals and students
+                Global wellness solutions from West Los Angeles
               </p>
             </div>
           </div>
           
           <p className="text-wellness max-w-4xl mx-auto mb-8">
-            Discover our <span className="glow-text">Power of 5</span> elite supplements plus affordable wellness essentials for busy professionals 
-            and students in Venice, Santa Monica, Malibu, and more!
+            Discover our <span className="glow-text">Power of 5</span> elite supplements plus affordable wellness essentials for health-conscious individuals worldwide!
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full font-semibold halo-glow">
-              West LA Trusted
+              Globally Trusted
             </span>
             <span className="bg-secondary text-secondary-foreground px-4 py-2 rounded-full font-semibold">
-              Budget-Friendly Health
+              Affordable Wellness
             </span>
           </div>
 
@@ -280,7 +279,7 @@ export const Home = () => {
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p className="text-xl font-semibold text-foreground">
-                Born in Los Angeles, Health is Wealth is more than just a supplement brand – we're a movement toward sustainable wellness and environmental responsibility.
+                Founded in West Los Angeles, Health is Wealth serves customers worldwide – we're a global movement toward sustainable wellness and environmental responsibility.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mt-12">
@@ -309,10 +308,10 @@ export const Home = () => {
                 <h3 className="text-2xl font-bold text-center mb-6 text-foreground">Why We Started Health is Wealth</h3>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    <strong className="text-foreground">In Los Angeles,</strong> we witnessed too many people struggling with expensive healthcare costs while neglecting preventive wellness. We realized that investing in your health today truly is the greatest wealth you can build for tomorrow.
+                    <strong className="text-foreground">Based in West Los Angeles,</strong> we witnessed people worldwide struggling with expensive healthcare costs while neglecting preventive wellness. We realized that investing in your health today truly is the greatest wealth you can build for tomorrow.
                   </p>
                   <p>
-                    <strong className="text-foreground">Our founders believed</strong> that everyone deserves access to high-quality, affordable supplements that not only improve personal health but also support our planet's wellbeing. We're not just selling products – we're building a community of conscious consumers who understand that health and environmental stewardship go hand in hand.
+                    <strong className="text-foreground">Our founders believed</strong> that everyone, everywhere deserves access to high-quality, affordable supplements that not only improve personal health but also support our planet's wellbeing. We're not just selling products – we're building a global community of conscious consumers who understand that health and environmental stewardship go hand in hand.
                   </p>
                   <p>
                     <strong className="text-foreground">Every recommendation we make</strong> is thoroughly researched, environmentally conscious, and designed to help you live not just longer, but better. We believe that when you feel good, you do good – for yourself, your community, and the environment.
@@ -349,9 +348,9 @@ export const Home = () => {
       <section id="directory" className="section-padding">
         <div className="max-w-6xl mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="heading-secondary mb-6">Shop Smart: West LA Wellness Directory</h2>
+            <h2 className="heading-secondary mb-6">Shop Smart: Local Wellness Directory</h2>
             <p className="text-wellness max-w-3xl mx-auto">
-              We've done the research so you don't have to. Here's where to shop and where to skip.
+              Based in West LA, we've done the local research. Here are our recommendations for Los Angeles area shoppers.
             </p>
           </div>
 

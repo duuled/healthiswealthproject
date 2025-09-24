@@ -150,7 +150,7 @@ const Supplements = () => {
       usage: 'Add 1-2 teaspoons to morning tea, smoothies, or take directly',
       category: 'IMMUNITY',
       description: 'Raw, unprocessed Manuka honey with high MGO content for maximum therapeutic benefits and immune system support.',
-      detailedDescription: 'Sourced from pristine New Zealand landscapes, this premium Manuka honey contains active compounds that provide natural antibacterial properties and immune system support. Perfect for busy West LA professionals seeking natural wellness solutions.',
+      detailedDescription: 'Sourced from pristine New Zealand landscapes, this premium Manuka honey contains active compounds that provide natural antibacterial properties and immune system support. Perfect for health-conscious individuals seeking natural wellness solutions worldwide.',
       shopLink: 'https://amazon.com/dp/B01K0PKS5M',
       image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=600',
       rating: 4.6,
