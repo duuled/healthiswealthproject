@@ -27,9 +27,19 @@ import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
 import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
 import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
 import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
+import smoothieRecipeImage from '@/assets/power-5-smoothie-recipe.png';
 
 export const Home = () => {
   const [email, setEmail] = useState('');
+  const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowFloatingCTA(window.scrollY > 500);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const localStores = [
     {
@@ -427,12 +437,18 @@ export const Home = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
               The 5 most powerful health supplements that will transform your wellness journey. 
-              Carefully selected from Amazon's top-rated products for maximum potency and results.
+              Carefully selected for maximum potency and results.
             </p>
-            <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
               <Badge className="px-6 py-3 text-lg bg-primary/20 text-primary border-primary">
-                ⭐ Amazon's Most Trusted Wellness Products ⭐
+                ⭐ Elite Wellness Products ⭐
               </Badge>
+              <Button asChild variant="outline" className="px-6 py-3">
+                <a href="/supplements">
+                  View All Supplements
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -521,6 +537,109 @@ export const Home = () => {
               </Card>
             ))}
           </div>
+
+          {/* CTA to explore more */}
+          <div className="text-center mt-16">
+            <Card className="p-8 bg-gradient-to-r from-primary/10 to-secondary/10 border-2 border-primary/20">
+              <h3 className="text-2xl font-bold mb-4">Want to See Our Complete Supplement Collection?</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Discover dozens more premium supplements including adaptogens, immune boosters, and longevity formulas - all curated for maximum wellness impact.
+              </p>
+              <Button asChild size="lg" className="text-lg px-8">
+                <a href="/supplements">
+                  Browse All Supplements
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Power 5 Smoothie Recipe Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-6xl mx-auto container-padding">
+          <div className="text-center mb-12">
+            <Badge className="px-6 py-3 text-lg bg-secondary/20 text-secondary border-secondary mb-4">
+              <Zap className="w-4 h-4 mr-2" />
+              Featured Recipe
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="glow-text">The Power 5 Health Smoothie</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Transform your mornings with our signature superfood blend - combining all 5 elite supplements into one powerful wellness drink!
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src={smoothieRecipeImage} 
+                alt="Power 5 Health Smoothie recipe with Moringa, Neem, Chaga, and Shilajit superfoods"
+                className="w-full rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div className="order-1 md:order-2 space-y-6">
+              <Card className="p-6 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <h3 className="text-2xl font-bold mb-4 flex items-center">
+                  <Heart className="w-6 h-6 mr-3 text-primary" />
+                  Why This Recipe Works
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-1 flex-shrink-0" />
+                    <span><strong>Energy & Vitality:</strong> Moringa powder provides sustained energy throughout your day</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-1 flex-shrink-0" />
+                    <span><strong>Anti-Inflammatory:</strong> Neem powder helps reduce inflammation naturally</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-1 flex-shrink-0" />
+                    <span><strong>Immune Support:</strong> Chaga mushroom strengthens your body's defenses</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-1 flex-shrink-0" />
+                    <span><strong>Mineral-Rich:</strong> Shilajit provides essential trace minerals for vitality</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Card className="p-6 bg-primary/10 border-primary">
+                <h3 className="text-xl font-bold mb-4 flex items-center">
+                  <Brain className="w-5 h-5 mr-3 text-primary" />
+                  Get All the Ingredients
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  All ingredients featured in this recipe are available in our Power of 5 collection above. Start your wellness journey today!
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Button asChild variant="default">
+                    <a href="#supplements" onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection('supplements');
+                    }}>
+                      View Power of 5
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline">
+                    <a href="/supplements">
+                      Shop All Supplements
+                    </a>
+                  </Button>
+                </div>
+              </Card>
+
+              <div className="bg-muted/50 p-4 rounded-lg">
+                <p className="text-sm text-muted-foreground text-center">
+                  💡 <strong>Pro Tip:</strong> Blend this smoothie every morning for 30 days and experience the transformative power of consistent wellness!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -529,9 +648,26 @@ export const Home = () => {
         <div className="max-w-4xl mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="heading-secondary mb-6">Join the Health Is Wealth Community</h2>
-            <p className="text-wellness">
-              Ready to start your affordable wellness journey in West LA? Let's connect!
+            <p className="text-wellness mb-6">
+              Ready to start your wellness journey? Connect with us globally from our West LA headquarters!
             </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild variant="outline" size="lg">
+                <a href="/supplements">
+                  <Leaf className="mr-2 w-5 h-5" />
+                  Explore All Products
+                </a>
+              </Button>
+              <Button asChild variant="default" size="lg">
+                <a href="#contact" onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('contact');
+                }}>
+                  <Mail className="mr-2 w-5 h-5" />
+                  Get Free Wellness Plan
+                </a>
+              </Button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -698,6 +834,36 @@ export const Home = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating CTA Button */}
+      {showFloatingCTA && (
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 animate-in slide-in-from-bottom">
+          <Button 
+            asChild 
+            size="lg" 
+            className="shadow-2xl hover:scale-105 transition-transform bg-primary text-primary-foreground"
+          >
+            <a href="/supplements">
+              <Leaf className="mr-2 w-5 h-5" />
+              Shop Supplements
+            </a>
+          </Button>
+          <Button 
+            asChild 
+            variant="outline" 
+            size="lg"
+            className="shadow-xl hover:scale-105 transition-transform bg-background"
+          >
+            <a href="#contact" onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('contact');
+            }}>
+              <Mail className="mr-2 w-5 h-5" />
+              Get Free Plan
+            </a>
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
