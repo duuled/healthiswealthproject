@@ -354,6 +354,105 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* Workout Catering Preview Section */}
+      <section className="py-20 bg-gradient-to-br from-secondary/10 to-primary/5">
+        <div className="max-w-6xl mx-auto container-padding">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="glow-text">Workout Catering Preview</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              Experience our revolutionary approach to fitness and wellness – where premium supplements meet personalized workout nutrition plans.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div className="space-y-6">
+              <h3 className="text-3xl font-bold text-foreground">
+                Fuel Your Fitness Journey
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Health is Wealth isn't just about supplements – we're pioneering a complete wellness ecosystem. Our workout catering service combines our elite Power of 5 supplements with customized nutrition plans designed specifically for your fitness goals.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Zap className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Pre & Post-Workout Nutrition</h4>
+                    <p className="text-muted-foreground">Optimized smoothie recipes and supplement timing to maximize your performance and recovery.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Brain className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Personalized Plans</h4>
+                    <p className="text-muted-foreground">Tailored supplement stacks and meal timing based on your workout intensity and goals.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Heart className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Holistic Approach</h4>
+                    <p className="text-muted-foreground">Combining our environmental mission with fitness – sustainable wellness for you and the planet.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild className="px-8 py-4">
+                  <a href="/supplements">
+                    Explore Supplements
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" className="px-8 py-4">
+                  Get Custom Plan
+                  <Mail className="ml-2 w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="rounded-xl overflow-hidden shadow-2xl border-2 border-primary/20">
+                <video 
+                  controls 
+                  className="w-full h-auto"
+                  poster="/placeholder.svg"
+                >
+                  <source src="/workout-catering-preview.mov" type="video/quicktime" />
+                  <source src="/workout-catering-preview.mov" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary/10 rounded-full blur-3xl" />
+            </div>
+          </div>
+
+          <div className="mt-12 p-8 bg-background/50 backdrop-blur rounded-xl border border-primary/20">
+            <h3 className="text-2xl font-bold text-center mb-6 text-foreground">
+              Our Niche: Where Supplements Meet Performance
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <Leaf className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h4 className="font-semibold text-foreground mb-2">Clean Supplements</h4>
+                <p className="text-sm text-muted-foreground">Premium, natural ingredients that fuel your body without compromising health or environment.</p>
+              </div>
+              <div>
+                <Zap className="w-8 h-8 text-secondary mx-auto mb-3" />
+                <h4 className="font-semibold text-foreground mb-2">Fitness Optimization</h4>
+                <p className="text-sm text-muted-foreground">Science-backed nutrition timing and supplement stacks for peak athletic performance.</p>
+              </div>
+              <div>
+                <Heart className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h4 className="font-semibold text-foreground mb-2">Lifestyle Integration</h4>
+                <p className="text-sm text-muted-foreground">Seamlessly integrate wellness into your daily routine, from workout to recovery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Directory Section */}
       <section id="directory" className="section-padding">
         <div className="max-w-6xl mx-auto container-padding">
