@@ -1,164 +1,90 @@
-import { useState } from 'react';
-import { ProductCard } from '@/components/ProductCard';
-import { Button } from '@/components/ui/button';
-import { Filter, Star } from 'lucide-react';
-import tshirtImage from '@/assets/starspring-tshirt.jpg';
-import hoodieImage from '@/assets/starspring-hoodie.jpg';
-import flannelImage from '@/assets/starspring-flannel.jpg';
+import { useState, useEffect } from "react";
+import { ProductCard } from "@/components/ProductCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { getProducts, ShopifyProduct } from "@/lib/shopify";
+import { Loader2 } from "lucide-react";
 
 export const Shop = () => {
-  const [selectedCategory, setSelectedCategory] = useState('ALL');
+  const [products, setProducts] = useState<ShopifyProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [email, setEmail] = useState("");
 
-  const products = [
-    {
-      name: 'STARSPRING ESSENTIAL TEE',
-      price: '$35',
-      image: tshirtImage,
-      type: 'T-Shirts',
-      category: 'TEES'
-    },
-    {
-      name: 'STARSPRING PREMIUM HOODIE',
-      price: '$65',
-      image: hoodieImage,
-      type: 'Hoodies',
-      category: 'HOODIES'
-    },
-    {
-      name: 'STARSPRING GRUNGE FLANNEL',
-      price: '$55',
-      image: flannelImage,
-      type: 'Shirts',
-      category: 'SHIRTS'
-    },
-    // Adding more mock products
-    {
-      name: 'STARSPRING OVERSIZED TEE',
-      price: '$40',
-      image: tshirtImage,
-      type: 'T-Shirts',
-      category: 'TEES'
-    },
-    {
-      name: 'STARSPRING ZIP HOODIE',
-      price: '$70',
-      image: hoodieImage,
-      type: 'Hoodies',
-      category: 'HOODIES'
-    },
-    {
-      name: 'STARSPRING BUTTON DOWN',
-      price: '$60',
-      image: flannelImage,
-      type: 'Shirts',
-      category: 'SHIRTS'
-    }
-  ];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      try {
+        const data = await getProducts(50);
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const categories = ['ALL', 'TEES', 'HOODIES', 'SHIRTS'];
+    fetchProducts();
+  }, []);
 
-  const filteredProducts = selectedCategory === 'ALL' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Newsletter signup:", email);
+    setEmail("");
+  };
 
   return (
-    <div className="min-h-screen pt-16">
-      {/* Header */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-4 mb-6">
-            <Star className="w-8 h-8 text-accent fill-current" />
-            <h1 className="grunge-text text-5xl md:text-6xl text-foreground">
-              SHOP
-            </h1>
-            <Star className="w-8 h-8 text-accent fill-current" />
-          </div>
-          
-          <p className="font-grunge text-lg text-muted-foreground max-w-2xl mx-auto">
-            Minimalist designs. Maximum impact. Every piece crafted for those who understand 
-            that true style comes from within.
+    <div className="min-h-screen pt-24 pb-16">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h1 className="font-display text-6xl font-bold mb-6 text-foreground">
+            SHOP
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Discover our curated collection of premium supplements and wellness products
           </p>
         </div>
-      </section>
 
-      {/* Filter Section */}
-      <section className="pb-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <div className="flex items-center space-x-2 text-muted-foreground">
-              <Filter className="w-4 h-4" />
-              <span className="font-grunge text-sm">FILTER BY:</span>
-            </div>
-            
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className={
-                  selectedCategory === category
-                    ? "bg-accent text-black font-grunge font-semibold"
-                    : "border-border text-foreground hover:border-accent hover:text-accent font-grunge"
-                }
-              >
-                {category}
-              </Button>
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-8 h-8 animate-spin text-accent" />
+          </div>
+        ) : products.length === 0 ? (
+          <div className="text-center py-20">
+            <h2 className="text-2xl font-bold mb-4 text-foreground">No products found</h2>
+            <p className="text-muted-foreground mb-8">
+              Create your first product by telling me what you want to sell and the price!
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {products.map((product) => (
+              <ProductCard key={product.node.id} product={product} />
             ))}
           </div>
-        </div>
-      </section>
+        )}
 
-      {/* Products Grid */}
-      <section className="pb-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product, index) => (
-              <ProductCard
-                key={index}
-                name={product.name}
-                price={product.price}
-                image={product.image}
-                type={product.type}
-              />
-            ))}
-          </div>
-
-          {filteredProducts.length === 0 && (
-            <div className="text-center py-16">
-              <p className="font-grunge text-lg text-muted-foreground">
-                No products found in this category.
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-20 px-4 bg-card/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="grunge-text text-3xl md:text-4xl text-foreground mb-6">
-            STAY IN THE LOOP
+        <div className="max-w-2xl mx-auto bg-card rounded-lg p-8 shadow-lg border border-border">
+          <h2 className="font-display text-3xl font-bold mb-4 text-center text-foreground">
+            JOIN OUR WELLNESS COMMUNITY
           </h2>
-          
-          <p className="font-grunge text-lg text-muted-foreground mb-8">
-            Be the first to know about new drops, exclusive designs, and the journey of StarSpring.
+          <p className="text-muted-foreground text-center mb-6">
+            Subscribe to receive exclusive offers and wellness tips
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <input
+          <form onSubmit={handleNewsletterSubmit} className="flex gap-4">
+            <Input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-input border border-border rounded-md text-foreground placeholder-muted-foreground font-grunge focus:outline-none focus:ring-2 focus:ring-accent"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 bg-background border-border"
+              required
             />
-            <Button
-              className="bg-accent/20 border border-accent text-accent hover:bg-accent hover:text-black backdrop-blur-sm font-grunge font-semibold px-6"
-            >
-              SUBSCRIBE
+            <Button type="submit" className="bg-accent text-black hover:bg-accent/90">
+              Subscribe
             </Button>
-          </div>
+          </form>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

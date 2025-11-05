@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Search } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
+import { CartDrawer } from './CartDrawer';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -115,7 +116,8 @@ export const Header = () => {
           </nav>
 
           {/* CTA - Minimized */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center space-x-4">
+            <CartDrawer />
             <Button asChild size="sm" className="btn-primary">
               <Link to="/supplements">
                 Shop Now
