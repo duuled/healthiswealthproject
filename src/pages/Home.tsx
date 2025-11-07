@@ -243,7 +243,7 @@ export const Home = () => {
                 Invest in Your Health with Health Is Wealth!
               </h1>
               <p className="text-xl text-primary font-semibold mt-2">
-                Global wellness solutions from West Los Angeles
+                Global Wellness solutions from Muscle Beach, Venice California
               </p>
             </div>
           </div>
