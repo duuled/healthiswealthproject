@@ -552,7 +552,7 @@ const Supplements = () => {
               <span className="glow-text">THE POWER OF 5</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Discover our carefully curated collection of premium natural supplements, scientifically backed and quality tested for optimal wellness results from Amazon.
+              Discover our carefully curated collection of premium natural supplements, scientifically backed and quality tested for optimal wellness results through our rigorous research and analytics.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="secondary" className="px-4 py-2">
