@@ -661,7 +661,7 @@ const Supplements = () => {
                   <div className="space-y-2">
                     <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
                       <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
-                        Shop on Amazon - {product.price}
+                        Shop Now - {product.price}
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </a>
                     </Button>
@@ -813,7 +813,7 @@ const Supplements = () => {
                   <div className="space-y-3">
                     <Button asChild className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90">
                       <a href={supplement.shopLink} target="_blank" rel="noopener noreferrer">
-                        Shop on Amazon - {supplement.price}
+                        Shop Now - {supplement.price}
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </a>
                     </Button>
