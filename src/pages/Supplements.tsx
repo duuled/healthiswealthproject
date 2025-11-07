@@ -659,7 +659,7 @@ const Supplements = () => {
                   </div>
 
                   <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
-                    <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
+                    <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
                       Shop Now - {product.price}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </a>
@@ -804,7 +804,7 @@ const Supplements = () => {
                   </div>
 
                   <Button asChild className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90">
-                    <a href={supplement.shopLink} target="_blank" rel="noopener noreferrer">
+                    <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
                       Shop Now - {supplement.price}
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </a>

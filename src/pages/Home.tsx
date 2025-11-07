@@ -623,7 +623,7 @@ export const Home = () => {
                   </div>
 
                   <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
-                    <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
+                    <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
                       Shop Now - {product.price}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </a>
