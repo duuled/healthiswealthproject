@@ -658,12 +658,19 @@ const Supplements = () => {
                     </div>
                   </div>
 
-                  <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
-                    <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
-                      Shop Now - {product.price}
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
+                  <div className="space-y-2">
+                    <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
+                      <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
+                        Shop on Amazon - {product.price}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="w-full h-10 text-sm font-semibold">
+                      <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+                        View in Our Store
+                      </a>
+                    </Button>
+                  </div>
 
                   <p className="text-xs text-muted-foreground text-center mt-2">
                     ✓ Fast shipping • ✓ 30-day returns
@@ -803,12 +810,19 @@ const Supplements = () => {
                     <p className="text-sm text-muted-foreground">{supplement.scientificBacking}</p>
                   </div>
 
-                  <Button asChild className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90">
-                    <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
-                      Shop Now - {supplement.price}
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </a>
-                  </Button>
+                  <div className="space-y-3">
+                    <Button asChild className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90">
+                      <a href={supplement.shopLink} target="_blank" rel="noopener noreferrer">
+                        Shop on Amazon - {supplement.price}
+                        <ArrowRight className="ml-2 w-5 h-5" />
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="w-full h-12 text-lg font-semibold">
+                      <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+                        View in Our Store
+                      </a>
+                    </Button>
+                  </div>
 
                   <p className="text-xs text-muted-foreground text-center mt-3">
                     ✓ Fast shipping • ✓ 30-day money-back guarantee
