@@ -33,7 +33,7 @@ export const Mission = () => {
               
               <p className="font-grunge text-lg text-muted-foreground leading-relaxed">
                 My name is behind StarSpring Apparel, and I'm just a 16-year-old Black kid from 
-                Los Angeles with a vision that's bigger than my circumstances. Growing up in a city 
+                Muscle Beach, Venice California with a vision that's bigger than my circumstances. Growing up in a city 
                 where dreams are born and broken every day, I learned early that if you want something, 
                 you don't wait for permission—you create it yourself.
               </p>
