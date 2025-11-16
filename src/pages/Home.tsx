@@ -813,15 +813,15 @@ export const Home = () => {
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <Mail className="w-5 h-5 text-primary mr-3" />
-                    <span>info@health-is-wealth.com</span>
+                    <span>healthiswealth@healthiswealth.live</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="w-5 h-5 text-primary mr-3" />
-                    <span>West LA Mental Health Hotline: 1-800-854-7771</span>
+                    <span>1-310-303-4808</span>
                   </div>
                   <div className="flex items-center">
                     <MapPin className="w-5 h-5 text-primary mr-3" />
-                    <span>Serving West LA, Venice, Santa Monica, Marina del Rey, Westchester, and Malibu</span>
+                    <span>Serving All Around Los Angeles Out Of Muscle Beach Venice California.</span>
                   </div>
                 </div>
               </div>
