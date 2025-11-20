@@ -913,13 +913,13 @@ export const Home = () => {
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <div className="space-y-2">
-                <a href="#" className="block text-sm text-muted-foreground hover:text-primary">
+                <a href="/privacy-policy" className="block text-sm text-muted-foreground hover:text-primary">
                   Privacy Policy
                 </a>
-                <a href="#" className="block text-sm text-muted-foreground hover:text-primary">
+                <a href="/terms-of-service" className="block text-sm text-muted-foreground hover:text-primary">
                   Terms of Service
                 </a>
-                <a href="#" className="block text-sm text-muted-foreground hover:text-primary">
+                <a href="/disclaimer" className="block text-sm text-muted-foreground hover:text-primary">
                   Disclaimer
                 </a>
               </div>
