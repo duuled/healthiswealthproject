@@ -115,8 +115,8 @@ export const TermsOfService = () => {
               </p>
               <div className="mt-2 space-y-1">
                 <p>Email: healthiswealth@healthiswealth.live</p>
-                <p>Phone: 1-310-303-4808</p>
-                <p>Location: Muscle Beach Venice California</p>
+                <p>Phone: 1-800-555-0199</p>
+                <p>Location: 1234 Sunset Blvd, Los Angeles, CA 90028</p>
               </div>
             </section>
           </div>

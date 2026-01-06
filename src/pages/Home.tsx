@@ -817,11 +817,11 @@ export const Home = () => {
                   </div>
                   <div className="flex items-center">
                     <Phone className="w-5 h-5 text-primary mr-3" />
-                    <span>1-310-303-4808</span>
+                    <span>1-800-555-0199</span>
                   </div>
                   <div className="flex items-center">
                     <MapPin className="w-5 h-5 text-primary mr-3" />
-                    <span>Serving All Around Los Angeles Out Of Muscle Beach Venice California.</span>
+                    <span>1234 Sunset Blvd, Los Angeles, CA 90028</span>
                   </div>
                 </div>
               </div>
