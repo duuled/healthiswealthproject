@@ -28,6 +28,8 @@ import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
 import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
 import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 import smoothieRecipeImage from '@/assets/power-5-smoothie-recipe.png';
+import purityTrackedVideo from '@/assets/purity-tracked-video.mp4';
+import purityTrackedPoster from '@/assets/purity-tracked-hero.png';
 
 export const Home = () => {
   const [email, setEmail] = useState('');
@@ -416,10 +418,9 @@ export const Home = () => {
                 <video 
                   controls 
                   className="w-full h-auto"
-                  poster="/placeholder.svg"
+                  poster={purityTrackedPoster}
                 >
-                  <source src="/workout-catering-preview.mov" type="video/quicktime" />
-                  <source src="/workout-catering-preview.mov" type="video/mp4" />
+                  <source src={purityTrackedVideo} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
