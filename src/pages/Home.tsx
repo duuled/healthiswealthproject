@@ -30,6 +30,7 @@ import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 import smoothieRecipeImage from '@/assets/power-5-smoothie-recipe.png';
 import purityTrackedVideo from '@/assets/purity-tracked-video.mp4';
 import purityTrackedPoster from '@/assets/purity-tracked-hero.png';
+import AdBanner from '@/components/AdBanner';
 
 export const Home = () => {
   const [email, setEmail] = useState('');
@@ -281,6 +282,8 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      <AdBanner />
 
       {/* Our Mission Section */}
       <section id="supplements" className="py-20 bg-background">
