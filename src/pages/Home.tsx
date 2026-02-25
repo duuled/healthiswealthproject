@@ -29,12 +29,16 @@ import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
 import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 import smoothieRecipeImage from '@/assets/power-5-smoothie-recipe.png';
 import purityTrackedVideo from '@/assets/purity-tracked-video.mp4';
+import cacaoVideo from '@/assets/cacao-video.mp4';
+import parsleyVideo from '@/assets/parsley-video.mp4';
 import purityTrackedPoster from '@/assets/purity-tracked-hero.png';
 import AdBanner from '@/components/AdBanner';
 
 export const Home = () => {
   const [email, setEmail] = useState('');
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(0);
+  const heroVideos = [purityTrackedVideo, cacaoVideo, parsleyVideo];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +47,14 @@ export const Home = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Video montage rotation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveVideo((prev) => (prev + 1) % heroVideos.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [heroVideos.length]);
 
   const localStores = [
     {
@@ -225,36 +237,46 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Fullscreen Video */}
+      {/* Hero Section - Video Montage */}
       <section id="home" className="relative h-screen w-full overflow-hidden">
-        {/* Video Background */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={purityTrackedPoster}
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={purityTrackedVideo} type="video/mp4" />
-        </video>
+        {/* Video Montage - stacked with crossfade */}
+        {heroVideos.map((video, index) => (
+          <video
+            key={index}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ${
+              index === activeVideo ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        ))}
         
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/35" />
 
         {/* Centered CTA */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-6">
+          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide text-center leading-tight">
+            Purity You Can Trust
+          </h1>
+          <p className="text-white/80 text-base md:text-lg tracking-[0.15em] uppercase font-light">
+            We take care in our products.
+          </p>
           <a
             href="/supplements"
-            className="bg-white/95 hover:bg-white text-black text-[13px] font-medium tracking-[0.15em] uppercase px-10 py-4 transition-all duration-300 hover:shadow-lg"
+            className="mt-4 bg-white/95 hover:bg-white text-black text-[13px] font-medium tracking-[0.15em] uppercase px-10 py-4 transition-all duration-300 hover:shadow-lg"
           >
-            Shop Supplements
+            Learn More
           </a>
         </div>
 
         {/* Bottom tagline */}
         <div className="absolute bottom-10 left-0 right-0 text-center z-10">
-          <p className="text-white/80 text-sm tracking-[0.2em] uppercase font-light">
+          <p className="text-white/60 text-xs tracking-[0.25em] uppercase font-light">
             Premium Wellness · Venice, California
           </p>
         </div>
