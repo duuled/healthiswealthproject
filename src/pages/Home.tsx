@@ -225,61 +225,38 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 wellness-gradient opacity-30" />
-        <img 
-          src={heroImage} 
-          alt="Natural wellness supplements with West LA landmarks" 
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
-        />
+      {/* Hero Section - Fullscreen Video */}
+      <section id="home" className="relative h-screen w-full overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={purityTrackedPoster}
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={purityTrackedVideo} type="video/mp4" />
+        </video>
         
-        <div className="relative z-10 text-center container-padding max-w-6xl mx-auto">
-          <div className="flex items-center justify-center mb-8">
-            <img 
-              src={logoImage} 
-              alt="Health Is Wealth bitten leaf logo with money sign" 
-              className="w-16 h-16 mr-4 leaf-animation" 
-            />
-            <div>
-              <h1 className="heading-primary">
-                Invest in Your Health with Health Is Wealth!
-              </h1>
-              <p className="text-xl text-primary font-semibold mt-2">
-                Global Wellness solutions from Muscle Beach, Venice California
-              </p>
-            </div>
-          </div>
-          
-          <p className="text-wellness max-w-4xl mx-auto mb-8">
-            Discover our <span className="glow-text">Power of 5</span> elite supplements plus affordable wellness essentials for health-conscious individuals worldwide!
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Centered CTA */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <a
+            href="/supplements"
+            className="bg-white/95 hover:bg-white text-black text-[13px] font-medium tracking-[0.15em] uppercase px-10 py-4 transition-all duration-300 hover:shadow-lg"
+          >
+            Shop Supplements
+          </a>
+        </div>
+
+        {/* Bottom tagline */}
+        <div className="absolute bottom-10 left-0 right-0 text-center z-10">
+          <p className="text-white/80 text-sm tracking-[0.2em] uppercase font-light">
+            Premium Wellness · Venice, California
           </p>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full font-semibold halo-glow">
-              Globally Trusted
-            </span>
-            <span className="bg-secondary text-secondary-foreground px-4 py-2 rounded-full font-semibold">
-              Affordable Wellness
-            </span>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button 
-              onClick={() => scrollToSection('supplements')}
-              variant="outline"
-              className="text-lg px-8 py-4"
-            >
-              View Preview
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button asChild className="btn-secondary text-lg px-8 py-4">
-              <a href="/supplements">
-                Shop All Supplements
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
 
