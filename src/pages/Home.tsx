@@ -31,6 +31,7 @@ import smoothieRecipeImage from '@/assets/power-5-smoothie-recipe.png';
 import purityTrackedVideo from '@/assets/purity-tracked-video.mp4';
 import cacaoVideo from '@/assets/cacao-video.mp4';
 import parsleyVideo from '@/assets/parsley-video.mp4';
+import acaiBowlVideo from '@/assets/acai-bowl-video.mp4';
 import purityTrackedPoster from '@/assets/purity-tracked-hero.png';
 import AdBanner from '@/components/AdBanner';
 
@@ -38,7 +39,7 @@ export const Home = () => {
   const [email, setEmail] = useState('');
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [activeVideo, setActiveVideo] = useState(0);
-  const heroVideos = [purityTrackedVideo, cacaoVideo, parsleyVideo];
+  const heroVideos = [purityTrackedVideo, cacaoVideo, parsleyVideo, acaiBowlVideo];
 
   useEffect(() => {
     const handleScroll = () => {
