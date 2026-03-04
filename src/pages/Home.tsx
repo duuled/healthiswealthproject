@@ -930,10 +930,18 @@ export const Home = () => {
             </div>
           </div>
           
-          <div className="border-t border-border mt-8 pt-8 text-center">
+          <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
               © 2025 Health Is Wealth. Made with ❤️ for the West LA community.
             </p>
+            <div className="flex items-center gap-4">
+              <a href="https://www.instagram.com/aisearchblog/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://aisearchblog.wordpress.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Newsletter">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM3.5 12c0-1.19.254-2.318.7-3.342l3.86 10.58A8.504 8.504 0 013.5 12zm8.5 8.5c-.834 0-1.64-.12-2.4-.345l2.55-7.41 2.613 7.157c.017.042.038.08.06.117A8.457 8.457 0 0112 20.5zm1.076-12.474c.512-.027.973-.08.973-.08.458-.054.404-.728-.054-.702 0 0-1.376.108-2.265.108-.835 0-2.238-.108-2.238-.108-.458-.026-.512.675-.054.702 0 0 .434.053.892.08l1.324 3.63-1.86 5.578-3.096-9.208c.512-.027.973-.08.973-.08.458-.054.404-.728-.054-.702 0 0-1.376.108-2.265.108-.16 0-.347-.004-.542-.01A8.468 8.468 0 0112 3.5c2.213 0 4.228.846 5.74 2.232-.037-.002-.072-.007-.11-.007-.835 0-1.427.728-1.427 1.51 0 .7.404 1.292.835 1.994.323.566.7 1.293.7 2.344 0 .727-.28 1.572-.647 2.748l-.848 2.833-3.067-9.128zm3.924 11.6l2.594-7.5c.485-1.212.646-2.18.646-3.044 0-.313-.02-.603-.058-.878A8.467 8.467 0 0120.5 12a8.504 8.504 0 01-3.5 6.876z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </footer>
