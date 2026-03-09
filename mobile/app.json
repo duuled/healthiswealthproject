@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Health Is Wealth",
+    "slug": "health-is-wealth",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0d0d0d"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.healthiswealthstore.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0d0d0d"
+      },
+      "package": "com.healthiswealthstore.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
