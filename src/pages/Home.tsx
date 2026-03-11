@@ -899,6 +899,9 @@ export const Home = () => {
                 <button onClick={() => scrollToSection('fitness')} className="block text-sm text-muted-foreground hover:text-primary">
                   Fitness Plans
                 </button>
+                <a href="https://aisearchblog.wordpress.com/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">
+                  Check Out Our Daily Health News
+                </a>
               </div>
             </div>
             
