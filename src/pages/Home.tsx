@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import heroImage from '@/assets/wellness-hero-image.jpg';
+import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade.jpg';
 import mentalWellnessImage from '@/assets/mental-wellness-image.jpg';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
 import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
@@ -224,6 +225,32 @@ export const Home = () => {
         '12oz premium size'
       ],
       scientificBacking: 'Manuka honey has been studied for its unique antibacterial properties and potential immune system benefits.',
+      verifiedQuality: true,
+      fastShipping: true
+    },
+    {
+      id: 'p6',
+      name: 'Blue Spirulina Lemonade Powder',
+      price: '$19.99',
+      originalPrice: '$24.99',
+      benefits: ['Powerful antioxidants', 'Natural detox support', 'Anti-inflammatory', 'Rich in phycocyanin'],
+      usage: 'Mix 1 teaspoon with cold water, lemon juice, and honey for a vibrant superfood lemonade',
+      category: 'IMMUNITY',
+      description: 'Pure organic blue spirulina powder — transform your lemonade into a stunning antioxidant-rich superfood drink.',
+      detailedDescription: 'Our Blue Spirulina Lemonade Powder is extracted from Arthrospira platensis and delivers a concentrated dose of phycocyanin — one of nature\'s most powerful antioxidants. This vibrant blue superfood powder turns ordinary lemonade into an Instagram-worthy wellness drink packed with anti-inflammatory compounds, protein, and essential nutrients. No fishy taste, just pure blue magic.',
+      shopLink: 'https://n4qdra-r1.myshopify.com/',
+      image: blueSpirulinaImage,
+      rating: 4.7,
+      reviews: 1230,
+      features: [
+        '100% pure blue spirulina',
+        'No fishy taste or smell',
+        'Rich in phycocyanin',
+        'USDA organic certified',
+        'Vegan & gluten-free',
+        'Perfect for lemonades & smoothies'
+      ],
+      scientificBacking: 'Phycocyanin, the blue pigment in spirulina, has been clinically studied for its potent antioxidant and anti-inflammatory properties, supporting cellular health and immune function.',
       verifiedQuality: true,
       fastShipping: true
     }
