@@ -194,6 +194,7 @@ const Supplements = () => {
       verifiedQuality: true,
       fastShipping: true
     }
+  ];
 
   const supplements = [
     {
