@@ -902,6 +902,9 @@ export const Home = () => {
                 <a href="https://aisearchblog.wordpress.com/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">
                   Check Out Our Daily Health News
                 </a>
+                <a href="https://healthiswealth.live" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">
+                  Visit HealthIsWealth.live
+                </a>
               </div>
             </div>
             
