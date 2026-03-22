@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import heroImage from '@/assets/wellness-hero-image.jpg';
+import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade.jpg';
 import mentalWellnessImage from '@/assets/mental-wellness-image.jpg';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
 import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
