@@ -14,7 +14,8 @@ import {
   Truck
 } from 'lucide-react';
 import chagaccinoImage from '@/assets/chagaccino-product.jpg';
-import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade.jpg';
+import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade-craving.jpg';
+import manukaHoneyImage from '@/assets/manuka-honey-drizzle.jpg';
 import mariosMushroomImage from '@/assets/marios-mushroom-power.jpg';
 import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
 import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
@@ -37,110 +38,6 @@ const Supplements = () => {
   // Power of 5 - Elite Wellness Products
   const powerOf5Products = [
     {
-      id: 'p1',
-      name: 'Organic Amla Powder - Vitamin C Powerhouse',
-      price: '$13.99',
-      originalPrice: '$15.99',
-      benefits: ['4x more Vitamin C than oranges', 'Natural antioxidant boost', 'Hair & skin health', 'Iron absorption support'],
-      usage: 'Add 1 teaspoon to smoothies, juices, or water daily',
-      category: 'IMMUNITY',
-      description: 'Pure, lab-tested organic Amla powder from India - the ultimate natural source of Vitamin C and antioxidants.',
-      detailedDescription: 'This premium organic Amla powder contains 4 times more Vitamin C than oranges and has been used for centuries in Ayurvedic medicine. Rich in iron, calcium, and phosphorus, this superfood supports immune function, enhances iron absorption, and promotes healthy hair and skin. Perfect for those seeking a natural, potent source of Vitamin C.',
-      shopLink: 'https://amzn.to/42atVvr',
-      image: amlaPowderImage,
-      rating: 4.5,
-      reviews: 349,
-      features: [
-        'Lab tested for purity',
-        'Gluten-free & Non-GMO',
-        '1.25 LB bulk bag',
-        '100% raw & natural',
-        'From sustainable farms',
-        'USDA organic certified'
-      ],
-      scientificBacking: 'Amla has been scientifically proven to be one of the richest natural sources of Vitamin C and contains powerful antioxidants that support immune system function.',
-      verifiedQuality: true,
-      fastShipping: true
-    },
-    {
-      id: 'p2',
-      name: 'Micro Ingredients Organic Moringa Powder',
-      price: '$29.99',
-      originalPrice: '$34.99',
-      benefits: ['92 essential nutrients', 'Natural energy boost', 'Immune system support', 'Anti-inflammatory properties'],
-      usage: 'Mix 1 tablespoon in smoothies, tea, or water daily',
-      category: 'ENERGY',
-      description: '2-pound organic moringa leaf powder packed with vitamins, minerals, and antioxidants for comprehensive wellness support.',
-      detailedDescription: 'This premium organic moringa powder from Micro Ingredients contains 92 essential nutrients including protein, calcium, iron, and fiber. Known as the "miracle tree," moringa provides natural energy, supports immune function, and offers powerful anti-inflammatory benefits. Perfect for adding nutritional density to your daily routine.',
-      shopLink: 'https://amzn.to/4nPp5w4',
-      image: moringaLeafImage,
-      rating: 4.4,
-      reviews: 4086,
-      features: [
-        'USDA organic certified',
-        '2 pounds bulk size',
-        'Rich in antioxidants',
-        'Vegan & gluten-free',
-        'Third-party tested',
-        'Sustainability certified'
-      ],
-      scientificBacking: 'Moringa has been extensively studied for its nutritional density and anti-inflammatory compounds, making it one of the most nutrient-dense plants on Earth.',
-      verifiedQuality: true,
-      fastShipping: true
-    },
-    {
-      id: 'p3',
-      name: 'Kuli Kuli Moringa Superfood Powder',
-      price: '$18.61',
-      originalPrice: '$22.99',
-      benefits: ['More antioxidants than kale', 'Complete protein source', 'Natural detox support', 'Sustained energy'],
-      usage: 'Add to smoothies, yogurt, or mix with water daily',
-      category: 'ENERGY',
-      description: 'Premium moringa leaf powder that packs more nutrition than kale, turmeric, and matcha combined.',
-      detailedDescription: 'Kuli Kuli sources the highest quality moringa leaves to create this nutrient-dense superfood powder. With more antioxidants than kale and more protein than most plants, this moringa powder provides sustained energy and comprehensive nutritional support. Each serving delivers essential amino acids, vitamins, and minerals.',
-      shopLink: 'https://www.amazon.com/dp/B07FYP5NXK/ref=cm_sw_r_as_gl_api_gl_i_BMBCMYMXFJ3PHK2YFJBD?linkCode=ml1&tag=keatontyler-20&linkId=80ebe2a13df56716bf749ab07b79e230',
-      image: kuliKuliMoringaImage,
-      rating: 4.3,
-      reviews: 1420,
-      features: [
-        '100% pure USDA certified',
-        'Non-GMO moringa powder',
-        '10.6 oz single pack',
-        'Complete amino acid profile',
-        'Sustainably sourced',
-        'Women-owned business'
-      ],
-      scientificBacking: 'Clinical studies show moringa contains more anti-inflammatory power, antioxidants, protein, calcium, iron, and fiber compared to kale, turmeric, and matcha.',
-      verifiedQuality: true,
-      fastShipping: true
-    },
-    {
-      id: 'p4',
-      name: 'U.S. Wellness Naturals Moringa Powder',
-      price: '$21.99',
-      originalPrice: '$26.99',
-      benefits: ['100% pure leaf powder', 'Raw from India', 'Resealable packaging', 'Versatile superfood'],
-      usage: 'Perfect for smoothies, drinks, tea, and recipes',
-      category: 'ENERGY',
-      description: '1 LB certified organic moringa powder with no stems - just pure, potent leaf nutrition in a convenient resealable bag.',
-      detailedDescription: 'U.S. Wellness Naturals delivers premium moringa powder made exclusively from leaves (no stems) for maximum potency. This 100% certified organic powder is raw-processed in India to preserve all nutrients. The convenient 1-pound resealable bag makes it perfect for daily use in smoothies, beverages, and recipes.',
-      shopLink: 'https://amzn.to/47XJA4Y',
-      image: usWellnessMoringaImage,
-      rating: 4.4,
-      reviews: 4092,
-      features: [
-        '100% certified organic',
-        'Pure leaf NO stems',
-        '1 LB (16oz) size',
-        'Raw from India',
-        'Resealable bag',
-        'Premium quality choice'
-      ],
-      scientificBacking: 'Moringa leaves contain the highest concentration of nutrients, and this stem-free powder ensures maximum bioavailability of vitamins, minerals, and antioxidants.',
-      verifiedQuality: true,
-      fastShipping: true
-    },
-    {
       id: 'p6',
       name: 'Blue Spirulina Lemonade Powder',
       price: '$19.99',
@@ -150,7 +47,7 @@ const Supplements = () => {
       category: 'IMMUNITY',
       description: 'Pure organic blue spirulina powder — transform your lemonade into a stunning antioxidant-rich superfood drink.',
       detailedDescription: 'Our Blue Spirulina Lemonade Powder is extracted from Arthrospira platensis and delivers a concentrated dose of phycocyanin — one of nature\'s most powerful antioxidants. This vibrant blue superfood powder turns ordinary lemonade into an Instagram-worthy wellness drink packed with anti-inflammatory compounds, protein, and essential nutrients. No fishy taste, just pure blue magic.',
-      shopLink: 'https://healthiswealthstore-p8wk2.myshopify.com/',
+      shopLink: 'https://www.amazon.com/dp/B0FH8C8WZL?tag=keatontyler-20',
       image: blueSpirulinaImage,
       rating: 4.7,
       reviews: 1230,
@@ -163,6 +60,110 @@ const Supplements = () => {
         'Perfect for lemonades & smoothies'
       ],
       scientificBacking: 'Phycocyanin, the blue pigment in spirulina, has been clinically studied for its potent antioxidant and anti-inflammatory properties, supporting cellular health and immune function.',
+      verifiedQuality: true,
+      fastShipping: true
+    },
+    {
+      id: 'p1',
+      name: 'Organic Amla Powder - Vitamin C Powerhouse',
+      price: '$13.99',
+      originalPrice: '$15.99',
+      benefits: ['4x more Vitamin C than oranges', 'Natural antioxidant boost', 'Hair & skin health', 'Iron absorption support'],
+      usage: 'Add 1 teaspoon to smoothies, juices, or water daily',
+      category: 'IMMUNITY',
+      description: 'Pure, lab-tested organic Amla powder from India - the ultimate natural source of Vitamin C and antioxidants.',
+      detailedDescription: 'This premium organic Amla powder contains 4 times more Vitamin C than oranges and has been used for centuries in Ayurvedic medicine.',
+      shopLink: 'https://amzn.to/42atVvr',
+      image: amlaPowderImage,
+      rating: 4.5,
+      reviews: 349,
+      features: [
+        'Lab tested for purity',
+        'Gluten-free & Non-GMO',
+        '1.25 LB bulk bag',
+        '100% raw & natural',
+        'From sustainable farms',
+        'USDA organic certified'
+      ],
+      scientificBacking: 'Amla has been scientifically proven to be one of the richest natural sources of Vitamin C.',
+      verifiedQuality: true,
+      fastShipping: true
+    },
+    {
+      id: 'p2',
+      name: 'Micro Ingredients Organic Moringa Powder',
+      price: '$29.99',
+      originalPrice: '$34.99',
+      benefits: ['92 essential nutrients', 'Natural energy boost', 'Immune system support', 'Anti-inflammatory properties'],
+      usage: 'Mix 1 tablespoon in smoothies, tea, or water daily',
+      category: 'ENERGY',
+      description: '2-pound organic moringa leaf powder packed with vitamins, minerals, and antioxidants.',
+      detailedDescription: 'This premium organic moringa powder from Micro Ingredients contains 92 essential nutrients.',
+      shopLink: 'https://amzn.to/4nPp5w4',
+      image: moringaLeafImage,
+      rating: 4.4,
+      reviews: 4086,
+      features: [
+        'USDA organic certified',
+        '2 pounds bulk size',
+        'Rich in antioxidants',
+        'Vegan & gluten-free',
+        'Third-party tested',
+        'Sustainability certified'
+      ],
+      scientificBacking: 'Moringa has been extensively studied for its nutritional density.',
+      verifiedQuality: true,
+      fastShipping: true
+    },
+    {
+      id: 'p5',
+      name: 'Premium Manuka Honey MGO 850+',
+      price: '$49.99',
+      originalPrice: '$59.99',
+      benefits: ['Medical-grade antibacterial', 'Immune system boost', 'Digestive wellness', 'Natural wound healing'],
+      usage: 'Take 1 teaspoon daily or add to warm tea, smoothies, and recipes',
+      category: 'IMMUNITY',
+      description: 'Certified high-grade Manuka honey with MGO 850+ for powerful antibacterial and immune-boosting benefits.',
+      detailedDescription: 'This premium Manuka Honey is sourced from New Zealand and certified with an MGO rating of 850+. Rich in methylglyoxal, this medical-grade honey delivers powerful antibacterial, anti-inflammatory, and immune-boosting properties. Lab-tested and AMHA certified for authenticity.',
+      shopLink: 'https://www.amazon.com/dp/B01HYIT7PO?tag=keatontyler-20',
+      image: manukaHoneyImage,
+      rating: 4.6,
+      reviews: 2890,
+      features: [
+        'MGO 850+ certified',
+        'AMHA certified authentic',
+        'Raw & unpasteurized',
+        'Non-GMO & lab-tested',
+        'From New Zealand',
+        'Medical grade quality'
+      ],
+      scientificBacking: 'Manuka honey contains methylglyoxal (MGO), which has been clinically proven to have potent antibacterial properties.',
+      verifiedQuality: true,
+      fastShipping: true
+    },
+    {
+      id: 'p4',
+      name: 'U.S. Wellness Naturals Moringa Powder',
+      price: '$21.99',
+      originalPrice: '$26.99',
+      benefits: ['100% pure leaf powder', 'Raw from India', 'Resealable packaging', 'Versatile superfood'],
+      usage: 'Perfect for smoothies, drinks, tea, and recipes',
+      category: 'ENERGY',
+      description: '1 LB certified organic moringa powder with no stems.',
+      detailedDescription: 'U.S. Wellness Naturals delivers premium moringa powder made exclusively from leaves (no stems) for maximum potency.',
+      shopLink: 'https://amzn.to/47XJA4Y',
+      image: usWellnessMoringaImage,
+      rating: 4.4,
+      reviews: 4092,
+      features: [
+        '100% certified organic',
+        'Pure leaf NO stems',
+        '1 LB (16oz) size',
+        'Raw from India',
+        'Resealable bag',
+        'Premium quality choice'
+      ],
+      scientificBacking: 'Moringa leaves contain the highest concentration of nutrients.',
       verifiedQuality: true,
       fastShipping: true
     }
