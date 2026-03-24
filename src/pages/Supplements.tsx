@@ -24,8 +24,6 @@ import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 import zazzeeAstragalusImage from '@/assets/zazzee-astragalus-extract.jpg';
 import nutricostAstragalusImage from '@/assets/nutricost-astragalus-powder.jpg';
 import elanenAstragalusImage from '@/assets/elanen-astragalus-tea.jpg';
-import amazingIndiaNeemImage from '@/assets/amazing-india-neem-powder.jpg';
-import vitamaticNeemImage from '@/assets/vitamatic-neem-powder.jpg';
 import pureShilajitImage from '@/assets/pure-shilajit-supplement.jpg';
 import seaMossGummiesImage from '@/assets/sea-moss-gummies.jpg';
 import magnesiumSupplementImage from '@/assets/magnesium-supplement.jpg';
