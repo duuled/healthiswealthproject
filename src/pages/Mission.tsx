@@ -147,7 +147,7 @@ export const Mission = () => {
               </Button>
             </Link>
             
-            <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://healthiswealthstore-p8wk2.myshopify.com/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="lg"

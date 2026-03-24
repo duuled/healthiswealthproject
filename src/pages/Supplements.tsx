@@ -150,7 +150,7 @@ const Supplements = () => {
       category: 'IMMUNITY',
       description: 'Pure organic blue spirulina powder — transform your lemonade into a stunning antioxidant-rich superfood drink.',
       detailedDescription: 'Our Blue Spirulina Lemonade Powder is extracted from Arthrospira platensis and delivers a concentrated dose of phycocyanin — one of nature\'s most powerful antioxidants. This vibrant blue superfood powder turns ordinary lemonade into an Instagram-worthy wellness drink packed with anti-inflammatory compounds, protein, and essential nutrients. No fishy taste, just pure blue magic.',
-      shopLink: 'https://n4qdra-r1.myshopify.com/',
+      shopLink: 'https://healthiswealthstore-p8wk2.myshopify.com/',
       image: blueSpirulinaImage,
       rating: 4.7,
       reviews: 1230,
@@ -588,7 +588,7 @@ const Supplements = () => {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full h-10 text-sm font-semibold">
-                      <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://healthiswealthstore-p8wk2.myshopify.com/" target="_blank" rel="noopener noreferrer">
                         View in Our Store
                       </a>
                     </Button>
@@ -740,7 +740,7 @@ const Supplements = () => {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full h-12 text-lg font-semibold">
-                      <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://healthiswealthstore-p8wk2.myshopify.com/" target="_blank" rel="noopener noreferrer">
                         View in Our Store
                       </a>
                     </Button>
