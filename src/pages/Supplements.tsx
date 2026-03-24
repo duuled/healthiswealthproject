@@ -29,7 +29,7 @@ import seaMossGummiesImage from '@/assets/sea-moss-gummies.jpg';
 import magnesiumSupplementImage from '@/assets/magnesium-supplement.jpg';
 import berberineSupplementImage from '@/assets/berberine-supplement.jpg';
 import jointSupportImage from '@/assets/joint-support-supplement.jpg';
-import glycoOptimizerImage from '@/assets/glyco-optimizer.jpg';
+
 
 const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
