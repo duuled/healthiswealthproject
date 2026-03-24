@@ -96,7 +96,7 @@ export const Home = () => {
     "I deserve joy and balance, right here in this moment."
   ];
 
-  // Power of 5 - Elite Amazon Products
+  // Power of 5 - Elite Wellness Products
   const powerOf5Products = [
     {
       id: 'p1',
@@ -203,32 +203,6 @@ export const Home = () => {
       fastShipping: true
     },
     {
-      id: 'p5',
-      name: 'Premium Manuka Honey',
-      price: '$24.99',
-      originalPrice: '$29.99',
-      benefits: ['Immunity boost', 'Natural energy', 'Antibacterial properties', 'Digestive support'],
-      usage: 'Add 1-2 teaspoons to morning tea, smoothies, or take directly',
-      category: 'IMMUNITY',
-      description: 'Raw, unprocessed Manuka honey with high MGO content for maximum therapeutic benefits and immune system support.',
-      detailedDescription: 'Sourced from pristine New Zealand landscapes, this premium Manuka honey contains active compounds that provide natural antibacterial properties and immune system support. Perfect for health-conscious individuals seeking natural wellness solutions worldwide.',
-      shopLink: 'https://amazon.com/dp/B01K0PKS5M',
-      image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=600',
-      rating: 4.6,
-      reviews: 892,
-      features: [
-        'MGO 550+ certified',
-        'Raw & unprocessed',
-        'Single-origin New Zealand',
-        'Glass jar packaging',
-        'Traceable source',
-        '12oz premium size'
-      ],
-      scientificBacking: 'Manuka honey has been studied for its unique antibacterial properties and potential immune system benefits.',
-      verifiedQuality: true,
-      fastShipping: true
-    },
-    {
       id: 'p6',
       name: 'Blue Spirulina Lemonade Powder',
       price: '$19.99',
@@ -238,7 +212,7 @@ export const Home = () => {
       category: 'IMMUNITY',
       description: 'Pure organic blue spirulina powder — transform your lemonade into a stunning antioxidant-rich superfood drink.',
       detailedDescription: 'Our Blue Spirulina Lemonade Powder is extracted from Arthrospira platensis and delivers a concentrated dose of phycocyanin — one of nature\'s most powerful antioxidants. This vibrant blue superfood powder turns ordinary lemonade into an Instagram-worthy wellness drink packed with anti-inflammatory compounds, protein, and essential nutrients. No fishy taste, just pure blue magic.',
-      shopLink: 'https://n4qdra-r1.myshopify.com/',
+      shopLink: 'https://healthiswealthstore-p8wk2.myshopify.com/',
       image: blueSpirulinaImage,
       rating: 4.7,
       reviews: 1230,
@@ -654,7 +628,7 @@ export const Home = () => {
                   </div>
 
                   <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
-                    <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://healthiswealthstore-p8wk2.myshopify.com/" target="_blank" rel="noopener noreferrer">
                       Shop Now - {product.price}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </a>

@@ -24,14 +24,12 @@ import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 import zazzeeAstragalusImage from '@/assets/zazzee-astragalus-extract.jpg';
 import nutricostAstragalusImage from '@/assets/nutricost-astragalus-powder.jpg';
 import elanenAstragalusImage from '@/assets/elanen-astragalus-tea.jpg';
-import amazingIndiaNeemImage from '@/assets/amazing-india-neem-powder.jpg';
-import vitamaticNeemImage from '@/assets/vitamatic-neem-powder.jpg';
 import pureShilajitImage from '@/assets/pure-shilajit-supplement.jpg';
 import seaMossGummiesImage from '@/assets/sea-moss-gummies.jpg';
 import magnesiumSupplementImage from '@/assets/magnesium-supplement.jpg';
 import berberineSupplementImage from '@/assets/berberine-supplement.jpg';
 import jointSupportImage from '@/assets/joint-support-supplement.jpg';
-import glycoOptimizerImage from '@/assets/glyco-optimizer.jpg';
+
 
 const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -143,32 +141,6 @@ const Supplements = () => {
       fastShipping: true
     },
     {
-      id: 'p5',
-      name: 'Premium Manuka Honey',
-      price: '$24.99',
-      originalPrice: '$29.99',
-      benefits: ['Immunity boost', 'Natural energy', 'Antibacterial properties', 'Digestive support'],
-      usage: 'Add 1-2 teaspoons to morning tea, smoothies, or take directly',
-      category: 'IMMUNITY',
-      description: 'Raw, unprocessed Manuka honey with high MGO content for maximum therapeutic benefits and immune system support.',
-      detailedDescription: 'Sourced from pristine New Zealand landscapes, this premium Manuka honey contains active compounds that provide natural antibacterial properties and immune system support. Perfect for health-conscious individuals seeking natural wellness solutions worldwide.',
-      shopLink: 'https://amazon.com/dp/B01K0PKS5M',
-      image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8da?w=600',
-      rating: 4.6,
-      reviews: 892,
-      features: [
-        'MGO 550+ certified',
-        'Raw & unprocessed',
-        'Single-origin New Zealand',
-        'Glass jar packaging',
-        'Traceable source',
-        '12oz premium size'
-      ],
-      scientificBacking: 'Manuka honey has been studied for its unique antibacterial properties and potential immune system benefits.',
-      verifiedQuality: true,
-      fastShipping: true
-    },
-    {
       id: 'p6',
       name: 'Blue Spirulina Lemonade Powder',
       price: '$19.99',
@@ -178,7 +150,7 @@ const Supplements = () => {
       category: 'IMMUNITY',
       description: 'Pure organic blue spirulina powder — transform your lemonade into a stunning antioxidant-rich superfood drink.',
       detailedDescription: 'Our Blue Spirulina Lemonade Powder is extracted from Arthrospira platensis and delivers a concentrated dose of phycocyanin — one of nature\'s most powerful antioxidants. This vibrant blue superfood powder turns ordinary lemonade into an Instagram-worthy wellness drink packed with anti-inflammatory compounds, protein, and essential nutrients. No fishy taste, just pure blue magic.',
-      shopLink: 'https://n4qdra-r1.myshopify.com/',
+      shopLink: 'https://healthiswealthstore-p8wk2.myshopify.com/',
       image: blueSpirulinaImage,
       rating: 4.7,
       reviews: 1230,
@@ -354,58 +326,6 @@ const Supplements = () => {
       fastShipping: true
     },
     {
-      id: 10,
-      name: 'Amazing India Organic Neem Powder',
-      price: '$14.99',
-      originalPrice: '$18.99',
-      benefits: ['Blood purification', 'Healthy immunity', 'Skin wellness', 'Natural detox support'],
-      usage: 'Mix 1/2 teaspoon in water, juice, or smoothies daily on empty stomach',
-      category: 'DIGESTIVE',
-      description: 'USDA certified organic neem powder - traditional Ayurvedic herb for blood purification, immunity, and skin health.',
-      detailedDescription: 'Amazing India\'s Organic Neem Powder is sourced from the highest quality neem leaves (Azadirachta indica) and processed to retain maximum potency. This traditional Ayurvedic herb has been used for centuries for its purifying properties, supporting healthy immunity, clear skin, and natural detoxification processes.',
-      shopLink: 'https://amzn.to/483dlkZ',
-      image: amazingIndiaNeemImage,
-      rating: 4.2,
-      reviews: 237,
-      features: [
-        'USDA certified organic',
-        '16oz bulk powder',
-        'Non-GMO verified',
-        'Pure neem leaves',
-        'Traditional Ayurvedic herb',
-        'Quality tested'
-      ],
-      scientificBacking: 'Neem has been extensively studied for its antimicrobial, anti-inflammatory, and immune-supporting properties, making it a valuable addition to wellness routines.',
-      bestseller: false,
-      fastShipping: true
-    },
-    {
-      id: 11,
-      name: 'Vitamatic Organic Neem Leaf Powder',
-      price: '$9.99',
-      originalPrice: '$12.99',
-      benefits: ['Skin support', 'Immune wellness', 'Detox support', 'Traditional Ayurvedic benefits'],
-      usage: 'Mix 1/4 to 1/2 teaspoon in water or juice daily, preferably on empty stomach',
-      category: 'DIGESTIVE',
-      description: 'Amazon\'s Choice certified USDA organic neem leaf powder - 1 pound of pure Azadirachta indica for traditional wellness support.',
-      detailedDescription: 'Vitamatic\'s Certified Organic Neem Leaf Powder delivers the traditional benefits of this revered Ayurvedic herb in convenient powder form. Made from 100% pure Azadirachta indica leaves, this Amazon\'s Choice product supports skin health, immune function, and natural detoxification processes. An excellent value for those seeking traditional herbal wellness support.',
-      shopLink: 'https://amzn.to/4gHvbMy',
-      image: vitamaticNeemImage,
-      rating: 4.5,
-      reviews: 868,
-      features: [
-        'Amazon\'s Choice product',
-        'USDA certified organic',
-        '1 lb (16oz) bulk size',
-        '100% pure neem leaves',
-        'Traditional Ayurvedic herb',
-        'Premium quality'
-      ],
-      scientificBacking: 'Neem has been used in Ayurvedic medicine for over 4000 years and modern research confirms its antimicrobial, anti-inflammatory, and skin-supporting properties.',
-      bestseller: false,
-      fastShipping: true
-    },
-    {
       id: 12,
       name: 'Pure Shilajit Complex - Premium Grade',
       price: '$32.99',
@@ -535,32 +455,7 @@ const Supplements = () => {
       bestseller: false,
       fastShipping: true
     },
-    {
-      id: 17,
-      name: 'Glyco Optimizer Blood Sugar Support',
-      price: '$35.99',
-      originalPrice: '$42.99',
-      benefits: ['Blood sugar balance', 'Insulin sensitivity', 'Glucose metabolism', 'Energy stability'],
-      usage: 'Take 1-2 capsules with meals, up to 3 times daily',
-      category: 'METABOLIC',
-      description: 'Advanced glucose support formula with chromium, alpha lipoic acid, and cinnamon extract for healthy blood sugar management.',
-      detailedDescription: 'Glyco Optimizer combines scientifically-backed ingredients including chromium picolinate, alpha lipoic acid, bitter melon extract, and Ceylon cinnamon to support healthy glucose metabolism and insulin sensitivity. This comprehensive formula helps maintain stable energy levels throughout the day.',
-      shopLink: 'https://amzn.to/426YUbG',
-      image: glycoOptimizerImage,
-      rating: 4.5,
-      reviews: 678,
-      features: [
-        'Chromium picolinate',
-        'Alpha lipoic acid',
-        'Ceylon cinnamon extract',
-        '120 vegetarian capsules',
-        'No artificial additives',
-        'Clinically studied ingredients'
-      ],
-      scientificBacking: 'The ingredients in this formula have been clinically studied for their ability to support healthy glucose metabolism and insulin function.',
-      bestseller: false,
-      fastShipping: true
-    }
+  
   ];
 
   const categories = ['ALL', 'METABOLIC', 'IMMUNITY', 'ENERGY', 'DIGESTIVE'];
@@ -605,11 +500,11 @@ const Supplements = () => {
           <div className="text-center mb-16">
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
               The 5 most powerful health supplements that will transform your wellness journey. 
-              Carefully selected from Amazon's top-rated products for maximum potency and results.
+              Carefully selected and personally tested for maximum potency and results.
             </p>
             <div className="flex justify-center">
               <Badge className="px-6 py-3 text-lg bg-primary/20 text-primary border-primary">
-                ⭐ Amazon's Most Trusted Wellness Products ⭐
+                ⭐ Our Most Trusted Wellness Products ⭐
               </Badge>
             </div>
           </div>
@@ -693,7 +588,7 @@ const Supplements = () => {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full h-10 text-sm font-semibold">
-                      <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://healthiswealthstore-p8wk2.myshopify.com/" target="_blank" rel="noopener noreferrer">
                         View in Our Store
                       </a>
                     </Button>
@@ -740,7 +635,7 @@ const Supplements = () => {
                 <div className="relative">
                   <img 
                     src={supplement.image} 
-                    alt={`${supplement.name} premium supplement bottle from Amazon`}
+                    alt={`${supplement.name} premium supplement`}
                     className="w-full h-80 object-cover"
                   />
                   <div className="absolute top-4 left-4 flex flex-col gap-2">
@@ -845,7 +740,7 @@ const Supplements = () => {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full h-12 text-lg font-semibold">
-                      <a href="https://n4qdra-r1.myshopify.com/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://healthiswealthstore-p8wk2.myshopify.com/" target="_blank" rel="noopener noreferrer">
                         View in Our Store
                       </a>
                     </Button>
@@ -864,12 +759,12 @@ const Supplements = () => {
       {/* Trust Section */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Why Choose Our Amazon Supplements?</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Why Choose Our Supplements?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
               <Shield className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Quality Assured</h3>
-              <p className="text-muted-foreground">Amazon verified sellers with third-party testing for purity and potency</p>
+              <p className="text-muted-foreground">Verified sellers with third-party testing for purity and potency</p>
             </div>
             <div className="flex flex-col items-center">
               <Leaf className="w-12 h-12 text-primary mb-4" />
