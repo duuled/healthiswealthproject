@@ -14,7 +14,8 @@ import {
   Truck
 } from 'lucide-react';
 import chagaccinoImage from '@/assets/chagaccino-product.jpg';
-import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade.jpg';
+import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade-craving.jpg';
+import manukaHoneyImage from '@/assets/manuka-honey-drizzle.jpg';
 import mariosMushroomImage from '@/assets/marios-mushroom-power.jpg';
 import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
 import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
