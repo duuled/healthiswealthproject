@@ -635,7 +635,7 @@ const Supplements = () => {
                 <div className="relative">
                   <img 
                     src={supplement.image} 
-                    alt={`${supplement.name} premium supplement bottle from Amazon`}
+                    alt={`${supplement.name} premium supplement`}
                     className="w-full h-80 object-cover"
                   />
                   <div className="absolute top-4 left-4 flex flex-col gap-2">
