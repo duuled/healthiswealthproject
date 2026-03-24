@@ -500,11 +500,11 @@ const Supplements = () => {
           <div className="text-center mb-16">
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
               The 5 most powerful health supplements that will transform your wellness journey. 
-              Carefully selected from Amazon's top-rated products for maximum potency and results.
+              Carefully selected and personally tested for maximum potency and results.
             </p>
             <div className="flex justify-center">
               <Badge className="px-6 py-3 text-lg bg-primary/20 text-primary border-primary">
-                ⭐ Amazon's Most Trusted Wellness Products ⭐
+                ⭐ Our Most Trusted Wellness Products ⭐
               </Badge>
             </div>
           </div>
