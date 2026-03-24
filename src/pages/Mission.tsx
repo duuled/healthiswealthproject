@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Star, Heart, Target, Zap, Leaf, Shield, Brain } from 'lucide-react';
+import { Heart, Target, Zap, Leaf, Shield, Brain, Users, Baby, Salad } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Mission = () => {
@@ -17,7 +17,7 @@ export const Mission = () => {
           </div>
           
           <p className="text-xl text-muted-foreground mb-8 tracking-wide">
-            Elevating Wellness, One Nutrient at a Time
+            Empowering Every Body — From Our Roots to Your Table
           </p>
         </div>
       </section>
@@ -28,23 +28,27 @@ export const Mission = () => {
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 md:p-12 space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Your Health Is Your Greatest Investment
+                Health Is Wealth — And We Mean It
               </h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                At <strong className="text-foreground">Health Is Wealth</strong>, we believe that true prosperity starts from within. Founded in Venice, California, our brand was born from a simple yet powerful truth: without your health, nothing else matters. We're on a mission to make premium, organic wellness accessible to everyone — not just the elite few.
+                At <strong className="text-foreground">Health Is Wealth</strong>, we started with one belief that changed everything: your health is the most valuable thing you'll ever own. Born out of a deep passion for organic, homegrown remedies sourced from premium suppliers around the world, we set out to build more than a brand — we're building a movement. A movement that puts clean, natural nutrition back into the hands of everyday people.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We know how overwhelming the supplement market can be. That's why we've done the research for you. Every product we recommend is carefully vetted for purity, potency, and real results. From organic moringa and amla powder to adaptogenic mushroom blends, our curated "Power of 5" lineup delivers the essential nutrients your body craves — without the fillers, artificial additives, or inflated price tags.
+                We cater to the entire community — families, fitness enthusiasts, vegans, and especially parents looking to give their children the healthiest start possible. We believe every person, regardless of age or lifestyle, deserves access to supplements and superfoods that are pure, potent, and free from harmful chemicals. That's why every product we carry is organic, third-party tested, and handpicked by our team.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our customers come to us looking for a healthier alternative — clean supplements packed with the right vitamins, minerals, and organic compounds that support immunity, energy, mental clarity, and long-term vitality. We stand behind every product we feature because we use them ourselves. These aren't trends — they're time-tested, science-backed solutions that genuinely work.
+                Innovation is at the heart of what we do. From our signature <strong className="text-foreground">Blue Spirulina Lemonade</strong> to our carefully curated "Power of 5" lineup, we're constantly exploring new recipes and formulations that make healthy living exciting, delicious, and accessible. We don't just sell supplements — we create experiences that inspire you to rethink what wellness can taste and feel like.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Whether you're just starting your wellness journey or you're a seasoned health enthusiast looking for trusted sources, Health Is Wealth is here to guide you. We partner with top-rated, third-party tested brands so you can shop with confidence knowing exactly what's going into your body. Your trust is everything to us, and we earn it every single day.
+                Whether you're a vegan looking for plant-based nutrition, a parent searching for safe and natural options for your kids, or someone who simply wants to feel their absolute best — Health Is Wealth is your trusted partner. We source only from premium, sustainable farms and producers who share our commitment to purity and the planet. Every powder, every capsule, every blend we offer has been personally tested and approved by our team before it ever reaches your door.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                This isn't a trend for us. This is a lifestyle. And we're here to walk this journey with you — one nutrient, one recipe, one healthier day at a time. Welcome to the family.
               </p>
             </div>
           </div>
@@ -62,60 +66,60 @@ export const Mission = () => {
             <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
               <Shield className="w-12 h-12 text-primary mx-auto mb-6" />
               <h3 className="font-bold text-xl text-foreground mb-4">
-                QUALITY YOU CAN TRUST
+                PREMIUM ORGANIC SOURCES
               </h3>
               <p className="text-muted-foreground">
-                Every product is USDA organic certified, third-party tested, and free from artificial additives. We never compromise on purity.
+                Every product is sourced from trusted organic farms and premium suppliers worldwide. USDA certified, third-party tested, zero compromises on purity.
+              </p>
+            </div>
+
+            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
+              <Salad className="w-12 h-12 text-primary mx-auto mb-6" />
+              <h3 className="font-bold text-xl text-foreground mb-4">
+                VEGAN & PLANT-BASED
+              </h3>
+              <p className="text-muted-foreground">
+                Proudly vegan-friendly across our entire lineup. Clean, plant-powered nutrition that aligns with your values and fuels your body naturally.
+              </p>
+            </div>
+
+            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
+              <Baby className="w-12 h-12 text-primary mx-auto mb-6" />
+              <h3 className="font-bold text-xl text-foreground mb-4">
+                SAFE FOR THE WHOLE FAMILY
+              </h3>
+              <p className="text-muted-foreground">
+                From toddlers to grandparents, our products are formulated with safety and gentleness in mind. Give your children the nutrients they need without the worry.
               </p>
             </div>
 
             <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
               <Brain className="w-12 h-12 text-primary mx-auto mb-6" />
               <h3 className="font-bold text-xl text-foreground mb-4">
-                SCIENCE-BACKED RESULTS
+                INNOVATIVE RECIPES
               </h3>
               <p className="text-muted-foreground">
-                We only recommend supplements with proven scientific backing. No hype, no gimmicks — just nutrients that deliver real, measurable benefits.
+                Blue Spirulina Lemonade is just the beginning. We're constantly developing creative, delicious ways to make superfoods part of your daily routine.
               </p>
             </div>
 
             <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
-              <Heart className="w-12 h-12 text-primary mx-auto mb-6" />
+              <Users className="w-12 h-12 text-primary mx-auto mb-6" />
               <h3 className="font-bold text-xl text-foreground mb-4">
-                ACCESSIBLE WELLNESS
+                COMMUNITY FIRST
               </h3>
               <p className="text-muted-foreground">
-                Premium health shouldn't break the bank. We find the best organic supplements at prices that respect your budget and your body.
+                We exist to serve our community. Every recommendation, every recipe, every product is chosen with you and your family's wellbeing at the center.
               </p>
             </div>
 
             <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
               <Leaf className="w-12 h-12 text-primary mx-auto mb-6" />
               <h3 className="font-bold text-xl text-foreground mb-4">
-                PLANET-FRIENDLY
+                HOMEGROWN REMEDIES
               </h3>
               <p className="text-muted-foreground">
-                We prioritize sustainably sourced ingredients and eco-friendly packaging. Your wellness journey should never come at the planet's expense.
-              </p>
-            </div>
-
-            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
-              <Target className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h3 className="font-bold text-xl text-foreground mb-4">
-                LONGEVITY FOCUSED
-              </h3>
-              <p className="text-muted-foreground">
-                We're not about quick fixes. Our recommendations support long-term health, vitality, and a life lived to its fullest potential.
-              </p>
-            </div>
-
-            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-8 text-center">
-              <Zap className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h3 className="font-bold text-xl text-foreground mb-4">
-                REAL COMMUNITY
-              </h3>
-              <p className="text-muted-foreground">
-                Join thousands who've transformed their health with us. We're building a global movement where wellness is a lifestyle, not a luxury.
+                Rooted in traditional, time-tested natural remedies passed down through generations — now backed by modern science and available to everyone.
               </p>
             </div>
           </div>
@@ -126,11 +130,11 @@ export const Mission = () => {
       <section className="py-20 px-4 bg-card/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            START YOUR WELLNESS JOURNEY TODAY
+            JOIN THE WELLNESS MOVEMENT
           </h2>
           
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Explore our handpicked collection of organic supplements, superfood powders, and natural wellness products. Every product we feature has been personally tested, thoroughly researched, and proven to deliver results. Your body deserves the best — and we're here to help you find it.
+            Explore our handpicked collection of organic supplements, superfood powders, and innovative wellness recipes. From our Power of 5 lineup to our Blue Spirulina Lemonade, every product has been personally tested and proven to deliver real results — for you, your family, and your future.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
