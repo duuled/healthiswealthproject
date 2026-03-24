@@ -328,58 +328,6 @@ const Supplements = () => {
       fastShipping: true
     },
     {
-      id: 10,
-      name: 'Amazing India Organic Neem Powder',
-      price: '$14.99',
-      originalPrice: '$18.99',
-      benefits: ['Blood purification', 'Healthy immunity', 'Skin wellness', 'Natural detox support'],
-      usage: 'Mix 1/2 teaspoon in water, juice, or smoothies daily on empty stomach',
-      category: 'DIGESTIVE',
-      description: 'USDA certified organic neem powder - traditional Ayurvedic herb for blood purification, immunity, and skin health.',
-      detailedDescription: 'Amazing India\'s Organic Neem Powder is sourced from the highest quality neem leaves (Azadirachta indica) and processed to retain maximum potency. This traditional Ayurvedic herb has been used for centuries for its purifying properties, supporting healthy immunity, clear skin, and natural detoxification processes.',
-      shopLink: 'https://amzn.to/483dlkZ',
-      image: amazingIndiaNeemImage,
-      rating: 4.2,
-      reviews: 237,
-      features: [
-        'USDA certified organic',
-        '16oz bulk powder',
-        'Non-GMO verified',
-        'Pure neem leaves',
-        'Traditional Ayurvedic herb',
-        'Quality tested'
-      ],
-      scientificBacking: 'Neem has been extensively studied for its antimicrobial, anti-inflammatory, and immune-supporting properties, making it a valuable addition to wellness routines.',
-      bestseller: false,
-      fastShipping: true
-    },
-    {
-      id: 11,
-      name: 'Vitamatic Organic Neem Leaf Powder',
-      price: '$9.99',
-      originalPrice: '$12.99',
-      benefits: ['Skin support', 'Immune wellness', 'Detox support', 'Traditional Ayurvedic benefits'],
-      usage: 'Mix 1/4 to 1/2 teaspoon in water or juice daily, preferably on empty stomach',
-      category: 'DIGESTIVE',
-      description: 'Amazon\'s Choice certified USDA organic neem leaf powder - 1 pound of pure Azadirachta indica for traditional wellness support.',
-      detailedDescription: 'Vitamatic\'s Certified Organic Neem Leaf Powder delivers the traditional benefits of this revered Ayurvedic herb in convenient powder form. Made from 100% pure Azadirachta indica leaves, this Amazon\'s Choice product supports skin health, immune function, and natural detoxification processes. An excellent value for those seeking traditional herbal wellness support.',
-      shopLink: 'https://amzn.to/4gHvbMy',
-      image: vitamaticNeemImage,
-      rating: 4.5,
-      reviews: 868,
-      features: [
-        'Amazon\'s Choice product',
-        'USDA certified organic',
-        '1 lb (16oz) bulk size',
-        '100% pure neem leaves',
-        'Traditional Ayurvedic herb',
-        'Premium quality'
-      ],
-      scientificBacking: 'Neem has been used in Ayurvedic medicine for over 4000 years and modern research confirms its antimicrobial, anti-inflammatory, and skin-supporting properties.',
-      bestseller: false,
-      fastShipping: true
-    },
-    {
       id: 12,
       name: 'Pure Shilajit Complex - Premium Grade',
       price: '$32.99',
