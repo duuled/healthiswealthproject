@@ -457,32 +457,7 @@ const Supplements = () => {
       bestseller: false,
       fastShipping: true
     },
-    {
-      id: 17,
-      name: 'Glyco Optimizer Blood Sugar Support',
-      price: '$35.99',
-      originalPrice: '$42.99',
-      benefits: ['Blood sugar balance', 'Insulin sensitivity', 'Glucose metabolism', 'Energy stability'],
-      usage: 'Take 1-2 capsules with meals, up to 3 times daily',
-      category: 'METABOLIC',
-      description: 'Advanced glucose support formula with chromium, alpha lipoic acid, and cinnamon extract for healthy blood sugar management.',
-      detailedDescription: 'Glyco Optimizer combines scientifically-backed ingredients including chromium picolinate, alpha lipoic acid, bitter melon extract, and Ceylon cinnamon to support healthy glucose metabolism and insulin sensitivity. This comprehensive formula helps maintain stable energy levels throughout the day.',
-      shopLink: 'https://amzn.to/426YUbG',
-      image: glycoOptimizerImage,
-      rating: 4.5,
-      reviews: 678,
-      features: [
-        'Chromium picolinate',
-        'Alpha lipoic acid',
-        'Ceylon cinnamon extract',
-        '120 vegetarian capsules',
-        'No artificial additives',
-        'Clinically studied ingredients'
-      ],
-      scientificBacking: 'The ingredients in this formula have been clinically studied for their ability to support healthy glucose metabolism and insulin function.',
-      bestseller: false,
-      fastShipping: true
-    }
+  
   ];
 
   const categories = ['ALL', 'METABOLIC', 'IMMUNITY', 'ENERGY', 'DIGESTIVE'];
