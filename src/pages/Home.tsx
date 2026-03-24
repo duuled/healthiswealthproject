@@ -96,7 +96,7 @@ export const Home = () => {
     "I deserve joy and balance, right here in this moment."
   ];
 
-  // Power of 5 - Elite Amazon Products
+  // Power of 5 - Elite Wellness Products
   const powerOf5Products = [
     {
       id: 'p1',
