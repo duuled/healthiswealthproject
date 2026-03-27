@@ -87,13 +87,6 @@ export const Home = () => {
     }
   ];
 
-  const affirmations = [
-    "I am enough, and my wellness journey is unfolding beautifully.",
-    "Every breath I take fills me with peace and strength.",
-    "I release stress and embrace calm, thriving wherever I am.",
-    "My mind is a sanctuary of positivity, growing stronger each day.",
-    "I deserve joy and balance, right here in this moment."
-  ];
 
   // Power of 5 - Elite Wellness Products
   const powerOf5Products = [
