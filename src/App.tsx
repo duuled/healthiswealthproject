@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { CookieConsent } from "@/components/CookieConsent";
+import { NewsletterPopup } from "@/components/NewsletterPopup";
 import { Home } from "./pages/Home";
 import Supplements from "./pages/Supplements";
 import { Shop } from "./pages/Shop";
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieConsent />
+          <NewsletterPopup />
         </div>
       </BrowserRouter>
     </TooltipProvider>

@@ -20,14 +20,12 @@ import {
   Truck
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import heroImage from '@/assets/wellness-hero-image.jpg';
 import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade-craving.jpg';
 import manukaHoneyImage from '@/assets/manuka-honey-drizzle.jpg';
-import mentalWellnessImage from '@/assets/mental-wellness-image.jpg';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
 import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
 import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
-import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
+
 import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 import smoothieRecipeImage from '@/assets/power-5-smoothie-recipe.png';
 import purityTrackedVideo from '@/assets/purity-tracked-video.mp4';
@@ -89,13 +87,6 @@ export const Home = () => {
     }
   ];
 
-  const affirmations = [
-    "I am enough, and my wellness journey is unfolding beautifully.",
-    "Every breath I take fills me with peace and strength.",
-    "I release stress and embrace calm, thriving wherever I am.",
-    "My mind is a sanctuary of positivity, growing stronger each day.",
-    "I deserve joy and balance, right here in this moment."
-  ];
 
   // Power of 5 - Elite Wellness Products
   const powerOf5Products = [
