@@ -39,6 +39,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieConsent />
+          <NewsletterPopup />
         </div>
       </BrowserRouter>
     </TooltipProvider>

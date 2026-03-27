@@ -27,7 +27,7 @@ import mentalWellnessImage from '@/assets/mental-wellness-image.jpg';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
 import amlaPowderImage from '@/assets/amla-powder-vitamin-c.jpg';
 import moringaLeafImage from '@/assets/moringa-leaf-powder.jpg';
-import kuliKuliMoringaImage from '@/assets/kuli-kuli-moringa.jpg';
+
 import usWellnessMoringaImage from '@/assets/us-wellness-moringa.jpg';
 import smoothieRecipeImage from '@/assets/power-5-smoothie-recipe.png';
 import purityTrackedVideo from '@/assets/purity-tracked-video.mp4';
