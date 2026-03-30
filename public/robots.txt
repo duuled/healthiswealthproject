@@ -10,5 +10,36 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+# AI search crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: *
 Allow: /
+
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /_next/
+Disallow: /checkout/confirmation
+
+# Sitemap
+Sitemap: https://healthiswealth.live/sitemap.xml

@@ -264,6 +264,148 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'callout', text: '☕ Best Preparation: Chaga tea (simmer chunks for 15-30 minutes) has highest beta-glucan extraction. Powder in coffee is second best. Tinctures are most concentrated for therapeutic use.' },
     ]
   },
+  {
+    slug: 'berberine-vs-metformin-blood-sugar',
+    title: 'Berberine vs Metformin: The Natural Blood Sugar Solution Doctors Won\'t Prescribe',
+    excerpt: 'Clinical trials show berberine matches metformin\'s blood sugar effects — without the prescription. Here\'s the science behind the supplement cardiologists are quietly recommending.',
+    category: 'Blood Sugar',
+    readTime: '10 min read',
+    publishedAt: 'March 25, 2025',
+    author: 'Health Is Wealth Team',
+    authorRole: 'Wellness Researchers',
+    tags: ['berberine', 'blood sugar', 'berberine vs metformin', 'insulin resistance', 'metabolic health'],
+    content: [
+      { type: 'paragraph', text: 'Berberine is a bitter yellow alkaloid extracted from plants like barberry, goldenseal, and Oregon grape. It has been used in Chinese and Ayurvedic medicine for over 2,500 years. But in 2008, a landmark study in the journal Metabolism changed everything — researchers found berberine reduced HbA1c and fasting blood glucose just as effectively as metformin, the world\'s most prescribed diabetes drug.' },
+      { type: 'heading', text: 'The Clinical Evidence: Berberine vs Metformin' },
+      { type: 'paragraph', text: 'A randomized controlled trial by Zhang et al. (2008) compared berberine (500mg three times daily) to metformin in 116 patients with type 2 diabetes over 3 months. Results: berberine reduced HbA1c by 2.0% vs metformin\'s 2.6%. Fasting blood glucose dropped by 20% in both groups. Postprandial blood glucose dropped 28.1% with berberine vs 23.8% with metformin. The conclusion was explicit: berberine was "similarly effective" to metformin.' },
+      { type: 'heading', text: 'How Berberine Works: The AMPK Pathway' },
+      { type: 'paragraph', text: 'Berberine activates AMP-activated protein kinase (AMPK) — the same cellular energy-sensing enzyme targeted by metformin. AMPK is sometimes called the "metabolic master switch." When activated, it simultaneously lowers blood glucose, reduces fat storage, improves insulin sensitivity, and reduces inflammation. This explains why berberine\'s effects extend far beyond blood sugar alone.' },
+      { type: 'heading', text: '8 Science-Backed Benefits of Berberine' },
+      { type: 'list', items: [
+        'Blood sugar control: Reduces fasting glucose by 15-20% in multiple RCTs',
+        'Insulin sensitivity: Increases glucose uptake by muscle cells via GLUT4 upregulation',
+        'LDL cholesterol reduction: Lowers LDL by an average of 21% in meta-analyses',
+        'Triglyceride reduction: Reduces triglycerides by up to 35% in dyslipidemia patients',
+        'Weight management: AMPK activation suppresses fat cell development (adipogenesis)',
+        'Gut microbiome improvement: Enriches Akkermansia muciniphila — the longevity bacterium',
+        'Anti-inflammatory: Inhibits NF-kB signaling, reducing systemic inflammation markers',
+        'PCOS support: Shown to improve ovulation rates and reduce androgen levels comparably to metformin'
+      ]},
+      { type: 'callout', text: '💊 Dosing Protocol: 500mg berberine, 3x daily with meals. Start with 1x daily for the first week to allow gut adaptation. Results are typically seen within 4-8 weeks. Cycling (8 weeks on, 2 weeks off) is recommended for long-term use.' },
+      { type: 'heading', text: 'Why It\'s Not Prescribed' },
+      { type: 'paragraph', text: 'Berberine cannot be patented. Pharmaceutical companies cannot generate the billion-dollar returns that justify funding large Phase III trials and FDA approval processes. This is not a conspiracy — it\'s simple economics. The same mechanism explains why many effective natural compounds remain "alternative medicine" despite strong clinical evidence.' },
+      { type: 'heading', text: 'Berberine vs Metformin: Side Effect Comparison' },
+      { type: 'list', items: [
+        'Metformin: GI distress (30% of users), lactic acidosis risk (rare), B12 depletion with long-term use, contraindicated in kidney disease',
+        'Berberine: Mild GI adjustment in first 1-2 weeks (resolves), no known B12 depletion, generally well-tolerated',
+        'Both: Can cause hypoglycemia if combined with other blood sugar medications — monitor carefully',
+        'Important: Berberine is NOT a replacement for prescribed medications without medical supervision'
+      ]},
+      { type: 'heading', text: 'The Insulin Resistance Epidemic' },
+      { type: 'paragraph', text: 'Over 88 million American adults have prediabetes — 84% of them don\'t know it. Insulin resistance (the precursor to type 2 diabetes) silently damages blood vessels, nerves, and organs for years before diagnosis. Early intervention with lifestyle changes and targeted supplementation is the most powerful window for reversal.' },
+      { type: 'quote', text: '"Berberine is one of the few natural compounds where the clinical evidence is so compelling it genuinely challenges the pharmaceutical narrative. We recommend it as a cornerstone of our metabolic health protocol." — Health Is Wealth' },
+      { type: 'heading', text: 'How to Stack Berberine for Maximum Effect' },
+      { type: 'list', items: [
+        'Berberine + Ceylon Cinnamon: Synergistic blood sugar lowering — cinnamon improves GLUT4 independently',
+        'Berberine + Chromium: Chromium enhances insulin receptor sensitivity',
+        'Berberine + Alpha Lipoic Acid: Dual AMPK activation + antioxidant protection for nerves',
+        'Avoid combining with: Cyclosporine, blood thinners, or other diabetes medications without physician oversight'
+      ]},
+      { type: 'callout', text: '🛒 Quality Matters: Look for berberine HCl (hydrochloride) form — highest bioavailability. Minimum 97% purity, third-party tested. Avoid products with excessive fillers or proprietary blends that obscure actual berberine content.' },
+    ]
+  },
+  {
+    slug: 'magnesium-glycinate-sleep-anxiety',
+    title: 'Magnesium Glycinate: The $15 Supplement That Fixes Sleep, Anxiety, and Muscle Cramps',
+    excerpt: 'Over 68% of Americans are deficient in magnesium. Here\'s why magnesium glycinate is the superior form — and exactly how it improves sleep quality, reduces anxiety, and stops muscle cramps.',
+    category: 'Sleep & Recovery',
+    readTime: '9 min read',
+    publishedAt: 'March 22, 2025',
+    author: 'Health Is Wealth Team',
+    authorRole: 'Wellness Researchers',
+    tags: ['magnesium glycinate', 'sleep', 'anxiety', 'magnesium for sleep', 'muscle recovery', 'stress'],
+    content: [
+      { type: 'paragraph', text: 'Magnesium is involved in over 300 enzymatic reactions in the human body. It regulates nerve function, muscle contraction, blood sugar, blood pressure, protein synthesis, and DNA repair. Despite being so foundational, the NHANES data shows 68% of Americans consume less than the recommended daily amount — and many functional medicine doctors argue the RDA itself is set too low.' },
+      { type: 'heading', text: 'Why Deficiency Is So Common' },
+      { type: 'paragraph', text: 'Modern agriculture has depleted soil magnesium levels by up to 50% compared to 50 years ago. Processed food diets provide almost no magnesium. Chronic stress depletes magnesium rapidly (cortisol drives urinary excretion). Alcohol, coffee, and certain medications (PPIs, diuretics, antibiotics) all accelerate magnesium loss. The result: a population running on chronically low magnesium — and feeling it in their sleep, mood, and muscles.' },
+      { type: 'heading', text: 'The 7 Forms of Magnesium (And Why Most Are Inferior)' },
+      { type: 'list', items: [
+        'Magnesium Oxide: Cheapest, poorest absorption (~4%). Common in cheap multivitamins. Mostly acts as a laxative.',
+        'Magnesium Citrate: Better absorbed (~16%). Good for constipation. Loose stools at higher doses.',
+        'Magnesium Chloride: Decent absorption, often used in topical sprays and bath flakes.',
+        'Magnesium Malate: Good for energy production and fibromyalgia pain. Malic acid supports the Krebs cycle.',
+        'Magnesium Taurate: Best for cardiovascular health — taurine + magnesium protect heart rhythm.',
+        'Magnesium Threonate: Highest brain penetration — crosses the blood-brain barrier. Best for cognitive function and memory.',
+        'Magnesium Glycinate: Highest bioavailability for sleep and anxiety. Glycine is a calming amino acid that amplifies magnesium\'s relaxation effects.'
+      ]},
+      { type: 'heading', text: 'Why Glycinate Wins for Sleep and Anxiety' },
+      { type: 'paragraph', text: 'Magnesium glycinate is magnesium bound to glycine — a non-essential amino acid with its own powerful calming properties. Glycine acts as an inhibitory neurotransmitter, reducing neuronal excitability. It increases serotonin without raising dopamine (preventing overstimulation). It lowers core body temperature slightly — a key trigger for sleep onset. Combined with magnesium\'s activation of GABA receptors (the brain\'s primary "off switch"), the dual mechanism is uniquely suited for sleep and anxiety.' },
+      { type: 'callout', text: '😴 Sleep Protocol: Take 300-400mg magnesium glycinate 30-60 minutes before bed. It typically takes 1-2 weeks of consistent use to feel the full sleep benefit as cellular stores replenish. Some people notice vivid dreams — this is normal and indicates magnesium is restoring REM sleep depth.' },
+      { type: 'heading', text: 'Clinical Evidence for Sleep' },
+      { type: 'paragraph', text: 'A 2012 double-blind RCT in the Journal of Research in Medical Sciences gave older adults 500mg magnesium daily for 8 weeks. The magnesium group experienced significantly improved sleep time, sleep efficiency, sleep onset latency, early morning awakening, and serum renin and melatonin levels. Insomnia severity scores dropped dramatically. A 2017 meta-analysis of 18 studies confirmed magnesium supplementation consistently improved subjective sleep quality.' },
+      { type: 'heading', text: 'Magnesium and Anxiety: The Neuroscience' },
+      { type: 'paragraph', text: 'Magnesium acts as a natural calcium channel blocker at NMDA receptors — the receptors responsible for excitatory nervous system activity. When magnesium is low, calcium floods these receptors unchecked, resulting in hyperexcitability, racing thoughts, and anxiety. Restoring magnesium levels effectively "calms the electrical storm" in the nervous system. A 2017 systematic review in Nutrients analyzed 18 studies and found consistent evidence that magnesium supplementation reduces anxiety symptoms, particularly in people with mild-to-moderate anxiety.' },
+      { type: 'heading', text: 'Muscle Cramps and Athletic Recovery' },
+      { type: 'list', items: [
+        'Muscle contraction requires calcium. Muscle relaxation requires magnesium. Deficiency = cramps.',
+        'Nocturnal leg cramps (common in pregnancy and athletes) respond rapidly to magnesium glycinate within 1-2 weeks',
+        'Post-exercise soreness (DOMS) reduced: magnesium reduces lactic acid accumulation and speeds muscle repair',
+        'Migraine prevention: Multiple RCTs show magnesium reduces migraine frequency by 41% with consistent supplementation',
+        'PMS symptoms: Magnesium reduces menstrual cramping, bloating, and mood symptoms in clinical trials'
+      ]},
+      { type: 'heading', text: 'Dosing and Safety Guidelines' },
+      { type: 'paragraph', text: 'The Tolerable Upper Intake Level (UL) for supplemental magnesium is 350mg/day for adults. Magnesium glycinate is generally well-tolerated above this in divided doses because the chelated form is absorbed more completely with less reaching the colon. Most people benefit from 200-400mg at night. Those with kidney disease should not supplement magnesium without physician guidance.' },
+      { type: 'quote', text: '"Magnesium glycinate is one of the highest-ROI supplements we\'ve found. The cost is minimal, the evidence is strong, and the impact on sleep and stress is often felt within a week." — Health Is Wealth' },
+      { type: 'callout', text: '🧪 Signs You\'re Deficient: Poor sleep quality, muscle twitches or cramps, anxiety or irritability, frequent headaches, constipation, fatigue, and sugar cravings. If you check 3+ of these boxes, magnesium glycinate should be your first intervention.' },
+    ]
+  },
+  {
+    slug: 'astragalus-root-immune-longevity',
+    title: 'Astragalus Root: The Ancient Adaptogen That Rebuilds Your Immune System From the Inside',
+    excerpt: 'Astragalus has been used in Traditional Chinese Medicine for 2,000 years. Now modern science reveals it activates telomerase, extends cellular lifespan, and rebuilds immunity at the genetic level.',
+    category: 'Immunity',
+    readTime: '10 min read',
+    publishedAt: 'March 18, 2025',
+    author: 'Health Is Wealth Team',
+    authorRole: 'Wellness Researchers',
+    tags: ['astragalus', 'astragalus benefits', 'immune system', 'telomeres', 'adaptogen', 'longevity', 'anti-aging'],
+    content: [
+      { type: 'paragraph', text: 'Astragalus membranaceus (Huang Qi) has been a cornerstone of Traditional Chinese Medicine for over 2,000 years. Known as an "adaptogen" — a compound that helps the body resist physical, chemical, and biological stressors — it was used to strengthen "wei qi," the defensive energy that protects against illness. Modern molecular biology is now explaining precisely why this ancient plant works.' },
+      { type: 'heading', text: 'The Telomere Discovery That Changed Everything' },
+      { type: 'paragraph', text: 'In 2009, Elizabeth Blackburn, Carol Greider, and Jack Szostak won the Nobel Prize in Physiology or Medicine for their discovery of telomeres and telomerase — the enzyme that rebuilds them. Telomeres are protective caps on chromosomes that shorten with each cell division. When they become critically short, cells stop dividing and enter senescence (biological aging). The critical finding for astragalus: its compound cycloastragenol activates telomerase, the enzyme that rebuilds telomere length.' },
+      { type: 'heading', text: 'Cycloastragenol: The Anti-Aging Compound' },
+      { type: 'paragraph', text: 'Cycloastragenol (also known as TA-65 in its purified form) was identified by the biotech company Geron as a potent telomerase activator. A 2011 study in Rejuvenation Research found that cycloastragenol treatment significantly increased telomere length in human immune cells (CD8 T-cells and NK cells). This matters because immune cell telomere shortening is directly associated with immunosenescence — the age-related decline of immune function that makes older adults vulnerable to infections.' },
+      { type: 'heading', text: '8 Science-Backed Benefits of Astragalus' },
+      { type: 'list', items: [
+        'Telomere protection: Cycloastragenol activates telomerase, slowing cellular aging in immune cells',
+        'T-cell activation: Astragalus polysaccharides (APS) directly stimulate T-lymphocyte proliferation',
+        'NK cell enhancement: Natural killer cell activity increases by up to 300% in some studies',
+        'Interferon production: Triggers antiviral interferon-gamma, the body\'s first-line viral defense',
+        'Adaptogenic stress response: Normalizes cortisol rhythms without sedation or stimulation',
+        'Cardiovascular protection: Astragalosides improve endothelial function and reduce arterial stiffness',
+        'Kidney protection: Multiple clinical trials in China show reduction in proteinuria in chronic kidney disease',
+        'Chemotherapy support: Used in integrative oncology to reduce treatment side effects and improve outcomes'
+      ]},
+      { type: 'heading', text: 'The Adaptogenic Mechanism Explained' },
+      { type: 'paragraph', text: 'Adaptogens work through the HPA axis (hypothalamic-pituitary-adrenal axis) — the stress response system that regulates cortisol. Chronic stress dysregulates the HPA axis, leading to cortisol dysfunction, immune suppression, and inflammation. Astragalus modulates HPA axis signaling to normalize the cortisol response curve: reducing excessive morning cortisol peaks and supporting appropriate afternoon decline. Unlike stimulants (which force energy) or sedatives (which suppress the system), adaptogens genuinely restore homeostasis.' },
+      { type: 'callout', text: '💡 Dosing Protocol: For general immune support, 500-1000mg of standardized extract (70% polysaccharides) daily. For anti-aging and telomere support, cycloastragenol at 10-25mg daily is the studied dose. Astragalus is one of the safest herbs studied — it has been taken for centuries without significant adverse effects documented.' },
+      { type: 'heading', text: 'Immunosenescence: Why Your Immune System Ages' },
+      { type: 'paragraph', text: 'The immune system undergoes a dramatic decline with age — a process called immunosenescence. Thymic involution (shrinkage of the thymus gland, which produces T-cells) begins in your 20s and accelerates after 40. By age 70, thymic output has fallen by over 95%. The result: fewer naive T-cells available to respond to new pathogens, vaccines, and cancer cells. Astragalus is one of the few compounds studied to specifically address thymic function and T-cell output.' },
+      { type: 'heading', text: 'Astragalus and the Microbiome' },
+      { type: 'paragraph', text: 'Recent research reveals a fascinating gut-immunity connection for astragalus. Astragalus polysaccharides act as prebiotics — selectively feeding Bifidobacterium and Lactobacillus strains while inhibiting pathogenic bacteria. A healthy gut microbiome produces 70% of immune system activity. This gut-level action means astragalus supports immunity from two directions simultaneously: directly via T-cell activation, and indirectly via microbiome optimization.' },
+      { type: 'quote', text: '"Astragalus represents the bridge between ancient wisdom and modern longevity science. The telomere research has elevated it from folk remedy to one of the most studied anti-aging compounds available." — Health Is Wealth' },
+      { type: 'heading', text: 'How to Choose and Use Astragalus' },
+      { type: 'list', items: [
+        'Form: Standardized extract (70% polysaccharides) is most researched — more reliable than raw powder',
+        'Dose: 500-1500mg/day standardized extract for immune support; up to 2-4g/day of root powder',
+        'Timing: Morning dosing aligns with natural cortisol rhythm; can be taken with or without food',
+        'Stack with: Reishi mushroom (complementary immune modulation), Vitamin D3 (synergistic immune support)',
+        'Avoid during: Active autoimmune flares (astragalus may upregulate immune activity); discuss with doctor if on immunosuppressants',
+        'Duration: Best results with consistent use over 8-12 weeks; traditional use was lifelong as a tonic herb'
+      ]},
+      { type: 'callout', text: '🌿 Quality Standard: Look for Astragalus membranaceus species (not mongholicus for longevity purposes), standardized to minimum 40% polysaccharides, sourced from Inner Mongolia or Shanxi province (traditional growing regions), and verified free of heavy metals and pesticides.' },
+    ]
+  },
 ];
 
 export const getBlogPost = (slug: string): BlogPost | undefined => {
@@ -274,4 +416,4 @@ export const getBlogPostsByCategory = (category: string): BlogPost[] => {
   return BLOG_POSTS.filter(post => post.category === category);
 };
 
-export const BLOG_CATEGORIES = ['All', 'Superfoods', 'Immunity', 'Mens Health', 'Lifestyle'];
+export const BLOG_CATEGORIES = ['All', 'Superfoods', 'Immunity', 'Mens Health', 'Lifestyle', 'Blood Sugar', 'Sleep & Recovery'];
