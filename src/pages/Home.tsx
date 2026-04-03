@@ -18,7 +18,8 @@ import {
   CheckCircle,
   X,
   Truck,
-  Youtube
+  Youtube,
+  Radio
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade-craving.jpg';
@@ -950,6 +951,7 @@ export const Home = () => {
               { handle: 'tymotionvsl', label: 'Ty Motion VSL', platform: 'instagram', color: 'from-pink-500/20 to-purple-600/20 border-pink-700/30' },
               { handle: 'keaton-tyler-8b3b10b7', label: 'Keaton Tyler', platform: 'linkedin', color: 'from-blue-700/20 to-blue-900/20 border-blue-800/30' },
               { handle: 'ktylermotion', label: 'K Tyler Motion', platform: 'x', color: 'from-gray-700/20 to-black/40 border-gray-600/30' },
+              { handle: 'liveliveradio.wordpress.com', label: 'Live Live Radio', platform: 'blog', color: 'from-violet-600/20 to-indigo-700/20 border-violet-700/30' },
             ].map((channel) => (
               <a
                 key={channel.handle}
@@ -958,6 +960,7 @@ export const Home = () => {
                   channel.platform === 'instagram' ? `https://www.instagram.com/${channel.handle}/` :
                   channel.platform === 'linkedin' ? `https://www.linkedin.com/in/${channel.handle}` :
                   channel.platform === 'x' ? `https://x.com/${channel.handle}` :
+                  channel.platform === 'blog' ? `https://${channel.handle}/` :
                   `https://www.tiktok.com/@${channel.handle}`
                 }
                 target="_blank"
@@ -973,6 +976,8 @@ export const Home = () => {
                     <Linkedin className="w-5 h-5 text-white" />
                   ) : channel.platform === 'x' ? (
                     <Twitter className="w-5 h-5 text-white" />
+                  ) : channel.platform === 'blog' ? (
+                    <Radio className="w-5 h-5 text-white" />
                   ) : (
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/>
@@ -981,7 +986,9 @@ export const Home = () => {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm leading-tight">{channel.label}</p>
-                  <p className="text-white/50 text-xs mt-0.5">@{channel.handle}</p>
+                  <p className="text-white/50 text-xs mt-0.5">
+                    {channel.platform === 'blog' ? 'WordPress Blog' : channel.platform === 'linkedin' ? 'LinkedIn' : `@${channel.handle}`}
+                  </p>
                 </div>
               </a>
             ))}
@@ -1027,6 +1034,9 @@ export const Home = () => {
                 </a>
                 <a href="https://healthiswealth.live" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">
                   Visit HealthIsWealth.live
+                </a>
+                <a href="https://liveliveradio.wordpress.com/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">
+                  Live Live Radio — News &amp; Culture
                 </a>
               </div>
             </div>

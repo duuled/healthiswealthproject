@@ -31,6 +31,7 @@ const subsidiaries = [
   { name: 'Ty Motion VSL', tag: '@tymotionvsl · Instagram', color: 'text-pink-400 border-pink-700/50 bg-pink-900/20' },
   { name: 'Keaton Tyler', tag: 'LinkedIn · FlavorCrave Founder', color: 'text-blue-400 border-blue-800/50 bg-blue-900/20' },
   { name: 'K Tyler Motion', tag: '@ktylermotion · X (Twitter)', color: 'text-gray-300 border-gray-600/50 bg-gray-800/20' },
+  { name: 'Live Live Radio', tag: 'liveliveradio.wordpress.com · News & Culture', color: 'text-violet-400 border-violet-700/50 bg-violet-900/20' },
 ];
 
 // ─── Agent Definitions ────────────────────────────────────────────────────────
