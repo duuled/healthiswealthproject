@@ -907,6 +907,52 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* The Network Section */}
+      <section className="py-20 bg-background border-t border-border/50">
+        <div className="max-w-6xl mx-auto container-padding">
+          <div className="text-center mb-12">
+            <p className="text-xs tracking-[0.25em] uppercase text-primary mb-3 font-medium">
+              FlavorCrave Empire
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              The Network
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-sm">
+              7 TikTok channels. One empire. Follow every channel to stay connected across the full FlavorCrave portfolio.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { handle: 'comedian_landmark', label: 'Comedy Landmark', color: 'from-yellow-500/20 to-pink-500/20 border-yellow-700/30' },
+              { handle: 'awhellnaw247', label: 'Aw Hell Naw', color: 'from-red-500/20 to-gray-800/40 border-red-700/30' },
+              { handle: 'djtymotion', label: 'DJ Ty Motion', color: 'from-blue-600/20 to-purple-600/20 border-blue-700/30' },
+              { handle: 'tastetable', label: 'Taste Table', color: 'from-orange-500/20 to-amber-500/20 border-orange-700/30' },
+              { handle: 'venicebeatsmusic', label: 'Venice Beats', color: 'from-cyan-500/20 to-blue-500/20 border-cyan-700/30' },
+              { handle: 'clipsup247', label: 'Clips Up 247', color: 'from-green-500/20 to-teal-500/20 border-green-700/30' },
+              { handle: 'theyrehere247', label: "They're Here 247", color: 'from-gray-600/20 to-slate-700/20 border-gray-600/30' },
+            ].map((channel) => (
+              <a
+                key={channel.handle}
+                href={`https://www.tiktok.com/@${channel.handle}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex flex-col items-center gap-3 p-5 rounded-2xl bg-gradient-to-br border ${channel.color} hover:scale-105 transition-transform duration-200 text-center`}
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                  <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm leading-tight">{channel.label}</p>
+                  <p className="text-white/50 text-xs mt-0.5">@{channel.handle}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-card/80 border-t border-border py-12">
         <div className="max-w-6xl mx-auto container-padding">

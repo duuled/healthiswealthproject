@@ -19,9 +19,14 @@ import {
 // ─── Company Hierarchy ───────────────────────────────────────────────────────
 
 const subsidiaries = [
-  { name: 'Taste Table', tag: 'Food & Flavor', color: 'text-orange-400 border-orange-700/50 bg-orange-900/20' },
-  { name: 'Health Is Wealth Store', tag: 'Supplements', color: 'text-green-400 border-green-700/50 bg-green-900/20' },
-  { name: '[Your Next Brand]', tag: 'Connected Co.', color: 'text-gray-400 border-gray-700/50 bg-gray-900/20' },
+  { name: 'Taste Table', tag: '@tastetable · Food & Flavor', color: 'text-orange-400 border-orange-700/50 bg-orange-900/20' },
+  { name: 'Health Is Wealth Store', tag: 'Supplements · keatontyler-20', color: 'text-green-400 border-green-700/50 bg-green-900/20' },
+  { name: 'DJ Ty Motion', tag: '@djtymotion · Music & Lifestyle', color: 'text-blue-400 border-blue-700/50 bg-blue-900/20' },
+  { name: 'Venice Beats Music', tag: '@venicebeatsmusic · Music', color: 'text-cyan-400 border-cyan-700/50 bg-cyan-900/20' },
+  { name: 'Comedy Landmark', tag: '@comedian_landmark · Comedy', color: 'text-yellow-400 border-yellow-700/50 bg-yellow-900/20' },
+  { name: 'Aw Hell Naw', tag: '@awhellnaw247 · Comedy', color: 'text-red-400 border-red-700/50 bg-red-900/20' },
+  { name: 'Clips Up 247', tag: '@clipsup247 · Clips', color: 'text-purple-400 border-purple-700/50 bg-purple-900/20' },
+  { name: "They're Here 247", tag: '@theyrehere247 · Viral', color: 'text-gray-400 border-gray-600/50 bg-gray-800/20' },
 ];
 
 // ─── Agent Definitions ────────────────────────────────────────────────────────
@@ -248,7 +253,7 @@ export const AIProtocols = () => {
           <p className="text-gray-500 text-sm max-w-2xl mx-auto">
             Six high-direction AI agents operating at the FlavorCrave parent level — running
             market intelligence, problem discovery, offer design, distribution, content
-            syndication, and full-portfolio scale planning across all connected companies.
+            syndication, and full-portfolio scale planning across 7 TikTok channels and all connected companies.
           </p>
         </div>
 
