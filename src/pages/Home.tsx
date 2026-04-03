@@ -278,6 +278,53 @@ export const Home = () => {
 
       <AdBanner />
 
+      {/* Featured Promo Video */}
+      <section className="py-16 bg-card/40 border-y border-border/50">
+        <div className="max-w-4xl mx-auto container-padding text-center">
+          <p className="text-xs tracking-[0.25em] uppercase text-primary mb-3 font-medium">
+            Now Promoting
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            Watch Our Latest Drop
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Follow <a href="https://www.tiktok.com/@djtymotion" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">@DjTymotion</a> for daily wellness finds, supplement reviews, and exclusive deals.
+          </p>
+          <div className="flex justify-center">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50 w-full max-w-[560px] aspect-video">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FGfQw5210Lv%2F%3Fmibextid%3DwwXIfr&show_text=false&width=560&mute=0"
+                width="100%"
+                height="100%"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen
+                title="Health Is Wealth - Featured Ad"
+              />
+            </div>
+          </div>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="/supplements"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+            >
+              Shop the Products
+            </a>
+            <a
+              href="https://www.tiktok.com/@djtymotion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-border text-foreground font-semibold text-sm hover:bg-card transition-colors"
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+              Follow @DjTymotion
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Our Mission Section */}
       <section id="supplements" className="py-20 bg-background">
         <div className="max-w-6xl mx-auto container-padding">
