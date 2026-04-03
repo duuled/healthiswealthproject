@@ -953,6 +953,7 @@ export const Home = () => {
               { handle: 'ktylermotion', label: 'K Tyler Motion', platform: 'x', color: 'from-gray-700/20 to-black/40 border-gray-600/30' },
               { handle: 'liveliveradio.wordpress.com', label: 'Live Live Radio', platform: 'blog', color: 'from-violet-600/20 to-indigo-700/20 border-violet-700/30' },
               { handle: 'awhecknaw247', label: 'Aw Heck Naw 247', platform: 'instagram', color: 'from-red-500/20 to-orange-600/20 border-red-700/30' },
+              { handle: 'time_for_action567', label: 'Time For Action', platform: 'instagram', color: 'from-emerald-500/20 to-teal-600/20 border-emerald-700/30' },
             ].map((channel) => (
               <a
                 key={channel.handle}

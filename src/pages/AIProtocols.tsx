@@ -33,6 +33,7 @@ const subsidiaries = [
   { name: 'K Tyler Motion', tag: '@ktylermotion · X (Twitter)', color: 'text-gray-300 border-gray-600/50 bg-gray-800/20' },
   { name: 'Live Live Radio', tag: 'liveliveradio.wordpress.com · News & Culture', color: 'text-violet-400 border-violet-700/50 bg-violet-900/20' },
   { name: 'Aw Heck Naw 247', tag: '@awhecknaw247 · Instagram', color: 'text-red-400 border-red-700/50 bg-red-900/20' },
+  { name: 'Time For Action', tag: '@time_for_action567 · Instagram', color: 'text-emerald-400 border-emerald-700/50 bg-emerald-900/20' },
 ];
 
 // ─── Agent Definitions ────────────────────────────────────────────────────────
