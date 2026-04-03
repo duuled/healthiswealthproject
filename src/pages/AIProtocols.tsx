@@ -28,6 +28,7 @@ const subsidiaries = [
   { name: 'Clips Up 247', tag: '@clipsup247 · Clips', color: 'text-purple-400 border-purple-700/50 bg-purple-900/20' },
   { name: "They're Here 247", tag: '@theyrehere247 · Viral', color: 'text-gray-400 border-gray-600/50 bg-gray-800/20' },
   { name: 'Beats By The Motion', tag: '@beatsbythemotion · YouTube', color: 'text-red-400 border-red-700/50 bg-red-900/20' },
+  { name: 'Ty Motion VSL', tag: '@tymotionvsl · Instagram', color: 'text-pink-400 border-pink-700/50 bg-pink-900/20' },
 ];
 
 // ─── Agent Definitions ────────────────────────────────────────────────────────

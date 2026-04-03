@@ -879,7 +879,7 @@ export const Home = () => {
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
                     </Button>
                   </a>
-                  <a href="https://www.instagram.com/aisearchblog/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <a href="https://www.instagram.com/tymotionvsl/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @tymotionvsl">
                     <Button variant="outline" size="sm" className="p-2">
                       <Instagram className="w-4 h-4" />
                     </Button>
@@ -937,10 +937,11 @@ export const Home = () => {
               { handle: 'clipsup247', label: 'Clips Up 247', platform: 'tiktok', color: 'from-green-500/20 to-teal-500/20 border-green-700/30' },
               { handle: 'theyrehere247', label: "They're Here 247", platform: 'tiktok', color: 'from-gray-600/20 to-slate-700/20 border-gray-600/30' },
               { handle: 'beatsbythemotion', label: 'Beats By The Motion', platform: 'youtube', color: 'from-red-600/20 to-red-900/20 border-red-700/30' },
+              { handle: 'tymotionvsl', label: 'Ty Motion VSL', platform: 'instagram', color: 'from-pink-500/20 to-purple-600/20 border-pink-700/30' },
             ].map((channel) => (
               <a
                 key={channel.handle}
-                href={channel.platform === 'youtube' ? `https://www.youtube.com/@${channel.handle}` : `https://www.tiktok.com/@${channel.handle}`}
+                href={channel.platform === 'youtube' ? `https://www.youtube.com/@${channel.handle}` : channel.platform === 'instagram' ? `https://www.instagram.com/${channel.handle}/` : `https://www.tiktok.com/@${channel.handle}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group flex flex-col items-center gap-3 p-5 rounded-2xl bg-gradient-to-br border ${channel.color} hover:scale-105 transition-transform duration-200 text-center`}
@@ -948,6 +949,8 @@ export const Home = () => {
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
                   {channel.platform === 'youtube' ? (
                     <Youtube className="w-5 h-5 text-white" />
+                  ) : channel.platform === 'instagram' ? (
+                    <Instagram className="w-5 h-5 text-white" />
                   ) : (
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/>
@@ -1045,7 +1048,7 @@ export const Home = () => {
               <a href="https://www.youtube.com/@beatsbythemotion" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube @beatsbythemotion">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/aisearchblog/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/tymotionvsl/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram @tymotionvsl">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="https://aisearchblog.wordpress.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Newsletter">

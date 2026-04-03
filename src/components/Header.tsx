@@ -114,11 +114,11 @@ export const Header = () => {
               <Youtube className="w-4 h-4" />
             </a>
             <a
-              href="https://www.instagram.com/aisearchblog/"
+              href="https://www.instagram.com/tymotionvsl/"
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors duration-200 ${isScrolled ? 'text-foreground' : 'text-white'} hover:opacity-60`}
-              aria-label="Instagram"
+              aria-label="Instagram @tymotionvsl"
             >
               <Instagram className="w-4 h-4" />
             </a>
@@ -179,7 +179,7 @@ export const Header = () => {
                 <a href="https://www.youtube.com/@beatsbythemotion" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-60" aria-label="YouTube @beatsbythemotion">
                   <Youtube className="w-5 h-5" />
                 </a>
-                <a href="https://www.instagram.com/aisearchblog/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-60" aria-label="Instagram">
+                <a href="https://www.instagram.com/tymotionvsl/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-60" aria-label="Instagram @tymotionvsl">
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a href="https://aisearchblog.wordpress.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-60" aria-label="Newsletter">
