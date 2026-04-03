@@ -952,6 +952,7 @@ export const Home = () => {
               { handle: 'keaton-tyler-8b3b10b7', label: 'Keaton Tyler', platform: 'linkedin', color: 'from-blue-700/20 to-blue-900/20 border-blue-800/30' },
               { handle: 'ktylermotion', label: 'K Tyler Motion', platform: 'x', color: 'from-gray-700/20 to-black/40 border-gray-600/30' },
               { handle: 'liveliveradio.wordpress.com', label: 'Live Live Radio', platform: 'blog', color: 'from-violet-600/20 to-indigo-700/20 border-violet-700/30' },
+              { handle: 'awhecknaw247', label: 'Aw Heck Naw 247', platform: 'instagram', color: 'from-red-500/20 to-orange-600/20 border-red-700/30' },
             ].map((channel) => (
               <a
                 key={channel.handle}
