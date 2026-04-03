@@ -34,6 +34,8 @@ const subsidiaries = [
   { name: 'Live Live Radio', tag: 'liveliveradio.wordpress.com · News & Culture', color: 'text-violet-400 border-violet-700/50 bg-violet-900/20' },
   { name: 'Aw Heck Naw 247', tag: '@awhecknaw247 · Instagram', color: 'text-red-400 border-red-700/50 bg-red-900/20' },
   { name: 'Time For Action', tag: '@time_for_action567 · Instagram', color: 'text-emerald-400 border-emerald-700/50 bg-emerald-900/20' },
+  { name: 'Rapchat', tag: 'rapch.at · Music Creation', color: 'text-yellow-400 border-yellow-700/50 bg-yellow-900/20' },
+  { name: 'Pinterest', tag: 'pin.it · Visual Discovery', color: 'text-rose-400 border-rose-700/50 bg-rose-900/20' },
 ];
 
 // ─── Agent Definitions ────────────────────────────────────────────────────────
