@@ -29,6 +29,7 @@ const subsidiaries = [
   { name: "They're Here 247", tag: '@theyrehere247 · Viral', color: 'text-gray-400 border-gray-600/50 bg-gray-800/20' },
   { name: 'Beats By The Motion', tag: '@beatsbythemotion · YouTube', color: 'text-red-400 border-red-700/50 bg-red-900/20' },
   { name: 'Ty Motion VSL', tag: '@tymotionvsl · Instagram', color: 'text-pink-400 border-pink-700/50 bg-pink-900/20' },
+  { name: 'Keaton Tyler', tag: 'LinkedIn · FlavorCrave Founder', color: 'text-blue-400 border-blue-800/50 bg-blue-900/20' },
 ];
 
 // ─── Agent Definitions ────────────────────────────────────────────────────────
