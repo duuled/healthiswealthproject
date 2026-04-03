@@ -21,7 +21,8 @@ import {
   Youtube,
   Radio,
   Music2,
-  Pin
+  Pin,
+  ShoppingBag
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade-craving.jpg';
@@ -959,6 +960,7 @@ export const Home = () => {
               { handle: 'MTgUWcUQ21b', label: 'Rapchat', platform: 'rapchat', color: 'from-yellow-500/20 to-orange-500/20 border-yellow-700/30' },
               { handle: '3arJRwuv0', label: 'Pinterest', platform: 'pinterest', color: 'from-rose-600/20 to-red-700/20 border-rose-700/30' },
               { handle: '5jWrvLJNu', label: 'Pinterest', platform: 'pinterest', color: 'from-rose-500/20 to-pink-700/20 border-rose-600/30' },
+              { handle: 'tymotion-', label: 'OfferUp Shop', platform: 'offerup', color: 'from-teal-500/20 to-green-600/20 border-teal-700/30' },
             ].map((channel) => (
               <a
                 key={channel.handle}
@@ -970,6 +972,7 @@ export const Home = () => {
                   channel.platform === 'blog' ? `https://${channel.handle}/` :
                   channel.platform === 'rapchat' ? `https://rapch.at/${channel.handle}` :
                   channel.platform === 'pinterest' ? `https://pin.it/${channel.handle}` :
+                  channel.platform === 'offerup' ? `https://offerup.co/profile/${channel.handle}` :
                   `https://www.tiktok.com/@${channel.handle}`
                 }
                 target="_blank"
@@ -991,6 +994,8 @@ export const Home = () => {
                     <Music2 className="w-5 h-5 text-white" />
                   ) : channel.platform === 'pinterest' ? (
                     <Pin className="w-5 h-5 text-white" />
+                  ) : channel.platform === 'offerup' ? (
+                    <ShoppingBag className="w-5 h-5 text-white" />
                   ) : (
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/>
@@ -1000,7 +1005,7 @@ export const Home = () => {
                 <div>
                   <p className="text-white font-semibold text-sm leading-tight">{channel.label}</p>
                   <p className="text-white/50 text-xs mt-0.5">
-                    {channel.platform === 'blog' ? 'WordPress Blog' : channel.platform === 'linkedin' ? 'LinkedIn' : channel.platform === 'rapchat' ? 'Rapchat' : channel.platform === 'pinterest' ? 'Pinterest' : `@${channel.handle}`}
+                    {channel.platform === 'blog' ? 'WordPress Blog' : channel.platform === 'linkedin' ? 'LinkedIn' : channel.platform === 'rapchat' ? 'Rapchat' : channel.platform === 'pinterest' ? 'Pinterest' : channel.platform === 'offerup' ? 'OfferUp' : `@${channel.handle}`}
                   </p>
                 </div>
               </a>

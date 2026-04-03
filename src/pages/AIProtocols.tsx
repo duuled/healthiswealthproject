@@ -36,6 +36,7 @@ const subsidiaries = [
   { name: 'Time For Action', tag: '@time_for_action567 · Instagram', color: 'text-emerald-400 border-emerald-700/50 bg-emerald-900/20' },
   { name: 'Rapchat', tag: 'rapch.at · Music Creation', color: 'text-yellow-400 border-yellow-700/50 bg-yellow-900/20' },
   { name: 'Pinterest', tag: 'pin.it · Visual Discovery', color: 'text-rose-400 border-rose-700/50 bg-rose-900/20' },
+  { name: 'OfferUp Shop', tag: 'tymotion- · Local Marketplace', color: 'text-teal-400 border-teal-700/50 bg-teal-900/20' },
 ];
 
 // ─── Agent Definitions ────────────────────────────────────────────────────────
