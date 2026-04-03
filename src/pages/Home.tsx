@@ -24,7 +24,47 @@ import {
   Pin,
   ShoppingBag
 } from 'lucide-react';
+import { TikTokIcon } from '@/components/icons/TikTokIcon';
 import { Badge } from '@/components/ui/badge';
+
+// ─── Network config (module scope — not re-created per render) ────────────────
+
+type Platform = 'tiktok' | 'youtube' | 'instagram' | 'linkedin' | 'x' | 'blog' | 'rapchat' | 'pinterest' | 'offerup';
+
+const PLATFORM_CONFIG: Record<Platform, { buildUrl: (h: string) => string; icon: JSX.Element; sublabel: (h: string) => string }> = {
+  tiktok:    { buildUrl: h => `https://www.tiktok.com/@${h}`,          icon: <TikTokIcon className="w-5 h-5 text-white" />,    sublabel: h => `@${h}` },
+  youtube:   { buildUrl: h => `https://www.youtube.com/@${h}`,         icon: <Youtube className="w-5 h-5 text-white" />,       sublabel: h => `@${h}` },
+  instagram: { buildUrl: h => `https://www.instagram.com/${h}/`,       icon: <Instagram className="w-5 h-5 text-white" />,     sublabel: h => `@${h}` },
+  linkedin:  { buildUrl: h => `https://www.linkedin.com/in/${h}`,      icon: <Linkedin className="w-5 h-5 text-white" />,      sublabel: _ => 'LinkedIn' },
+  x:         { buildUrl: h => `https://x.com/${h}`,                    icon: <Twitter className="w-5 h-5 text-white" />,       sublabel: h => `@${h}` },
+  blog:      { buildUrl: h => `https://${h}/`,                         icon: <Radio className="w-5 h-5 text-white" />,         sublabel: _ => 'WordPress Blog' },
+  rapchat:   { buildUrl: h => `https://rapch.at/${h}`,                 icon: <Music2 className="w-5 h-5 text-white" />,        sublabel: _ => 'Rapchat' },
+  pinterest: { buildUrl: h => `https://pin.it/${h}`,                   icon: <Pin className="w-5 h-5 text-white" />,           sublabel: _ => 'Pinterest' },
+  offerup:   { buildUrl: h => `https://offerup.co/profile/${h}`,       icon: <ShoppingBag className="w-5 h-5 text-white" />,   sublabel: _ => 'OfferUp' },
+};
+
+interface Channel { handle: string; label: string; platform: Platform; color: string; }
+
+const NETWORK_CHANNELS: Channel[] = [
+  { handle: 'comedian_landmark',        label: 'Comedy Landmark',      platform: 'tiktok',    color: 'from-yellow-500/20 to-pink-500/20 border-yellow-700/30' },
+  { handle: 'awhellnaw247',             label: 'Aw Hell Naw',          platform: 'tiktok',    color: 'from-red-500/20 to-gray-800/40 border-red-700/30' },
+  { handle: 'djtymotion',               label: 'DJ Ty Motion',         platform: 'tiktok',    color: 'from-blue-600/20 to-purple-600/20 border-blue-700/30' },
+  { handle: 'tastetable',               label: 'Taste Table',          platform: 'tiktok',    color: 'from-orange-500/20 to-amber-500/20 border-orange-700/30' },
+  { handle: 'venicebeatsmusic',         label: 'Venice Beats',         platform: 'tiktok',    color: 'from-cyan-500/20 to-blue-500/20 border-cyan-700/30' },
+  { handle: 'clipsup247',               label: 'Clips Up 247',         platform: 'tiktok',    color: 'from-green-500/20 to-teal-500/20 border-green-700/30' },
+  { handle: 'theyrehere247',            label: "They're Here 247",     platform: 'tiktok',    color: 'from-gray-600/20 to-slate-700/20 border-gray-600/30' },
+  { handle: 'beatsbythemotion',         label: 'Beats By The Motion',  platform: 'youtube',   color: 'from-red-600/20 to-red-900/20 border-red-700/30' },
+  { handle: 'tymotionvsl',              label: 'Ty Motion VSL',        platform: 'instagram', color: 'from-pink-500/20 to-purple-600/20 border-pink-700/30' },
+  { handle: 'awhecknaw247',             label: 'Aw Heck Naw 247',      platform: 'instagram', color: 'from-red-500/20 to-orange-600/20 border-red-700/30' },
+  { handle: 'time_for_action567',       label: 'Time For Action',      platform: 'instagram', color: 'from-emerald-500/20 to-teal-600/20 border-emerald-700/30' },
+  { handle: 'keaton-tyler-8b3b10b7',   label: 'Keaton Tyler',         platform: 'linkedin',  color: 'from-blue-700/20 to-blue-900/20 border-blue-800/30' },
+  { handle: 'ktylermotion',             label: 'K Tyler Motion',       platform: 'x',         color: 'from-gray-700/20 to-black/40 border-gray-600/30' },
+  { handle: 'liveliveradio.wordpress.com', label: 'Live Live Radio',   platform: 'blog',      color: 'from-violet-600/20 to-indigo-700/20 border-violet-700/30' },
+  { handle: 'MTgUWcUQ21b',             label: 'Rapchat',              platform: 'rapchat',   color: 'from-yellow-500/20 to-orange-500/20 border-yellow-700/30' },
+  { handle: '3arJRwuv0',               label: 'Pinterest (Pins)',      platform: 'pinterest', color: 'from-rose-600/20 to-red-700/20 border-rose-700/30' },
+  { handle: '5jWrvLJNu',               label: 'Pinterest (Board)',     platform: 'pinterest', color: 'from-rose-500/20 to-pink-700/20 border-rose-600/30' },
+  { handle: 'tymotion-',               label: 'OfferUp Shop',         platform: 'offerup',   color: 'from-teal-500/20 to-green-600/20 border-teal-700/30' },
+];
 import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade-craving.jpg';
 import manukaHoneyImage from '@/assets/manuka-honey-drizzle.jpg';
 import logoImage from '@/assets/health-is-wealth-logo.jpg';
@@ -938,78 +978,30 @@ export const Home = () => {
               The Network
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto text-sm">
-              7 TikTok channels. One empire. Follow every channel to stay connected across the full FlavorCrave portfolio.
+              18 properties. 9 platforms. One empire. Follow every channel across the full FlavorCrave portfolio.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { handle: 'comedian_landmark', label: 'Comedy Landmark', platform: 'tiktok', color: 'from-yellow-500/20 to-pink-500/20 border-yellow-700/30' },
-              { handle: 'awhellnaw247', label: 'Aw Hell Naw', platform: 'tiktok', color: 'from-red-500/20 to-gray-800/40 border-red-700/30' },
-              { handle: 'djtymotion', label: 'DJ Ty Motion', platform: 'tiktok', color: 'from-blue-600/20 to-purple-600/20 border-blue-700/30' },
-              { handle: 'tastetable', label: 'Taste Table', platform: 'tiktok', color: 'from-orange-500/20 to-amber-500/20 border-orange-700/30' },
-              { handle: 'venicebeatsmusic', label: 'Venice Beats', platform: 'tiktok', color: 'from-cyan-500/20 to-blue-500/20 border-cyan-700/30' },
-              { handle: 'clipsup247', label: 'Clips Up 247', platform: 'tiktok', color: 'from-green-500/20 to-teal-500/20 border-green-700/30' },
-              { handle: 'theyrehere247', label: "They're Here 247", platform: 'tiktok', color: 'from-gray-600/20 to-slate-700/20 border-gray-600/30' },
-              { handle: 'beatsbythemotion', label: 'Beats By The Motion', platform: 'youtube', color: 'from-red-600/20 to-red-900/20 border-red-700/30' },
-              { handle: 'tymotionvsl', label: 'Ty Motion VSL', platform: 'instagram', color: 'from-pink-500/20 to-purple-600/20 border-pink-700/30' },
-              { handle: 'keaton-tyler-8b3b10b7', label: 'Keaton Tyler', platform: 'linkedin', color: 'from-blue-700/20 to-blue-900/20 border-blue-800/30' },
-              { handle: 'ktylermotion', label: 'K Tyler Motion', platform: 'x', color: 'from-gray-700/20 to-black/40 border-gray-600/30' },
-              { handle: 'liveliveradio.wordpress.com', label: 'Live Live Radio', platform: 'blog', color: 'from-violet-600/20 to-indigo-700/20 border-violet-700/30' },
-              { handle: 'awhecknaw247', label: 'Aw Heck Naw 247', platform: 'instagram', color: 'from-red-500/20 to-orange-600/20 border-red-700/30' },
-              { handle: 'time_for_action567', label: 'Time For Action', platform: 'instagram', color: 'from-emerald-500/20 to-teal-600/20 border-emerald-700/30' },
-              { handle: 'MTgUWcUQ21b', label: 'Rapchat', platform: 'rapchat', color: 'from-yellow-500/20 to-orange-500/20 border-yellow-700/30' },
-              { handle: '3arJRwuv0', label: 'Pinterest', platform: 'pinterest', color: 'from-rose-600/20 to-red-700/20 border-rose-700/30' },
-              { handle: '5jWrvLJNu', label: 'Pinterest', platform: 'pinterest', color: 'from-rose-500/20 to-pink-700/20 border-rose-600/30' },
-              { handle: 'tymotion-', label: 'OfferUp Shop', platform: 'offerup', color: 'from-teal-500/20 to-green-600/20 border-teal-700/30' },
-            ].map((channel) => (
-              <a
-                key={channel.handle}
-                href={
-                  channel.platform === 'youtube' ? `https://www.youtube.com/@${channel.handle}` :
-                  channel.platform === 'instagram' ? `https://www.instagram.com/${channel.handle}/` :
-                  channel.platform === 'linkedin' ? `https://www.linkedin.com/in/${channel.handle}` :
-                  channel.platform === 'x' ? `https://x.com/${channel.handle}` :
-                  channel.platform === 'blog' ? `https://${channel.handle}/` :
-                  channel.platform === 'rapchat' ? `https://rapch.at/${channel.handle}` :
-                  channel.platform === 'pinterest' ? `https://pin.it/${channel.handle}` :
-                  channel.platform === 'offerup' ? `https://offerup.co/profile/${channel.handle}` :
-                  `https://www.tiktok.com/@${channel.handle}`
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group flex flex-col items-center gap-3 p-5 rounded-2xl bg-gradient-to-br border ${channel.color} hover:scale-105 transition-transform duration-200 text-center`}
-              >
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
-                  {channel.platform === 'youtube' ? (
-                    <Youtube className="w-5 h-5 text-white" />
-                  ) : channel.platform === 'instagram' ? (
-                    <Instagram className="w-5 h-5 text-white" />
-                  ) : channel.platform === 'linkedin' ? (
-                    <Linkedin className="w-5 h-5 text-white" />
-                  ) : channel.platform === 'x' ? (
-                    <Twitter className="w-5 h-5 text-white" />
-                  ) : channel.platform === 'blog' ? (
-                    <Radio className="w-5 h-5 text-white" />
-                  ) : channel.platform === 'rapchat' ? (
-                    <Music2 className="w-5 h-5 text-white" />
-                  ) : channel.platform === 'pinterest' ? (
-                    <Pin className="w-5 h-5 text-white" />
-                  ) : channel.platform === 'offerup' ? (
-                    <ShoppingBag className="w-5 h-5 text-white" />
-                  ) : (
-                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/>
-                    </svg>
-                  )}
-                </div>
-                <div>
-                  <p className="text-white font-semibold text-sm leading-tight">{channel.label}</p>
-                  <p className="text-white/50 text-xs mt-0.5">
-                    {channel.platform === 'blog' ? 'WordPress Blog' : channel.platform === 'linkedin' ? 'LinkedIn' : channel.platform === 'rapchat' ? 'Rapchat' : channel.platform === 'pinterest' ? 'Pinterest' : channel.platform === 'offerup' ? 'OfferUp' : `@${channel.handle}`}
-                  </p>
-                </div>
-              </a>
-            ))}
+            {NETWORK_CHANNELS.map((channel) => {
+              const config = PLATFORM_CONFIG[channel.platform];
+              return (
+                <a
+                  key={channel.handle}
+                  href={config.buildUrl(channel.handle)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group flex flex-col items-center gap-3 p-5 rounded-2xl bg-gradient-to-br border ${channel.color} hover:scale-105 transition-transform duration-200 text-center`}
+                >
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                    {config.icon}
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-sm leading-tight">{channel.label}</p>
+                    <p className="text-white/50 text-xs mt-0.5">{config.sublabel(channel.handle)}</p>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
