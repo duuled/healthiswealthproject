@@ -826,15 +826,16 @@ export const Home = () => {
               <div>
                 <h4 className="font-semibold mb-4">Follow Our Journey</h4>
                 <div className="flex space-x-4">
-                  <Button variant="outline" size="sm" className="p-2">
-                    <Instagram className="w-4 h-4" />
-                  </Button>
-                  <Button variant="outline" size="sm" className="p-2">
-                    <Twitter className="w-4 h-4" />
-                  </Button>
-                  <Button variant="outline" size="sm" className="p-2">
-                    <Linkedin className="w-4 h-4" />
-                  </Button>
+                  <a href="https://www.tiktok.com/@djtymotion" target="_blank" rel="noopener noreferrer" aria-label="TikTok @DjTymotion">
+                    <Button variant="outline" size="sm" className="p-2">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+                    </Button>
+                  </a>
+                  <a href="https://www.instagram.com/aisearchblog/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <Button variant="outline" size="sm" className="p-2">
+                      <Instagram className="w-4 h-4" />
+                    </Button>
+                  </a>
                 </div>
               </div>
 
@@ -934,6 +935,9 @@ export const Home = () => {
               © 2025 Health Is Wealth. Made with ❤️ for the West LA community.
             </p>
             <div className="flex items-center gap-4">
+              <a href="https://www.tiktok.com/@djtymotion" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="TikTok @DjTymotion">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+              </a>
               <a href="https://www.instagram.com/aisearchblog/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
