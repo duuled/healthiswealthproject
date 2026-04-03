@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X, Instagram, Youtube } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { CartDrawer } from './CartDrawer';
 
@@ -105,6 +105,15 @@ export const Header = () => {
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
             </a>
             <a
+              href="https://www.youtube.com/@beatsbythemotion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transition-colors duration-200 ${isScrolled ? 'text-foreground' : 'text-white'} hover:opacity-60`}
+              aria-label="YouTube @beatsbythemotion"
+            >
+              <Youtube className="w-4 h-4" />
+            </a>
+            <a
               href="https://www.instagram.com/aisearchblog/"
               target="_blank"
               rel="noopener noreferrer"
@@ -166,6 +175,9 @@ export const Header = () => {
               <div className="flex items-center gap-4 pt-4 border-t border-border/50">
                 <a href="https://www.tiktok.com/@djtymotion" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-60" aria-label="TikTok @DjTymotion">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@beatsbythemotion" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-60" aria-label="YouTube @beatsbythemotion">
+                  <Youtube className="w-5 h-5" />
                 </a>
                 <a href="https://www.instagram.com/aisearchblog/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-60" aria-label="Instagram">
                   <Instagram className="w-5 h-5" />
