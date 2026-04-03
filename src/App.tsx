@@ -15,6 +15,7 @@ import { TermsOfService } from "./pages/TermsOfService";
 import { Disclaimer } from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 import { ProductDetail } from "./pages/ProductDetail";
+import { AIProtocols } from "./pages/AIProtocols";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/ai-protocols" element={<AIProtocols />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

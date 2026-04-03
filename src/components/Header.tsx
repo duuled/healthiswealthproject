@@ -23,6 +23,7 @@ export const Header = () => {
 
   const rightNav = [
     { label: 'Supplements', path: '/shop' },
+    { label: 'AI Protocols', path: '/ai-protocols' },
     { label: 'Contact', id: 'contact' },
   ];
 
