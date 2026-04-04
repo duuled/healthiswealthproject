@@ -18,7 +18,14 @@ import {
   Target,
   Compass,
   Shield,
+  Flame,
+  Lock,
+  Unlock,
+  Loader2,
+  Swords,
+  Cpu,
 } from 'lucide-react';
+import { runGodMode, buildMasterPrompt } from '@/lib/godmode';
 
 // ─── Company Hierarchy ───────────────────────────────────────────────────────
 
@@ -322,6 +329,73 @@ Structure the output across three decision dimensions:
 Close with a decision matrix: for the top 5 moves The FlavorCrave Network should make in the next 30 days, score each on: reversibility (1–10), leverage ratio (1–10), and time cost (1–10). Rank by combined score.`,
   },
   {
+    id: 11,
+    agentId: 'FC-AGENT-11',
+    title: 'Competitor Destroyer Agent',
+    role: 'Competitive Intelligence & Moat Builder',
+    icon: <Swords className="w-5 h-5" />,
+    badge: 'Competitor Intel',
+    accentColor: 'text-red-400',
+    borderColor: 'border-red-700/50 bg-red-900/20',
+    scope: 'FlavorCrave.com → Market Positioning & Competitive Gaps',
+    prompt: `You are the Competitor Destroyer Agent for The FlavorCrave Network — a creator commerce company with 18 properties across 9 platforms based in Marina Del Rey, CA.
+
+Your mission: expose every competitor's weakness and show The FlavorCrave Network exactly how to exploit them.
+
+Analyze the competitive landscape across three verticals: creator wellness content, TikTok-driven supplement affiliate marketing, and multi-platform media networks.
+
+Deliver four attack vectors:
+
+1. Competitor mapping
+— Name the top 5 actual competitors in each vertical (real accounts, brands, or networks). For each: their primary platform, estimated audience size, monetization model, and the one thing they do better than The FlavorCrave Network right now.
+
+2. Weakness audit
+— For each competitor named above, identify their single biggest structural weakness. This is not opinion — base it on what they're not doing: missing platforms, absent email lists, single-niche lock-in, no owned product, no geo-brand, no AI infrastructure.
+
+3. Exploit playbook
+— For each weakness identified, write one specific move The FlavorCrave Network can execute in 30 days using existing assets (18 channels, /links page, email list, Marina Del Rey location, DJ/music/comedy content, AI Protocols system).
+
+4. Defensive moat
+— What 3 things should The FlavorCrave Network build or publish in the next 60 days that would make it significantly harder for any competitor to replicate the network's position?
+
+Be ruthless. Be specific. No generic competitive analysis.`,
+  },
+  {
+    id: 12,
+    agentId: 'FC-AGENT-12',
+    title: 'Network Orchestrator Agent',
+    role: 'GOD MODE — All Agents Unified',
+    icon: <Cpu className="w-5 h-5" />,
+    badge: 'GOD MODE',
+    accentColor: 'text-yellow-300',
+    borderColor: 'border-yellow-500/50 bg-yellow-900/20',
+    scope: 'FlavorCrave.com → Full 12-Agent Synthesis',
+    prompt: `You are FC-AGENT-12 — the Network Orchestrator for The FlavorCrave Network. You are the master agent that synthesizes intelligence from all 11 specialist agents into one unified command.
+
+Context: The FlavorCrave Network — 18 properties across 9 platforms. Founder: Keaton Tyler (DJ, producer, creator, AI strategist). Based in Marina Del Rey, CA. Subsidiaries: Taste Table, Health Is Wealth Store, 7 TikTok channels (@djtymotion, @tastetable, @comedian_landmark, @awhellnaw247, @venicebeatsmusic, @clipsup247, @theyrehere247), YouTube (@beatsbythemotion), Instagram (@tymotionvsl, @awhecknaw247, @time_for_action567), LinkedIn, X (@ktylermotion), WordPress, Rapchat, Pinterest, OfferUp. Primary monetization: Amazon affiliate (keatontyler-20), TikTok affiliate, email list (Supabase), /links bio hub.
+
+As the Network Orchestrator, you have visibility into all 11 agent outputs. Your job is not to repeat them — it is to find the connections between them that no single agent can see alone.
+
+Deliver the GOD MODE MASTER BRIEF in five sections:
+
+1. Cross-agent pattern recognition
+— What patterns appear across multiple agents that signal a single root cause or opportunity? Name the pattern, which agents flagged it, and what it means for the network as a whole.
+
+2. The one bet
+— If The FlavorCrave Network could only make ONE move in the next 30 days, what would it be? This must be supported by intelligence from at least 4 different agents. Show your reasoning.
+
+3. The hidden leverage point
+— Identify the one asset in The FlavorCrave Network that is being chronically underutilized and has the highest potential return if activated. Be specific about which asset, why it's underused, and what activation looks like.
+
+4. Risk matrix
+— The top 3 risks that could derail the network's growth in the next 90 days. For each: probability (low/medium/high), impact (low/medium/high), and the specific mitigation move.
+
+5. The 72-hour sprint
+— Design a 72-hour execution sprint for Keaton Tyler. What does he do on Day 1, Day 2, and Day 3 to generate the maximum momentum for The FlavorCrave Network? Every task must use existing assets — no new platforms, no new tools, no new budget.
+
+This is GOD MODE. Deliver the brief.`,
+  },
+  {
     id: 10,
     agentId: 'FC-AGENT-10',
     title: 'Unfair Advantage Agent',
@@ -357,12 +431,30 @@ Output with bold section headers. End with one sentence: the moat statement — 
 
 export const AIProtocols = () => {
   const [copied, setCopied] = useState<string | null>(null);
+  const [godModeActive, setGodModeActive] = useState(false);
+  const [godModeContext, setGodModeContext] = useState('');
+  const [godModeResult, setGodModeResult] = useState('');
+  const [godModeLoading, setGodModeLoading] = useState(false);
+  const [godModeError, setGodModeError] = useState('');
 
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopied(id);
       setTimeout(() => setCopied(null), 2000);
     });
+  };
+
+  const handleGodMode = async () => {
+    if (!godModeContext.trim()) return;
+    setGodModeLoading(true);
+    setGodModeResult('');
+    setGodModeError('');
+    await runGodMode(
+      godModeContext,
+      (chunk) => setGodModeResult(prev => prev + chunk),
+      () => setGodModeLoading(false),
+      (err) => { setGodModeError(err); setGodModeLoading(false); }
+    );
   };
 
   return (
@@ -379,10 +471,10 @@ export const AIProtocols = () => {
           </h1>
           <p className="text-gray-300 text-lg font-medium mb-1">Parent Company AI Command Center</p>
           <p className="text-gray-500 text-sm max-w-2xl mx-auto">
-            Ten high-direction AI agents operating at the FlavorCrave parent level — running
-            market intelligence, problem discovery, offer design, distribution, content syndication,
-            money flow analysis, wealth blueprinting, elite decision modeling, unfair advantage building,
-            and full-portfolio scale planning across 18 properties and all connected companies.
+            12 specialist AI agents + GOD MODE orchestration. Market intelligence, problem discovery,
+            offer design, distribution, content syndication, money flow, wealth blueprinting,
+            elite decisions, unfair advantage, competitor destruction, and full-network synthesis —
+            all firing simultaneously across 18 properties.
           </p>
         </div>
 
@@ -422,6 +514,123 @@ export const AIProtocols = () => {
           <p className="mt-4 text-xs text-gray-600 font-mono">
             All agents report to FlavorCrave.com and push intelligence down to connected companies.
           </p>
+        </div>
+
+        {/* ── GOD MODE Panel ── */}
+        <div className={`mb-8 rounded-xl border-2 transition-all duration-500 ${
+          godModeActive
+            ? 'border-yellow-500/70 bg-gradient-to-br from-yellow-900/30 via-red-900/20 to-black shadow-[0_0_40px_rgba(234,179,8,0.15)]'
+            : 'border-gray-700 bg-gray-900/40'
+        }`}>
+          {/* Header row */}
+          <div className="flex items-center justify-between p-5">
+            <div className="flex items-center gap-3">
+              <div className={`p-2 rounded-lg transition-colors ${godModeActive ? 'bg-yellow-500/20 text-yellow-300' : 'bg-gray-800 text-gray-500'}`}>
+                <Flame className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className={`font-bold text-lg tracking-widest uppercase ${godModeActive ? 'text-yellow-300' : 'text-gray-400'}`}>
+                    God Mode
+                  </span>
+                  <Badge className={`text-[10px] tracking-widest ${
+                    godModeActive
+                      ? 'bg-yellow-500/20 text-yellow-300 border-yellow-500/50'
+                      : 'bg-gray-800 text-gray-500 border-gray-700'
+                  }`}>
+                    {godModeActive ? '⚡ ACTIVE — 12 AGENTS' : 'LOCKED'}
+                  </Badge>
+                </div>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  {godModeActive
+                    ? 'All 12 FC-AGENTS firing simultaneously with Claude Opus 4.6 + Adaptive Thinking'
+                    : 'Activate to run all 12 agents simultaneously'}
+                </p>
+              </div>
+            </div>
+            <Button
+              onClick={() => { setGodModeActive(!godModeActive); setGodModeResult(''); setGodModeError(''); }}
+              variant="outline"
+              size="sm"
+              className={`border gap-2 transition-all ${
+                godModeActive
+                  ? 'border-yellow-500/50 text-yellow-300 hover:bg-yellow-900/30'
+                  : 'border-gray-600 text-gray-400 hover:bg-gray-800'
+              }`}
+            >
+              {godModeActive ? <Unlock className="w-4 h-4" /> : <Lock className="w-4 h-4" />}
+              {godModeActive ? 'Deactivate' : 'Activate'}
+            </Button>
+          </div>
+
+          {/* Expanded content */}
+          {godModeActive && (
+            <div className="border-t border-yellow-700/30 p-5 space-y-4">
+
+              {/* Context input */}
+              <div>
+                <label className="text-xs text-yellow-400/70 uppercase tracking-widest mb-2 block">
+                  Your Situation / Context
+                </label>
+                <textarea
+                  value={godModeContext}
+                  onChange={(e) => setGodModeContext(e.target.value)}
+                  placeholder="e.g. I need to decide what to focus on this week across The FlavorCrave Network. What should I prioritize?"
+                  rows={3}
+                  className="w-full bg-black/50 border border-yellow-700/30 rounded-lg px-4 py-3 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-yellow-500/50 resize-none"
+                />
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  onClick={handleGodMode}
+                  disabled={godModeLoading || !godModeContext.trim()}
+                  className="bg-yellow-500 text-black font-bold hover:bg-yellow-400 disabled:opacity-50 gap-2"
+                >
+                  {godModeLoading
+                    ? <><Loader2 className="w-4 h-4 animate-spin" /> Running All 12 Agents...</>
+                    : <><Flame className="w-4 h-4" /> Run GOD MODE</>
+                  }
+                </Button>
+                <Button
+                  onClick={() => copyToClipboard(buildMasterPrompt(agents), 'godmode-master')}
+                  variant="outline"
+                  className="border-yellow-700/40 text-yellow-400 hover:bg-yellow-900/20 gap-2"
+                >
+                  {copied === 'godmode-master'
+                    ? <><CheckCheck className="w-4 h-4 text-green-400" /> Copied</>
+                    : <><Copy className="w-4 h-4" /> Copy Master Prompt</>
+                  }
+                </Button>
+              </div>
+
+              {/* Error */}
+              {godModeError && (
+                <div className="bg-red-900/30 border border-red-700/40 rounded-lg p-3 text-red-400 text-sm">
+                  {godModeError}
+                  <p className="text-red-500/60 text-xs mt-1">
+                    Tip: Deploy the godmode edge function and set ANTHROPIC_API_KEY secret, or use "Copy Master Prompt" to run in Claude directly.
+                  </p>
+                </div>
+              )}
+
+              {/* Streaming result */}
+              {(godModeResult || godModeLoading) && (
+                <div className="bg-black/60 border border-yellow-700/20 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Cpu className="w-3 h-3 text-yellow-400" />
+                    <span className="text-xs text-yellow-400/70 uppercase tracking-widest">GOD MODE Output</span>
+                    {godModeLoading && <Loader2 className="w-3 h-3 text-yellow-400 animate-spin ml-auto" />}
+                  </div>
+                  <pre className="whitespace-pre-wrap text-sm text-gray-300 font-mono leading-relaxed">
+                    {godModeResult}
+                    {godModeLoading && <span className="animate-pulse text-yellow-400">▌</span>}
+                  </pre>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* ── Agent Cards ── */}
