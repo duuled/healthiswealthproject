@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSEO } from '@/hooks/useSEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -34,6 +35,32 @@ import jointSupportImage from '@/assets/joint-support-supplement.jpg';
 
 const Supplements = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
+
+  useSEO({
+    title: 'Premium Wellness Supplements | Moringa, Shilajit, Chaga, Neem & Amla | Health Is Wealth',
+    description:
+      'Shop premium ancient superfoods: Moringa Leaf Powder, Pure Shilajit, Chaga Mushroom, Neem Powder & Amla. Purity-tracked, ethically sourced. Free shipping over $50. Ships nationwide.',
+    keywords:
+      'moringa powder supplement, buy shilajit online, chaga mushroom supplement, neem powder capsules, amla vitamin C powder, organic superfoods, wellness supplements shop, buy moringa online, ancient superfoods USA',
+    canonicalUrl: '/supplements',
+    ogTitle: 'Shop Premium Wellness Supplements | Health Is Wealth',
+    ogDescription:
+      'Ancient superfoods. Modern purity standards. Moringa, Shilajit, Chaga, Neem & Amla — shipped nationwide.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Premium Wellness Supplements',
+      description: 'Shop ancient superfoods including Moringa, Shilajit, Chaga Mushroom, Neem Powder, and Amla',
+      url: 'https://healthiswealth.live/supplements',
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://healthiswealth.live' },
+          { '@type': 'ListItem', position: 2, name: 'Supplements', item: 'https://healthiswealth.live/supplements' },
+        ],
+      },
+    },
+  });
 
   // Power of 5 - Elite Wellness Products
   const powerOf5Products = [

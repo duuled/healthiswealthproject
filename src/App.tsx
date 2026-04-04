@@ -15,6 +15,9 @@ import { TermsOfService } from "./pages/TermsOfService";
 import { Disclaimer } from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 import { ProductDetail } from "./pages/ProductDetail";
+import { WellnessHub } from "./pages/WellnessHub";
+import { CityLanding } from "./pages/CityLanding";
+import { GeoRedirectBanner } from "./components/GeoRedirectBanner";
 
 const queryClient = new QueryClient();
 
@@ -26,12 +29,15 @@ const App = () => (
       <BrowserRouter>
         <div className="relative min-h-screen bg-background">
           <Header />
+          <GeoRedirectBanner />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/supplements" element={<Supplements />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/product/:handle" element={<ProductDetail />} />
             <Route path="/mission" element={<Mission />} />
+            <Route path="/wellness" element={<WellnessHub />} />
+            <Route path="/wellness/:city" element={<CityLanding />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

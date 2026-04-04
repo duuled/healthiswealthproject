@@ -1,8 +1,28 @@
 import { Button } from '@/components/ui/button';
 import { Heart, Target, Zap, Leaf, Shield, Brain, Users, Baby, Salad } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/hooks/useSEO';
 
 export const Mission = () => {
+  useSEO({
+    title: 'Our Mission — Holistic Wellness for Everyone | Health Is Wealth',
+    description:
+      'Health Is Wealth was founded on a simple belief: real health is a human right. We source the world\'s most powerful ancient superfoods to make holistic wellness accessible to every community.',
+    keywords:
+      'health is wealth mission, holistic wellness brand, natural health company, superfood brand story, Black-owned wellness company, community health, plant-based wellness movement',
+    canonicalUrl: '/mission',
+    ogTitle: 'Our Mission — Wellness for Every Community | Health Is Wealth',
+    ogDescription:
+      'We believe real health is a human right. Our mission is to make the world\'s most powerful ancient superfoods accessible to everyone.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'Health Is Wealth — Our Mission',
+      description: 'Our mission and story behind Health Is Wealth premium wellness supplements',
+      url: 'https://healthiswealth.live/mission',
+    },
+  });
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}

@@ -10,6 +10,7 @@ export const Navigation = () => {
   const navItems = [
     { name: 'HOME', path: '/' },
     { name: 'SUPPLEMENTS', path: '/supplements' },
+    { name: 'WELLNESS', path: '/wellness' },
     { name: 'MISSION', path: '/mission' },
     { name: 'SHOP', path: '/shop' },
   ];
