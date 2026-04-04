@@ -1,27 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:geo="http://www.google.com/geo/feeds/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
-    <loc>https://health-is-wealth.com/</loc>
-    <lastmod>2025-10-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://healthiswealth.live/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://health-is-wealth.com/supplements</loc>
-    <lastmod>2025-10-14</lastmod>
+    <loc>https://healthiswealth.live/supplements</loc>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
+
   <url>
-    <loc>https://health-is-wealth.com/shop</loc>
-    <lastmod>2025-10-14</lastmod>
+    <loc>https://healthiswealth.live/shop</loc>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://health-is-wealth.com/mission</loc>
-    <lastmod>2025-10-14</lastmod>
+    <loc>https://healthiswealth.live/links</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://healthiswealth.live/ai-protocols</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://healthiswealth.live/mission</loc>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://healthiswealth.live/privacy-policy</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://healthiswealth.live/terms-of-service</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://healthiswealth.live/disclaimer</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

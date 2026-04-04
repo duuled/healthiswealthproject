@@ -2,17 +2,18 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Leaf, 
-  Star, 
-  Shield, 
-  Zap, 
+import {
+  Leaf,
+  Star,
+  Shield,
+  Zap,
   Heart,
   ArrowRight,
   CheckCircle,
   Award,
   Truck
 } from 'lucide-react';
+import { buildAffiliateUrl } from '@/lib/affiliate';
 import chagaccinoImage from '@/assets/chagaccino-product.jpg';
 import blueSpirulinaImage from '@/assets/blue-spirulina-lemonade-craving.jpg';
 import manukaHoneyImage from '@/assets/manuka-honey-drizzle.jpg';
@@ -583,7 +584,7 @@ const Supplements = () => {
 
                   <div className="space-y-2">
                     <Button asChild className="w-full h-10 text-sm font-semibold bg-primary hover:bg-primary/90">
-                      <a href={product.shopLink} target="_blank" rel="noopener noreferrer">
+                      <a href={buildAffiliateUrl(product.shopLink, 'supplements')} target="_blank" rel="noopener noreferrer">
                         Shop Now - {product.price}
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </a>
@@ -735,7 +736,7 @@ const Supplements = () => {
 
                   <div className="space-y-3">
                     <Button asChild className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90">
-                      <a href={supplement.shopLink} target="_blank" rel="noopener noreferrer">
+                      <a href={buildAffiliateUrl(supplement.shopLink, 'supplements')} target="_blank" rel="noopener noreferrer">
                         Shop Now - {supplement.price}
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </a>
