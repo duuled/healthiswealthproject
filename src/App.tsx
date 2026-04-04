@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 import { ProductDetail } from "./pages/ProductDetail";
 import { AIProtocols } from "./pages/AIProtocols";
 import { Links } from "./pages/Links";
+import { Marketing } from "./pages/Marketing";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/ai-protocols" element={<AIProtocols />} />
             <Route path="/links" element={<Links />} />
+            <Route path="/marketing" element={<Marketing />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

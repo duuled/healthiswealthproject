@@ -35,6 +35,7 @@ export const Header = () => {
     { label: 'Supplements', path: '/shop' },
     { label: 'AI Protocols', path: '/ai-protocols' },
     { label: 'Links', path: '/links' },
+    { label: 'Marketing', path: '/marketing' },
     { label: 'Contact', id: 'contact' },
   ];
 
