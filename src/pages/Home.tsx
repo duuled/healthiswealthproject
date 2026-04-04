@@ -79,9 +79,12 @@ import parsleyVideo from '@/assets/parsley-video.mp4';
 import acaiBowlVideo from '@/assets/acai-bowl-video.mp4';
 import purityTrackedPoster from '@/assets/purity-tracked-hero.png';
 import AdBanner from '@/components/AdBanner';
+import { subscribeEmail } from '@/lib/newsletter';
 
 export const Home = () => {
   const [email, setEmail] = useState('');
+  const [contactStatus, setContactStatus] = useState<{ success: boolean; message: string } | null>(null);
+  const [contactLoading, setContactLoading] = useState(false);
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [activeVideo, setActiveVideo] = useState(0);
   const heroVideos = [purityTrackedVideo, cacaoVideo, parsleyVideo, acaiBowlVideo];
@@ -862,7 +865,14 @@ export const Home = () => {
             {/* Contact Form */}
             <Card className="p-8">
               <h3 className="text-xl font-semibold mb-6">Get Your Free Wellness Plan!</h3>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={async (e) => {
+                e.preventDefault();
+                setContactLoading(true);
+                const result = await subscribeEmail(email, 'home');
+                setContactStatus(result);
+                setContactLoading(false);
+                if (result.success) setEmail('');
+              }}>
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input
@@ -876,9 +886,10 @@ export const Home = () => {
                   <input
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => { setEmail(e.target.value); setContactStatus(null); }}
                     className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="your.email@example.com"
+                    required
                   />
                 </div>
                 <div>
@@ -889,9 +900,14 @@ export const Home = () => {
                     placeholder="Tell us about your wellness goals..."
                   />
                 </div>
-                <Button className="btn-primary w-full">
-                  Get My Free Plan!
+                <Button type="submit" disabled={contactLoading} className="btn-primary w-full">
+                  {contactLoading ? 'Submitting...' : 'Get My Free Plan!'}
                 </Button>
+                {contactStatus && (
+                  <p className={`text-sm text-center ${contactStatus.success ? 'text-green-600' : 'text-red-500'}`}>
+                    {contactStatus.message}
+                  </p>
+                )}
               </form>
             </Card>
 

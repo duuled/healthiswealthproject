@@ -4,11 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getProducts, ShopifyProduct } from "@/lib/shopify";
 import { Loader2 } from "lucide-react";
+import { subscribeEmail } from "@/lib/newsletter";
 
 export const Shop = () => {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
   const [loading, setLoading] = useState(true);
   const [email, setEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<{ success: boolean; message: string } | null>(null);
+  const [newsletterLoading, setNewsletterLoading] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -26,10 +29,13 @@ export const Shop = () => {
     fetchProducts();
   }, []);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Newsletter signup:", email);
-    setEmail("");
+    setNewsletterLoading(true);
+    const result = await subscribeEmail(email, 'shop');
+    setNewsletterStatus(result);
+    setNewsletterLoading(false);
+    if (result.success) setEmail("");
   };
 
   return (
@@ -75,14 +81,19 @@ export const Shop = () => {
               type="email"
               placeholder="Enter your email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => { setEmail(e.target.value); setNewsletterStatus(null); }}
               className="flex-1 bg-background border-border"
               required
             />
-            <Button type="submit" className="bg-accent text-black hover:bg-accent/90">
-              Subscribe
+            <Button type="submit" disabled={newsletterLoading} className="bg-accent text-black hover:bg-accent/90">
+              {newsletterLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Subscribe'}
             </Button>
           </form>
+          {newsletterStatus && (
+            <p className={`mt-3 text-sm text-center ${newsletterStatus.success ? 'text-green-600' : 'text-red-500'}`}>
+              {newsletterStatus.message}
+            </p>
+          )}
         </div>
       </div>
     </div>
