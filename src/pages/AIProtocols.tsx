@@ -14,6 +14,10 @@ import {
   Building2,
   ChevronRight,
   BarChart2,
+  DollarSign,
+  Target,
+  Compass,
+  Shield,
 } from 'lucide-react';
 
 // ─── Company Hierarchy ───────────────────────────────────────────────────────
@@ -194,6 +198,33 @@ Include 6–8 formats across at least 3 platforms. Show how content flows from p
 Output with bold section headers. Write hooks in the authentic voice of the food-meets-wellness niche, not generic marketing copy.`,
   },
   {
+    id: 6,
+    agentId: 'FC-AGENT-06',
+    title: 'Real Money Game Agent',
+    role: 'Industry Money Flow Decoder',
+    icon: <DollarSign className="w-5 h-5" />,
+    badge: 'Money Flow',
+    accentColor: 'text-emerald-400',
+    borderColor: 'border-emerald-700/50 bg-emerald-900/20',
+    scope: 'FlavorCrave.com → Creator Commerce + Wellness Industry',
+    prompt: `Break down how money actually flows in this industry: Creator Commerce + Health & Wellness Supplements.
+
+Applied to: The FlavorCrave Network — 18 properties across 9 platforms including 7 TikTok channels, YouTube, Instagram, LinkedIn, X, WordPress blog, Rapchat, Pinterest, and OfferUp. Based in Marina Del Rey, CA.
+
+Analyze and show the hidden structure across three dimensions:
+
+1. Who controls distribution
+— Map every layer from content creation to purchase: platform algorithms, search engines, marketplaces, email, and owned media. For each layer, state: who owns it, what % of the value they capture, and what The FlavorCrave Network's current position is (renting vs. owning).
+
+2. Where profits are concentrated
+— Break down margin structure at each level: supplement manufacturer, platform, creator-with-audience, and affiliate. Give real % ranges. Show where The FlavorCrave Network sits today and where the maximum margin opportunity is.
+
+3. Who captures the most value
+— Name the 3 entities capturing the most value in this industry right now. Explain what structural advantage they hold. Then identify the one move The FlavorCrave Network can make in the next 90 days to capture a larger share of that value without requiring external capital.
+
+Show the hidden structure. Be specific. No generic analysis.`,
+  },
+  {
     id: 7,
     agentId: 'FC-AGENT-07',
     title: 'Scale Architecture Agent',
@@ -233,6 +264,93 @@ Also include:
 
 Output as a structured roadmap with phase headers. No generic list.`,
   },
+  {
+    id: 8,
+    agentId: 'FC-AGENT-08',
+    title: 'Wealth Blueprint Agent',
+    role: '$100K → $1M/Month Scale Roadmap',
+    icon: <Target className="w-5 h-5" />,
+    badge: 'Wealth Blueprint',
+    accentColor: 'text-amber-400',
+    borderColor: 'border-amber-700/50 bg-amber-900/20',
+    scope: 'FlavorCrave.com → Full Network Revenue Architecture',
+    prompt: `Design a roadmap to scale The FlavorCrave Network from current stage to $100K–$1M/month.
+
+Context: The FlavorCrave Network is a creator commerce company operating 18 properties across 9 platforms — 7 TikTok channels (@djtymotion, @tastetable, @comedian_landmark, @awhellnaw247, @venicebeatsmusic, @clipsup247, @theyrehere247), YouTube (@beatsbythemotion), Instagram (@tymotionvsl, @awhecknaw247, @time_for_action567), LinkedIn (Keaton Tyler), X (@ktylermotion), WordPress blog (liveliveradio), Rapchat, Pinterest, and OfferUp. Primary monetization: Amazon affiliate (tag: keatontyler-20) and TikTok affiliate links. Base: Marina Del Rey, CA.
+
+Design the roadmap across four components — focus on leverage + speed:
+
+1. Business model evolution
+— Map the current model (affiliate-first) to the $1M/month model. What changes at each revenue milestone: $10K, $50K, $100K, $500K, $1M/month? What is the primary revenue driver at each stage?
+
+2. Revenue streams — stacked by leverage
+— List 6–8 specific revenue streams for this network. For each: current status, 90-day realistic target, 12-month ceiling, and leverage ratio (effort input vs. income output). Sort by leverage ratio, highest first.
+
+3. Systems to build — in order
+— What are the 5 operational systems that must exist before $100K/month is achievable? Name exact tools (not categories). Include: email automation, UTM tracking, content repurposing, sponsorship pipeline, and one owned product system.
+
+4. Scaling strategy — phase by phase
+— Month 1–2: stabilize and activate. Month 3–4: automate and compound. Month 5–8: delegate and accelerate. Month 9–12: scale and defend. For each phase, state: one primary focus, one revenue unlock, and one thing to stop doing.
+
+Output as a structured roadmap. Be specific to this network's actual assets — 18 channels, creator content, wellness niche, Marina Del Rey positioning.`,
+  },
+  {
+    id: 9,
+    agentId: 'FC-AGENT-09',
+    title: 'Elite Decision Model Agent',
+    role: 'High-Level Entrepreneur Decision Framework',
+    icon: <Compass className="w-5 h-5" />,
+    badge: 'Decision Model',
+    accentColor: 'text-sky-400',
+    borderColor: 'border-sky-700/50 bg-sky-900/20',
+    scope: 'FlavorCrave.com → Network-Wide Strategic Decisions',
+    prompt: `Teach me how high-level entrepreneurs make decisions — then apply it to The FlavorCrave Network.
+
+Context: The FlavorCrave Network is a creator commerce company with 18 properties across 9 platforms, based in Marina Del Rey, CA. Current decisions include: which channels to prioritize, when to launch owned products, when to pitch brand sponsorships, and how to allocate time across 18 active properties.
+
+Structure the output across three decision dimensions:
+
+1. When to move fast
+— What conditions signal that speed is the highest-value action? Give 5 specific criteria. Then apply each criterion to The FlavorCrave Network's current situation — for each active opportunity (TikTok bio links, email automation, first brand sponsorship, white-label supplement), state: move fast or wait, and why.
+
+2. When to say no
+— What makes elite operators say no when others say yes? Give the 5-question filter they run every opportunity through. Apply this filter to: adding a 19th platform, accepting a low-paying brand deal, launching a new subsidiary brand before existing ones are monetized.
+
+3. How they minimize risk
+— Elite entrepreneurs don't avoid risk — they structure it. Give 4 specific risk-minimization techniques. For each, apply it to a real FlavorCrave decision: Spark Ads test, white-label supplement, sponsorship pitch, email broadcast.
+
+Close with a decision matrix: for the top 5 moves The FlavorCrave Network should make in the next 30 days, score each on: reversibility (1–10), leverage ratio (1–10), and time cost (1–10). Rank by combined score.`,
+  },
+  {
+    id: 10,
+    agentId: 'FC-AGENT-10',
+    title: 'Unfair Advantage Agent',
+    role: 'Competitive Moat Builder',
+    icon: <Shield className="w-5 h-5" />,
+    badge: 'Unfair Advantage',
+    accentColor: 'text-rose-400',
+    borderColor: 'border-rose-700/50 bg-rose-900/20',
+    scope: 'FlavorCrave.com → Creator Commerce + Wellness Industry',
+    prompt: `Help me build an unfair advantage in creator commerce and health & wellness.
+
+Applied to: The FlavorCrave Network — 18 properties across 9 platforms, founded by Keaton Tyler (DJ, producer, creator, AI strategist) based in Marina Del Rey, CA. Subsidiaries: Taste Table (food & flavor), Health Is Wealth Store (supplements), 7 TikTok channels, YouTube, Instagram, LinkedIn, X, blog, music, and marketplace properties.
+
+Build the unfair advantage across four dimensions — make The FlavorCrave Network hard to compete with:
+
+1. Skills — what combination is irreplaceable
+— Map the specific skill stack that Keaton Tyler + The FlavorCrave Network holds: music production, DJing, comedy content, VSL creation, wellness expertise, AI protocol design, multi-platform distribution. For each skill, rate its rarity in the creator-commerce-wellness space (1 = common, 10 = rare). Then identify the 2–3 skill combinations that no competitor currently holds.
+
+2. Distribution — the structural advantage
+— Analyze the 18-property network as a distribution asset. What is the combined reach potential? How does having 7 TikTok channels in different niches (comedy, music, wellness, viral) create cross-pollination that single-niche creators can't replicate? What is the compounding value of the /links hub page + email list over 12 months?
+
+3. Network — who to connect with next
+— Identify the 3 highest-leverage relationship categories for The FlavorCrave Network: brand sponsors, co-creators, or distribution partners. For each category, give 2 specific outreach strategies using the assets already in place (LinkedIn profile, 7 TikTok channels, AI Protocols page, Marina Del Rey location).
+
+4. Positioning — category of one
+— Write the positioning statement that makes The FlavorCrave Network uncopyable. It must reference: the multi-channel media network, the AI command center, the health-flavor-culture intersection, and the Marina Del Rey base. Then list 5 specific reasons a brand sponsor would choose The FlavorCrave Network over any single creator or wellness brand.
+
+Output with bold section headers. End with one sentence: the moat statement — what makes The FlavorCrave Network impossible to replicate in under 3 years.`,
+  },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -261,9 +379,10 @@ export const AIProtocols = () => {
           </h1>
           <p className="text-gray-300 text-lg font-medium mb-1">Parent Company AI Command Center</p>
           <p className="text-gray-500 text-sm max-w-2xl mx-auto">
-            Six high-direction AI agents operating at the FlavorCrave parent level — running
-            market intelligence, problem discovery, offer design, distribution, content
-            syndication, and full-portfolio scale planning across 7 TikTok channels and all connected companies.
+            Ten high-direction AI agents operating at the FlavorCrave parent level — running
+            market intelligence, problem discovery, offer design, distribution, content syndication,
+            money flow analysis, wealth blueprinting, elite decision modeling, unfair advantage building,
+            and full-portfolio scale planning across 18 properties and all connected companies.
           </p>
         </div>
 
@@ -373,8 +492,8 @@ export const AIProtocols = () => {
             FlavorCrave.com — Multi-Agent AI Operating System
           </p>
           <p className="text-gray-600 text-xs mb-3">
-            Each agent prompt is pre-configured for the FlavorCrave The FlavorCrave Network with scope across
-            Taste Table and Health Is Wealth Store. Paste into ChatGPT, Claude, or any AI tool to
+            Each agent prompt is pre-configured for The FlavorCrave Network with scope across
+            all 18 properties. Paste into ChatGPT, Claude, or any AI tool to
             run strategic intelligence at the portfolio level.
           </p>
           <a
