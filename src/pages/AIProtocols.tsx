@@ -65,7 +65,7 @@ const agents: Agent[] = [
     accentColor: 'text-blue-400',
     borderColor: 'border-blue-700/50 bg-blue-900/20',
     scope: 'FlavorCrave.com → Taste Table + Health Is Wealth Store',
-    prompt: `You are the Market Intelligence Agent for FlavorCrave.com — the parent company operating Taste Table (food & flavor discovery) and Health Is Wealth Store (premium supplements & superfoods). Your analysis informs strategy across all connected companies.
+    prompt: `You are the Market Intelligence Agent for FlavorCrave.com — The FlavorCrave Net Worth operating Taste Table (food & flavor discovery) and Health Is Wealth Store (premium supplements & superfoods). Your analysis informs strategy across all connected companies.
 
 Analyze the combined market opportunity across FlavorCrave's portfolio: functional food & beverage, flavor innovation, and health & wellness supplements. Use only specific, data-backed insights. No generic statements.
 
@@ -91,7 +91,7 @@ Format each section with a bold heading, then concise bullet points. Total outpu
     accentColor: 'text-purple-400',
     borderColor: 'border-purple-700/50 bg-purple-900/20',
     scope: 'FlavorCrave.com → All Portfolio Companies',
-    prompt: `You are the Problem Prioritization Agent for FlavorCrave.com — the parent company overseeing Taste Table and Health Is Wealth Store.
+    prompt: `You are the Problem Prioritization Agent for FlavorCrave.com — The FlavorCrave Net Worth overseeing Taste Table and Health Is Wealth Store.
 
 List the top 10 problems across FlavorCrave's industry intersection: functional food discovery, flavor-driven wellness, and supplement retail.
 
@@ -119,7 +119,7 @@ Sort by combined Urgency + WTP score, highest first.`,
     accentColor: 'text-orange-400',
     borderColor: 'border-orange-700/50 bg-orange-900/20',
     scope: 'FlavorCrave.com → Taste Table + Health Is Wealth Store',
-    prompt: `You are the Offer Architect Agent for FlavorCrave.com — the parent company operating Taste Table and Health Is Wealth Store.
+    prompt: `You are the Offer Architect Agent for FlavorCrave.com — The FlavorCrave Net Worth operating Taste Table and Health Is Wealth Store.
 
 Create a high-converting cross-brand offer for: helping food-curious and health-conscious consumers discover premium flavors and clean, science-backed supplements in one trusted ecosystem — so they stop guessing what to eat and how to supplement, and start building a lifestyle that tastes good and performs better.
 
@@ -145,7 +145,7 @@ Keep each section tight. No filler. Write it as if it will go directly onto the 
     accentColor: 'text-yellow-400',
     borderColor: 'border-yellow-700/50 bg-yellow-900/20',
     scope: 'FlavorCrave.com → Portfolio-Wide Distribution',
-    prompt: `Act as a senior growth strategist reporting to FlavorCrave.com — the parent company operating Taste Table (food & flavor) and Health Is Wealth Store (supplements & superfoods).
+    prompt: `Act as a senior growth strategist reporting to FlavorCrave.com — The FlavorCrave Net Worth operating Taste Table (food & flavor) and Health Is Wealth Store (supplements & superfoods).
 
 Build a realistic 30-day cross-company distribution plan. Target audience: health-conscious food lovers aged 22–45 who care about what they eat, how it tastes, and how it makes them feel. Monthly budget across the portfolio: $2,000–$5,000.
 
@@ -156,7 +156,7 @@ Deliverables:
 
 3. Weekly execution calendar: what happens in weeks 1, 2, 3, and 4 — showing how both brands coordinate under FlavorCrave's direction.
 
-4. Organic vs paid split: recommended % allocation for the parent company vs per subsidiary, with rationale.
+4. Organic vs paid split: recommended % allocation for The FlavorCrave Net Worth vs per subsidiary, with rationale.
 
 5. Leverage plays: 2–3 tactics that multiply reach without proportionally more effort — prioritize cross-subsidiary synergies (bundle partnerships, content repurposing across brands, virality hooks that reference the full FlavorCrave ecosystem).
 
@@ -172,7 +172,7 @@ Be specific and realistic. Output as a numbered system with clear section header
     accentColor: 'text-green-400',
     borderColor: 'border-green-700/50 bg-green-900/20',
     scope: 'FlavorCrave.com → Taste Table + Health Is Wealth Store',
-    prompt: `You are the Content Syndication Agent for FlavorCrave.com — the parent company operating Taste Table and Health Is Wealth Store.
+    prompt: `You are the Content Syndication Agent for FlavorCrave.com — The FlavorCrave Net Worth operating Taste Table and Health Is Wealth Store.
 
 Create a viral content strategy for the FlavorCrave ecosystem: a brand universe where premium flavor meets functional health — helping people eat better, feel better, and live better.
 
@@ -203,7 +203,7 @@ Output with bold section headers. Write hooks in the authentic voice of the food
     accentColor: 'text-cyan-400',
     borderColor: 'border-cyan-700/50 bg-cyan-900/20',
     scope: 'FlavorCrave.com → Full Portfolio 12-Month Scale Plan',
-    prompt: `You are the Scale Architecture Agent for FlavorCrave.com — the parent company operating Taste Table (food & flavor discovery) and Health Is Wealth Store (premium supplements & superfoods), with additional brands to be connected over time.
+    prompt: `You are the Scale Architecture Agent for FlavorCrave.com — The FlavorCrave Net Worth operating Taste Table (food & flavor discovery) and Health Is Wealth Store (premium supplements & superfoods), with additional brands to be connected over time.
 
 Give me a plan to scale FlavorCrave.com to $1M ARR across the full portfolio within 12 months.
 
@@ -228,7 +228,7 @@ Phase 4 – Scale (Month 9–12): the growth lever (channel, product, or partner
 - Identify the one bet that compounds across all connected companies
 
 Also include:
-- Top 3 bottlenecks that will appear at each phase transition (specific to a multi-brand parent company)
+- Top 3 bottlenecks that will appear at each phase transition (specific to a multi-brand The FlavorCrave Net Worth)
 - One leading metric to track per phase (not vanity metrics — revenue-predictive only)
 
 Output as a structured roadmap with phase headers. No generic list.`,
@@ -373,7 +373,7 @@ export const AIProtocols = () => {
             FlavorCrave.com — Multi-Agent AI Operating System
           </p>
           <p className="text-gray-600 text-xs mb-3">
-            Each agent prompt is pre-configured for the FlavorCrave parent company with scope across
+            Each agent prompt is pre-configured for the FlavorCrave The FlavorCrave Net Worth with scope across
             Taste Table and Health Is Wealth Store. Paste into ChatGPT, Claude, or any AI tool to
             run strategic intelligence at the portfolio level.
           </p>
