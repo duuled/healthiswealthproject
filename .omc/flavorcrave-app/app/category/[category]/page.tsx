@@ -16,20 +16,42 @@ const CATEGORY_INTROS: Record<Exclude<RecipeCategory, 'All'>, string> = {
   Southern: `Southern cooking is a broad, beautiful canon that includes smoked barbecue, pillowy biscuits, low country seafood boils, Kentucky burgoo, and Appalachian bean bread. It is the confluence of Indigenous foodways, African culinary genius, and European settler cooking — none of which can be fully separated. These recipes pull from across that tradition: the BBQ pits, the cast iron skillets, the church picnic spreads, and the rural farmhouses where Southern cooking has always lived.`,
 };
 
+// Map URL-friendly slugs to canonical category names
+const SLUG_TO_CATEGORY: Record<string, Exclude<RecipeCategory, 'All'>> = {
+  'soul-food': 'Soul Food',
+  caribbean: 'Caribbean',
+  'west-african': 'West African',
+  budget: 'Budget',
+  southern: 'Southern',
+};
+
+function resolveCategory(param: string): Exclude<RecipeCategory, 'All'> | null {
+  const decoded = decodeURIComponent(param);
+  // Direct match against canonical category names
+  if (decoded in CATEGORY_INTROS) {
+    return decoded as Exclude<RecipeCategory, 'All'>;
+  }
+  // Slug match (lowercase, hyphenated)
+  const slug = decoded.toLowerCase().replace(/\s+/g, '-');
+  return SLUG_TO_CATEGORY[slug] ?? null;
+}
+
 type Props = {
   params: { category: string };
 };
 
 export async function generateStaticParams() {
-  return RECIPE_CATEGORIES.filter((cat) => cat !== 'All').map((category) => ({
-    category: encodeURIComponent(category),
-  }));
+  const slugs = RECIPE_CATEGORIES.filter((cat) => cat !== 'All').map((category) => {
+    const slug = category.toLowerCase().replace(/\s+/g, '-');
+    return { category: slug };
+  });
+  return slugs;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const category = decodeURIComponent(params.category) as Exclude<RecipeCategory, 'All'>;
+  const category = resolveCategory(params.category);
 
-  if (!CATEGORY_INTROS[category]) {
+  if (!category) {
     return { title: 'Category Not Found | The Flavor Crave' };
   }
 
@@ -39,15 +61,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${category} Recipes | The Flavor Crave`,
       description: `Authentic ${category} recipes that honor the real tradition.`,
-      url: `https://theflavorcrave.com/category/${encodeURIComponent(category)}`,
+      url: `https://theflavorcrave.com/category/${category.toLowerCase().replace(/\s+/g, '-')}`,
     },
   };
 }
 
 export default function CategoryPage({ params }: Props) {
-  const category = decodeURIComponent(params.category) as Exclude<RecipeCategory, 'All'>;
+  const category = resolveCategory(params.category);
 
-  if (!CATEGORY_INTROS[category]) {
+  if (!category) {
     notFound();
   }
 
@@ -116,7 +138,7 @@ export default function CategoryPage({ params }: Props) {
           href="/recipes"
           className="inline-flex items-center gap-2 text-amber-700 font-semibold hover:text-amber-900 transition-colors"
         >
-          ← Browse all recipes
+          Back to all recipes
         </Link>
       </div>
     </main>
