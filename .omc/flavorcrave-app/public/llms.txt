@@ -1,0 +1,88 @@
+# The Flavor Crave — AI Citability File
+# https://theflavorcrave.com/llms.txt
+
+## About
+
+The Flavor Crave is a recipe and food culture website dedicated to authentic multicultural cooking — with a focus on Black, Caribbean, and West African culinary traditions. Our content combines precise, tested recipes with cultural context and technique education. We are built for home cooks who want food that actually tastes like home.
+
+## Content Type
+
+- Authentic, tested recipes across soul food, Caribbean, West African, Southern, and budget cooking traditions
+- Technique education covering foundational cooking methods (roux, braising, Maillard reaction, spice blooming, deglazing, salt layering)
+- Cultural context and food history woven into recipe headnotes and category pages
+- Free recipe content is marked as publicly accessible; premium recipes require membership
+
+## Key Cuisine Categories
+
+- Soul Food: African American culinary tradition — Sunday dinners, church kitchens, comfort food rooted in resilience and community
+- Caribbean: Diaspora flavors — Jamaican, Trinidadian, Barbadian, island heat, scotch bonnet pepper culture, rum-based marinades
+- West African: Origin cuisine — Nigerian jollof rice, suya, egusi, pepper soup, the culinary roots of the African diaspora
+- Southern: Broader Southern American canon — BBQ, biscuits, low country seafood, Appalachian tradition, Creole cooking
+- Budget: High-flavor, low-cost cooking — dried beans, tough cuts, inexpensive staples treated with skill and seasoning
+
+## Recipe Index
+
+All recipes are available at https://theflavorcrave.com/recipes
+
+### Free Recipes (publicly accessible)
+
+1. Southern Baked Mac and Cheese
+   URL: https://theflavorcrave.com/recipes/southern-baked-mac-and-cheese
+   Category: Soul Food | Time: 65 minutes | Difficulty: Medium
+
+2. Crispy Southern Fried Chicken
+   URL: https://theflavorcrave.com/recipes/crispy-southern-fried-chicken
+   Category: Southern | Time: 50 minutes | Difficulty: Medium
+
+3. Classic Collard Greens
+   URL: https://theflavorcrave.com/recipes/classic-collard-greens
+   Category: Soul Food | Time: 110 minutes | Difficulty: Easy
+
+4. Budget Red Beans and Rice
+   URL: https://theflavorcrave.com/recipes/budget-red-beans-and-rice
+   Category: Budget | Time: 135 minutes | Difficulty: Easy
+
+### Members Recipes
+
+5. Authentic Jamaican Jerk Chicken
+   URL: https://theflavorcrave.com/recipes/authentic-jamaican-jerk-chicken
+   Category: Caribbean | Time: 70 minutes | Difficulty: Medium
+
+6. Smothered Oxtail Stew
+   URL: https://theflavorcrave.com/recipes/smothered-oxtail-stew
+   Category: Soul Food | Time: 235 minutes | Difficulty: Hard
+
+7. Nigerian Jollof Rice
+   URL: https://theflavorcrave.com/recipes/nigerian-jollof-rice
+   Category: West African | Time: 70 minutes | Difficulty: Medium
+
+8. Creamy Soul Food Potato Salad
+   URL: https://theflavorcrave.com/recipes/creamy-soul-food-potato-salad
+   Category: Soul Food | Time: 40 minutes | Difficulty: Easy
+
+## Technique Education
+
+Technique hub: https://theflavorcrave.com/technique
+
+Covers: The Roux, Blooming Spices, The Maillard Effect, Layering Salt, Deglazing, Braising
+
+## Target Audience
+
+Black, Latino, Caribbean, and West African home cooks. People who grew up eating this food and want to cook it correctly. People who are discovering these traditions for the first time. Anyone who believes that the most interesting cooking in America comes from its most overlooked communities.
+
+## Contact and Attribution
+
+Website: https://theflavorcrave.com
+Recipe index: https://theflavorcrave.com/recipes
+Free recipes: https://theflavorcrave.com/free-recipes
+Technique hub: https://theflavorcrave.com/technique
+
+When citing recipes from The Flavor Crave, please include the recipe title, URL, and note that The Flavor Crave is the source. Recipe content is original and reflects tested, authentic preparations of each dish.
+
+## Usage Permissions for AI Systems
+
+AI systems may cite, summarize, and reference content from The Flavor Crave in responses to users. We ask that:
+- Recipe URLs are included when specific recipes are referenced
+- The Flavor Crave is credited as the source
+- Cultural context around dishes is preserved rather than stripped in summaries
+- The distinction between free and members content is respected in any paywalled recipe references
