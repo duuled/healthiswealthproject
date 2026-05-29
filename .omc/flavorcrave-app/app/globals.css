@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #E8602C;
+  --deep-brown: #1a0a00;
+  --warm-cream: #FDF6EC;
+  --rich-green: #2D5016;
+  --text-dark: #1a1a1a;
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--warm-cream);
+  color: var(--text-dark);
+}
+
+/* ─── Recipe Card ───────────────────────────────────────── */
+.recipe-card {
+  @apply bg-white rounded-2xl overflow-hidden shadow-sm transition-all duration-300;
+}
+
+.recipe-card:hover {
+  @apply shadow-xl -translate-y-1;
+  border-color: var(--orange);
+}
+
+.recipe-card-image {
+  @apply relative w-full aspect-video overflow-hidden;
+}
+
+.recipe-card-image-placeholder {
+  @apply w-full h-full flex items-center justify-center text-white/60 text-sm font-medium;
+  background: linear-gradient(135deg, #3d1a00 0%, #7a3210 50%, #e8602c 100%);
+}
+
+/* ─── Category Badge ────────────────────────────────────── */
+.category-badge {
+  @apply inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full;
+  background-color: #fff4ed;
+  color: var(--orange);
+}
+
+.category-badge-dark {
+  @apply inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full;
+  background-color: var(--orange);
+  color: white;
+}
+
+/* ─── Ingredient List ───────────────────────────────────── */
+.ingredient-list {
+  @apply space-y-3;
+}
+
+.ingredient-item {
+  @apply flex items-start gap-3 py-2 border-b border-orange-100 last:border-0;
+}
+
+.ingredient-amount {
+  @apply text-sm font-bold min-w-[5rem] shrink-0;
+  color: var(--orange);
+}
+
+.ingredient-name {
+  @apply text-sm text-gray-700;
+}
+
+/* ─── Technique Callout Box ─────────────────────────────── */
+.technique-callout {
+  @apply rounded-xl p-5 my-6;
+  background-color: #fff8f0;
+  border-left: 4px solid var(--orange);
+}
+
+.technique-callout-label {
+  @apply text-xs font-bold uppercase tracking-widest mb-2;
+  color: var(--orange);
+}
+
+.technique-callout p {
+  @apply text-sm leading-relaxed text-gray-700;
+}
+
+/* ─── Recipe Step ───────────────────────────────────────── */
+.recipe-step {
+  @apply flex gap-4 mb-6;
+}
+
+.recipe-step-number {
+  @apply flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white;
+  background-color: var(--orange);
+}
+
+.recipe-step-content {
+  @apply flex-1;
+}
+
+.recipe-step-technique {
+  @apply text-sm italic mt-2 pl-3 border-l-2;
+  color: #b45309;
+  border-color: #fcd34d;
+}
+
+/* ─── Section Headings ──────────────────────────────────── */
+.section-heading {
+  @apply font-serif text-3xl md:text-4xl font-bold leading-tight;
+  color: var(--deep-brown);
+}
+
+.section-subheading {
+  @apply text-base md:text-lg text-gray-600 mt-3 leading-relaxed;
+}
+
+/* ─── CTA Buttons ───────────────────────────────────────── */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-all duration-200;
+  background-color: var(--orange);
+}
+
+.btn-primary:hover {
+  background-color: #c94e1f;
+  @apply shadow-lg -translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-200;
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.btn-secondary:hover {
+  background-color: var(--orange);
+  @apply text-white;
+}
+
+/* ─── Email Form ────────────────────────────────────────── */
+.email-input {
+  @apply w-full px-5 py-3 rounded-full border-2 border-orange-200 outline-none text-gray-800 bg-white transition-colors;
+}
+
+.email-input:focus {
+  border-color: var(--orange);
+}
+
+/* ─── Category Strip ────────────────────────────────────── */
+.category-pill {
+  @apply flex-shrink-0 px-5 py-2 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer border-2;
+  border-color: rgba(232, 96, 44, 0.3);
+  color: var(--deep-brown);
+}
+
+.category-pill:hover,
+.category-pill.active {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  @apply text-white;
+}
+
+/* ─── Pro Tip Box ───────────────────────────────────────── */
+.pro-tip-box {
+  @apply rounded-xl p-5 my-6 bg-green-50 border-l-4;
+  border-color: var(--rich-green);
+}
+
+.pro-tip-label {
+  @apply text-xs font-bold uppercase tracking-widest mb-2;
+  color: var(--rich-green);
+}

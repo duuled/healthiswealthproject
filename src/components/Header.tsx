@@ -18,11 +18,13 @@ export const Header = () => {
 
   const leftNav = [
     { label: 'Shop', path: '/supplements' },
+    { label: 'Blog', path: '/blog' },
     { label: 'Mission', path: '/mission' },
   ];
 
   const rightNav = [
     { label: 'Supplements', path: '/shop' },
+    { label: 'Free Guide', path: '/free-guide' },
     { label: 'Contact', id: 'contact' },
   ];
 
@@ -133,7 +135,7 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-background/98 backdrop-blur-lg border-t border-border/50 -mx-6 px-6">
             <div className="py-6 space-y-1">
-              {[...leftNav, ...rightNav].map((item) =>
+              {[...leftNav, ...rightNav, { label: 'Refer & Earn', path: '/refer' }].map((item) =>
                 'id' in item ? (
                   <button
                     key={item.label}

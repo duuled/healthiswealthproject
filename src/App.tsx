@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { CookieConsent } from "@/components/CookieConsent";
 import { NewsletterPopup } from "@/components/NewsletterPopup";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { SocialProofToast } from "@/components/SocialProofToast";
 import { Home } from "./pages/Home";
 import Supplements from "./pages/Supplements";
 import { Shop } from "./pages/Shop";
@@ -15,6 +17,11 @@ import { TermsOfService } from "./pages/TermsOfService";
 import { Disclaimer } from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 import { ProductDetail } from "./pages/ProductDetail";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import LeadMagnet from "./pages/LeadMagnet";
+import ReferralProgram from "./pages/ReferralProgram";
+import FunnelPage from "./pages/FunnelPage";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +39,11 @@ const App = () => (
             <Route path="/shop" element={<Shop />} />
             <Route path="/product/:handle" element={<ProductDetail />} />
             <Route path="/mission" element={<Mission />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/free-guide" element={<LeadMagnet />} />
+            <Route path="/refer" element={<ReferralProgram />} />
+            <Route path="/start" element={<FunnelPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
@@ -40,6 +52,8 @@ const App = () => (
           </Routes>
           <CookieConsent />
           <NewsletterPopup />
+          <ExitIntentPopup />
+          <SocialProofToast />
         </div>
       </BrowserRouter>
     </TooltipProvider>

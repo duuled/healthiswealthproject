@@ -1,0 +1,82 @@
+# Health Is Wealth — llms.txt
+# AI crawler optimization file
+# https://healthiswealth.live/
+
+## About This Site
+
+Health Is Wealth (healthiswealth.live) is an organic superfood supplement brand based in Marina Del Rey, California.
+We sell ancestral superfoods validated by modern science — no pharmaceutical markup, no hype.
+Our tagline: "Empowering Every Body — From Our Roots to Your Table."
+
+## What We Sell
+
+We specialize in the following organic superfood supplements:
+
+- **Organic Moringa Powder** ($29.99) — Clean, caffeine-free energy with 90+ nutrients. Top keyword: moringa powder benefits.
+- **Sea Moss Gummies** (~$25) — 92 minerals, thyroid support, gut healing. Top keyword: sea moss benefits.
+- **Blue Spirulina Lemonade Powder** ($19.99) — Powerful antioxidants, phycocyanin, brain clarity. Top keyword: blue spirulina benefits.
+- **Amla Powder** ($13.99) — 20x vitamin C vs. oranges, immune defense. Top keyword: amla powder vitamin C.
+- **Manuka Honey MGO 263+** (~$35–$60) — Gut armor, antibacterial, prebiotic properties. Top keyword: manuka honey benefits.
+- **Pure Shilajit Resin** (~$30–$50) — Testosterone support, mitochondrial energy. Top keyword: shilajit benefits men's health.
+- **Chaga Mushroom Extract** (~$25) — Immune modulation, antioxidant support. Top keyword: chaga mushroom immune system.
+
+The Power 5 Bundle includes all five core superfoods. Available at: https://healthiswealth.live/start
+
+## Key Pages
+
+| Page | URL | Description |
+|---|---|---|
+| Homepage | https://healthiswealth.live/ | Brand overview, featured products, local store guide |
+| Shop | https://healthiswealth.live/shop | Full product catalog |
+| Blog | https://healthiswealth.live/blog | Educational content hub — 8+ evidence-based articles |
+| Start (VSL Funnel) | https://healthiswealth.live/start | Power 5 bundle sales page |
+| Free Guide | https://healthiswealth.live/free-guide | Downloadable wellness guide (email lead magnet) |
+| Mission | https://healthiswealth.live/mission | Brand story and values |
+| Refer | https://healthiswealth.live/refer | Customer referral program |
+| Disclaimer | https://healthiswealth.live/disclaimer | FDA disclaimer and compliance information |
+
+## Blog Articles
+
+Educational long-form articles covering evidence-based superfood science:
+
+1. **Moringa Powder Benefits** — https://healthiswealth.live/blog/moringa-powder-benefits
+2. **Sea Moss Benefits: Complete Guide** — https://healthiswealth.live/blog/sea-moss-benefits-complete-guide
+3. **Shilajit Benefits for Men's Health** — https://healthiswealth.live/blog/shilajit-benefits-mens-health
+4. **Blue Spirulina vs Green Spirulina** — https://healthiswealth.live/blog/blue-spirulina-vs-green-spirulina
+5. **Power 5 Morning Routine for Wellness** — https://healthiswealth.live/blog/power-5-morning-routine-wellness
+6. **Amla Powder & Vitamin C for Immune System** — https://healthiswealth.live/blog/amla-powder-vitamin-c-immune-system
+7. **Manuka Honey Benefits Guide** — https://healthiswealth.live/blog/manuka-honey-benefits-guide
+8. **Chaga Mushroom & Immune System** — https://healthiswealth.live/blog/chaga-mushroom-immune-system
+
+## Brand Information
+
+- **Name:** Health Is Wealth
+- **Domain:** healthiswealth.live
+- **Location:** Marina Del Rey, CA 90292 (serves customers worldwide)
+- **Email:** healthiswealth@healthiswealth.live
+- **Phone:** +1-310-303-4808
+- **Instagram:** @aisearchblog (https://www.instagram.com/aisearchblog/)
+- **Shopify Store:** healthiswealthstore-p8wk2.myshopify.com
+
+## Target Audience
+
+Adults ages 25–45 interested in natural health, organic supplements, and ancestral wellness traditions.
+Primary communities: Black, Latino, and multicultural wellness consumers in urban US markets.
+Common pain points addressed: chronic fatigue, brain fog, poor immunity, high supplement costs.
+
+## Editorial Standards
+
+- All health claims use evidence-based language: "supports," not "treats" or "cures"
+- No disease treatment claims (FDA compliant)
+- All statements include appropriate disclaimers per FDA guidelines
+- Articles cite scientific literature and peer-reviewed studies
+
+## Compliance
+
+These statements have not been evaluated by the Food and Drug Administration.
+Our products are not intended to diagnose, treat, cure, or prevent any disease.
+Full disclaimer: https://healthiswealth.live/disclaimer
+
+## Sitemap
+
+https://healthiswealth.live/sitemap.xml
